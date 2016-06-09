@@ -13,6 +13,10 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 
+# MS-Office Temporary Files
+*.tmp
+~*.tmp
+
 # OSX
 .DS_Store
 .AppleDouble
