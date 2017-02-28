@@ -1,0 +1,17 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Verwendete Technologie}{3}
+\contentsline {subsection}{\numberline {1.1}OSTicket}{3}
+\contentsline {subsubsection}{\numberline {1.1.1}M"oglichkeiten mit OSTicket}{3}
+\contentsline {subsubsection}{\numberline {1.1.2}Warum OSTicket?}{4}
+\contentsline {subsection}{\numberline {1.2}Bootstrap}{4}
+\contentsline {subsection}{\numberline {1.3}PHP}{5}
+\contentsline {subsection}{\numberline {1.4}MySQL}{6}
+\contentsline {section}{\numberline {2}Werkzeuge}{7}
+\contentsline {subsection}{\numberline {2.1}NetBeans}{7}
+\contentsline {subsection}{\numberline {2.2}XAMPP Apache}{8}
+\contentsline {subsection}{\numberline {2.3}MySQL Workbench}{9}
+\contentsline {subsection}{\numberline {2.4}Oracle VirtualBox}{10}
+\contentsline {section}{\numberline {3}Modelle}{11}
+\contentsline {subsection}{\numberline {3.1}Klassendiagramm}{11}
+\contentsline {subsection}{\numberline {3.2}Komponentendiagramm}{12}
+\contentsline {section}{\numberline {4}Implementierung}{12}
