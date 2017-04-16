@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.2.12)  11 APR 2017 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.2.21)  21 MAR 2017 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2491,17 +2491,10 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 21.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package rerunfilecheck Info: File `"Latex Vorlage IT Kolleg Imst".out' has not 
+changed.
+(rerunfilecheck)             Checksum: 964F8BE12710C2378BD372BEBD434E6F;3513.
 
-
-Package rerunfilecheck Warning: File `"Latex Vorlage IT Kolleg Imst".out' has c
-hanged.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Latex Vorlage IT Kolleg Imst".out'
-:
-(rerunfilecheck)             Before: C210A901FB29361EA31A9B31E4698A44;3569
-(rerunfilecheck)             After:  964F8BE12710C2378BD372BEBD434E6F;3513.
 
 LaTeX Warning: There were undefined references.
 
@@ -2529,7 +2522,7 @@ type1/public/lm/lmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri
 /fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
 c/lm/lmtt12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 >
-Output written on "Latex Vorlage IT Kolleg Imst.pdf" (43 pages, 5455761 bytes).
+Output written on "Latex Vorlage IT Kolleg Imst.pdf" (43 pages, 5455913 bytes).
 
 PDF statistics:
  703 PDF objects out of 1000 (max. 8388607)
