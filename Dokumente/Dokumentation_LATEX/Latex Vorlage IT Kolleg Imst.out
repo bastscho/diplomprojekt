@@ -10,47 +10,73 @@
 \BOOKMARK [2][-]{subsection.1.2.3}{Risikoanalyse}{section.1.2}% 10
 \BOOKMARK [1][-]{section.1.3}{Pflichtenheft}{chapter.1}% 11
 \BOOKMARK [2][-]{subsection.1.3.1}{Zielbestimmung}{section.1.3}% 12
-\BOOKMARK [2][-]{subsection.1.3.2}{Produkteinsatz und Umgebung}{section.1.3}% 13
-\BOOKMARK [2][-]{subsection.1.3.3}{Funktionalit\344ten}{section.1.3}% 14
-\BOOKMARK [2][-]{subsection.1.3.4}{Testszenarien und Testf\344lle}{section.1.3}% 15
-\BOOKMARK [2][-]{subsection.1.3.5}{Liefervereinbarung}{section.1.3}% 16
-\BOOKMARK [1][-]{section.1.4}{Planung}{chapter.1}% 17
-\BOOKMARK [2][-]{subsection.1.4.1}{Projektstrukturplan}{section.1.4}% 18
-\BOOKMARK [2][-]{subsection.1.4.2}{Meilensteine}{section.1.4}% 19
-\BOOKMARK [2][-]{subsection.1.4.3}{Gant-Chart}{section.1.4}% 20
-\BOOKMARK [2][-]{subsection.1.4.4}{Abnahmekriterien}{section.1.4}% 21
-\BOOKMARK [2][-]{subsection.1.4.5}{Pl\344ne zur Evaluierung}{section.1.4}% 22
-\BOOKMARK [2][-]{subsection.1.4.6}{Erg\344nzungen und zu kl\344rende Punkte}{section.1.4}% 23
-\BOOKMARK [0][-]{chapter.2}{Vorstellung des Produktes}{}% 24
-\BOOKMARK [0][-]{chapter.3}{Eingesetzte Technologien}{}% 25
-\BOOKMARK [0][-]{chapter.4}{Problemanalyse}{}% 26
-\BOOKMARK [1][-]{section.4.1}{USE-Case-Analyse}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.2}{Domain-Class-Modelling}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.3}{User-Interface-Design}{chapter.4}% 29
-\BOOKMARK [0][-]{chapter.5}{Systementwurf}{}% 30
-\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.2}{Benutzerschnittstellen}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.3}{Datenbankentwurf}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.4}{Klassenentwurf}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.5}{Sicherheit des Systems}{chapter.5}% 35
-\BOOKMARK [0][-]{chapter.6}{Implementierung}{}% 36
-\BOOKMARK [0][-]{chapter.7}{Deployment}{}% 37
-\BOOKMARK [0][-]{chapter.8}{Tests}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Systemtests}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.2}{Akzeptanztests}{chapter.8}% 40
-\BOOKMARK [0][-]{chapter.9}{Projektevaluation}{}% 41
-\BOOKMARK [0][-]{chapter.10}{Benutzerhandbuch}{}% 42
-\BOOKMARK [0][-]{chapter.11}{Zusammenfassung}{}% 43
-\BOOKMARK [0][-]{chapter.12}{Beispielkapitel}{}% 44
-\BOOKMARK [1][-]{section.12.1}{Beispiele zitieren}{chapter.12}% 45
-\BOOKMARK [2][-]{subsection.12.1.1}{Beispiele Abbildungen}{section.12.1}% 46
-\BOOKMARK [1][-]{section.12.2}{Beispiele Listen}{chapter.12}% 47
-\BOOKMARK [1][-]{section.12.3}{Beispiel Codesequenz}{chapter.12}% 48
-\BOOKMARK [2][-]{subsection.12.3.1}{Quicksort in JAVA}{section.12.3}% 49
-\BOOKMARK [1][-]{section.12.4}{Beispieltext}{chapter.12}% 50
-\BOOKMARK [0][-]{chapter*.18}{Abbildungsverzeichnis}{}% 51
-\BOOKMARK [0][-]{chapter*.19}{Tabellenverzeichnis}{}% 52
-\BOOKMARK [0][-]{chapter*.20}{Quelltexte}{}% 53
-\BOOKMARK [0][-]{chapter*.21}{Literaturverzeichnis}{}% 54
-\BOOKMARK [0][-]{appendix.A}{Anhang-Kapitel}{}% 55
-\BOOKMARK [1][-]{section.A.1}{Anhang-Section}{appendix.A}% 56
+\BOOKMARK [1][-]{section.1.4}{IST Zustand}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.5}{SOLL Zustand}{chapter.1}% 14
+\BOOKMARK [2][-]{subsection.1.5.1}{SMART}{section.1.5}% 15
+\BOOKMARK [2][-]{subsection.1.5.2}{Produkteinsatz und Umgebung}{section.1.5}% 16
+\BOOKMARK [2][-]{subsection.1.5.3}{Projektumfeldanalyse}{section.1.5}% 17
+\BOOKMARK [2][-]{subsection.1.5.4}{Stakeholder}{section.1.5}% 18
+\BOOKMARK [2][-]{subsection.1.5.5}{Funktionalit\344ten}{section.1.5}% 19
+\BOOKMARK [2][-]{subsection.1.5.6}{Muss Anforderungen}{section.1.5}% 20
+\BOOKMARK [2][-]{subsection.1.5.7}{Soll Anforderungen}{section.1.5}% 21
+\BOOKMARK [2][-]{subsection.1.5.8}{Testszenarien und Testf\344lle}{section.1.5}% 22
+\BOOKMARK [1][-]{section.1.6}{Testf\344lle}{chapter.1}% 23
+\BOOKMARK [2][-]{subsection.1.6.1}{Testfall A}{section.1.6}% 24
+\BOOKMARK [2][-]{subsection.1.6.2}{Testfall B}{section.1.6}% 25
+\BOOKMARK [2][-]{subsection.1.6.3}{Testfall C}{section.1.6}% 26
+\BOOKMARK [2][-]{subsection.1.6.4}{Liefervereinbarung}{section.1.6}% 27
+\BOOKMARK [1][-]{section.1.7}{Planung}{chapter.1}% 28
+\BOOKMARK [2][-]{subsection.1.7.1}{Projektstrukturplan}{section.1.7}% 29
+\BOOKMARK [2][-]{subsection.1.7.2}{Meilensteine}{section.1.7}% 30
+\BOOKMARK [2][-]{subsection.1.7.3}{Gant-Chart}{section.1.7}% 31
+\BOOKMARK [2][-]{subsection.1.7.4}{Abnahmekriterien}{section.1.7}% 32
+\BOOKMARK [2][-]{subsection.1.7.5}{Pl\344ne zur Evaluierung}{section.1.7}% 33
+\BOOKMARK [2][-]{subsection.1.7.6}{Erg\344nzungen und zu kl\344rende Punkte}{section.1.7}% 34
+\BOOKMARK [0][-]{chapter.2}{Vorstellung des Produktes}{}% 35
+\BOOKMARK [1][-]{section.2.1}{Verwendete Technologie}{chapter.2}% 36
+\BOOKMARK [2][-]{subsection.2.1.1}{OSTicket}{section.2.1}% 37
+\BOOKMARK [2][-]{subsection.2.1.2}{Bootstrap}{section.2.1}% 38
+\BOOKMARK [2][-]{subsection.2.1.3}{PHP}{section.2.1}% 39
+\BOOKMARK [2][-]{subsection.2.1.4}{MySQL}{section.2.1}% 40
+\BOOKMARK [1][-]{section.2.2}{Werkzeuge}{chapter.2}% 41
+\BOOKMARK [2][-]{subsection.2.2.1}{NetBeans}{section.2.2}% 42
+\BOOKMARK [2][-]{subsection.2.2.2}{XAMPP Apache}{section.2.2}% 43
+\BOOKMARK [2][-]{subsection.2.2.3}{MySQL Workbench}{section.2.2}% 44
+\BOOKMARK [1][-]{section.2.3}{Modelle}{chapter.2}% 45
+\BOOKMARK [2][-]{subsection.2.3.1}{Klassendiagramm}{section.2.3}% 46
+\BOOKMARK [2][-]{subsection.2.3.2}{Komponentendiagramm}{section.2.3}% 47
+\BOOKMARK [1][-]{section.2.4}{Implementierung}{chapter.2}% 48
+\BOOKMARK [0][-]{chapter.3}{Problemanalyse}{}% 49
+\BOOKMARK [1][-]{section.3.1}{USE-Case-Analyse}{chapter.3}% 50
+\BOOKMARK [2][-]{subsection.3.1.1}{Ablaufbeschreibung}{section.3.1}% 51
+\BOOKMARK [1][-]{section.3.2}{Wireframes}{chapter.3}% 52
+\BOOKMARK [1][-]{section.3.3}{Prototyp}{chapter.3}% 53
+\BOOKMARK [1][-]{section.3.4}{Domain-Class-Modelling}{chapter.3}% 54
+\BOOKMARK [1][-]{section.3.5}{User-Interface-Design}{chapter.3}% 55
+\BOOKMARK [0][-]{chapter.4}{Systementwurf}{}% 56
+\BOOKMARK [1][-]{section.4.1}{Architektur}{chapter.4}% 57
+\BOOKMARK [1][-]{section.4.2}{Benutzerschnittstellen}{chapter.4}% 58
+\BOOKMARK [1][-]{section.4.3}{Datenbankentwurf}{chapter.4}% 59
+\BOOKMARK [1][-]{section.4.4}{Klassenentwurf}{chapter.4}% 60
+\BOOKMARK [1][-]{section.4.5}{Sicherheit des Systems}{chapter.4}% 61
+\BOOKMARK [0][-]{chapter.5}{Implementierung}{}% 62
+\BOOKMARK [0][-]{chapter.6}{Deployment}{}% 63
+\BOOKMARK [0][-]{chapter.7}{Tests}{}% 64
+\BOOKMARK [1][-]{section.7.1}{Systemtests}{chapter.7}% 65
+\BOOKMARK [1][-]{section.7.2}{Akzeptanztests}{chapter.7}% 66
+\BOOKMARK [0][-]{chapter.8}{Projektevaluation}{}% 67
+\BOOKMARK [0][-]{chapter.9}{Benutzerhandbuch}{}% 68
+\BOOKMARK [0][-]{chapter.10}{Zusammenfassung}{}% 69
+\BOOKMARK [0][-]{chapter.11}{Beispielkapitel}{}% 70
+\BOOKMARK [1][-]{section.11.1}{Beispiele zitieren}{chapter.11}% 71
+\BOOKMARK [2][-]{subsection.11.1.1}{Beispiele Abbildungen}{section.11.1}% 72
+\BOOKMARK [1][-]{section.11.2}{Beispiele Listen}{chapter.11}% 73
+\BOOKMARK [1][-]{section.11.3}{Beispiel Codesequenz}{chapter.11}% 74
+\BOOKMARK [2][-]{subsection.11.3.1}{Quicksort in JAVA}{section.11.3}% 75
+\BOOKMARK [1][-]{section.11.4}{Beispieltext}{chapter.11}% 76
+\BOOKMARK [0][-]{chapter*.52}{Abbildungsverzeichnis}{}% 77
+\BOOKMARK [0][-]{chapter*.53}{Tabellenverzeichnis}{}% 78
+\BOOKMARK [0][-]{chapter*.54}{Quelltexte}{}% 79
+\BOOKMARK [0][-]{chapter*.55}{Literaturverzeichnis}{}% 80
+\BOOKMARK [0][-]{appendix.A}{Anhang-Kapitel}{}% 81
+\BOOKMARK [1][-]{section.A.1}{Anhang-Section}{appendix.A}% 82

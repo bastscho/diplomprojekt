@@ -5,8 +5,9 @@
 \chapter*{Notationen}
 Beschreibung wie Code, Hinweise, Zitate etc. formatiert werden  
 
-\chapter{Projektmanagement}
 
+\chapter{Projektmanagement}
+%todo: Projektmanagementscheiße bullshitten
 \section{Metainformationen}
 \subsection{Team}
 \subsection{Betreuer}
@@ -14,7 +15,8 @@ Beschreibung wie Code, Hinweise, Zitate etc. formatiert werden
 \subsection{Ansprechpartner}
 \section{Vorerhebungen}
 \subsection{Projektzieleplan}
-Projektziele-Hierarchie - SMART
+
+
 \newpage
 \subsection{Projektumfeld}
 \begin{itemize}
@@ -49,6 +51,7 @@ Je höher die Zahl in der Tabelle, desto höher ist die Auswirkung bzw. Einwirku
 	\caption{Analyse Einwirkung \& Auswirkung}
 	\label{Abb_Einwirkung_Auswirkung}
 \end{table}
+\newpage
 
 \subsubsection{Risikomatrix}
 \begin{figure}[h]
@@ -58,47 +61,155 @@ Je höher die Zahl in der Tabelle, desto höher ist die Auswirkung bzw. Einwirku
 	\label{Abb_Risikomatrix}
 \end{figure}
 
+
+\newpage
 \section{Pflichtenheft}
 \subsection{Zielbestimmung}
-\begin{itemize}
-	\item Projektbeschreibung
-	\item IST-Zustand
-	\item SOLL-Zustand
-	\item NICHT-Ziele (Abgrenzungskriterien)
-\end{itemize}
+\section{IST Zustand}
+IT-ManagerInnen an Tirols Schulen können Probleme mit der Infrastruktur melden und Anfragen zur Beschaffung von Ressourcen/Komponenten stellen.
+\\
+Sie können den Bearbeitungsverlauf ihrer Tickets beobachten. SystembetreuerInnen empfangen die Tickets der IT-ManagerInnen, welche sich in ihrem Cluster befinden. SystembetreuerInnen bearbeiten die Tickets und antworten auf die Anfragen.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.725]{figures/Ist_Login.png}
+	\caption{IST-Zustand OS-Ticket}
+	\label{Abb_IST-Zustand}
+\end{figure}
+\noindent Die Benutzerschnittstelle ist derzeit nur auf die Benutzung mit großen Bildschirmen (ab 1024 Pixel Bildschirmbreite) ausgelegt. Sie kann sich nicht an kleinere Formate (Smartphone, etc.) anpassen.
+
+\section{SOLL Zustand}
+Bessere Usability soll mit Hilfe von Mobile-First Orientierung auf Basis von Bootstrap erreicht und wenn möglich die Ticketerstellung vereinfacht werden.
+\\
+Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten ermöglichen und eine Erweiterung von Landesebene auf Bundesebene zulassen. Des Weiteren gilt es, den AnwenderInnen den Ticketingprozess intuitiver zu gestalten.
+
+\subsection{SMART}
+\begin{description}
+	\item[S] Spezifisch\newline
+	Systembetreuer und IT-Manager können Support- und Beschaffungsanfragen mit Hilfe des Ticketsystems abwickeln.
+	\item[M] Messbar\newline
+	Systembetreuer empfangen die Tickets und kümmern sich um die Probleme. Die Schulen werden in Cluster eingeteilt und von Systembetreuern verwaltet. 
+	\item[A] Attraktiv\newline
+	Die Plattform muss auf jedem Endgerät verfügbar sein (Responsive Design). Das Absetzen und Ansehen von Tickets soll vereinfacht werden, die Plattform bietet einige Funktionen die für das System relevant sind.
+	\item[R] Realisierbar\newline
+	Zum Realisieren wird eine Testumgebung von Seiten des Betreuers zur Verfügung gestellt. Das Responsive Design wird mithilfe eines Framework (Bootstrap) realisiert.
+	\item[T] Terminisierbar\newline
+	Im Juni 2017 wird das Projekt abgeschlossen und eine technische Dokumentation des Projekts liegt vor.
+\end{description}
+
+
 \subsection{Produkteinsatz und Umgebung}
-\begin{itemize}
-	\item Anwendungsgebiet
-	\item Zielgruppen
-	\item Betriebsbedingungen
-	\item Hard-/Softwareumgebung
-\end{itemize}
+%--------------------------------
+%todo: Anwender des Systems beschreiben (steht auch so in der Vorlage)
+%--------------------------------
+\subsection{Projektumfeldanalyse}
+\subsubsection{Einflussfaktoren}
+Das Projekt wurde durch den Landesschulrat Tirol in Auftrag gegeben. Die Ansprechperson, Herr Helmut Hammerl, informiert uns über den IST und SOLL-Zustand der Plattform und unterstützt das Projekt mit Ideen und Hilfestellungen bei Problemstellungen.
+\\
+Des Weiteren beeinflussen die Anwender (IT-Manager) und die Systembetreuer der Plattform das Projektresultat. Da auf die Anwenderfreundlichkeit viel Wert gelegt wird, spielen diese Faktoren eine wirkliche Rolle.
+\\
+Die Projektbetreuer Stefan Stolz und Alexander Scharmer sind für auftretende Fragen, bezüglich Problemstellungen die während des Projekts auftreten können, enorm einflussreich.
+\newpage
+\subsection{Stakeholder}
+\subsubsection{Stakeholder Identifizieren}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|lll|}
+		\hline
+		Stakeholder          & Einfluss &  Konfliktpotential      \\ \hline                         
+		Mag. Helmut Hammerle & 3         & 0                  \\ 
+		Dr. Stefan Walch     & 2         & 0                  \\
+		Stefan Stolz         & 1         & +                  \\ 
+		Alexander Scharmer   & 1         & +                  \\ 
+		Michael Gamper       & 0         & 0                  \\ 
+		LSI DI Anton Lendl   & 3         & 0                  \\ 
+		Team Mitglieder      & 2         & 0                   \\ \hline			
+	\end{tabular}
+	\caption{Stakeholder Identifikation}
+	\label{Tbl_Stakeholder_Identifikation}
+\end{table}
+
+
+\subsubsection{Stakehnolder Klassifizieren}	
+
+%todo: Formatierung der Tabelle
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|lll|}
+		\hline
+		Stakeholder          & Risiken durch Stakeholder                        & Strategien                                            \\ \hline
+		Mag. Helmut Hammerle & Ändern der Ansprüche          & Unterschriebenes Pflichtenheft  \\
+		Dr. Stefan Walch      & Nicht bestätigen des Projektantrages             & Durchdachter Projektantrag                            \\
+		Stefan Stolz         & falsche Informationen, kein Interesse & regelmäßiges Treffen             \\
+		Alexander Scharmer   & falsche Informationen, kein Interesse & regelmäßiges Treffen              \\
+		Michael Gamper       & Nicht bestätigen des Projektantrages             & Durchdachter Projektantrag                            \\
+		LSI DI Anton Lendl   & Nicht bestätigen des Projektantrages             & Durchdachter Projektantrag                            \\
+		Team Mitglieder      & Mangelnde Motivation                             & Faire Arbeitsverteilung           \\ \hline			
+	\end{tabular}
+	\caption{Stakehodler Klassifikation}
+	\label{Tbl_Stakeholder_Klassifikation}
+\end{table}
+
+
 \subsection{Funktionalitäten}
-\begin{itemize}
-	\item MUSS-Anforderungen
-	\begin{itemize}
-		\item Funktional
-		\item Nicht-funktional
-	\end{itemize}
-	\item KANN-Anforderungen
-	\begin{itemize}
-		\item Funktional
-		\item Nicht-funktional
-	\end{itemize}
-\end{itemize}
+\subsection{Muss Anforderungen}
+IT-ManagerInnen und Systembetreuer müssen sich unter itsys-tirol.at, einem Portal des Landesschulrates, basierend auf OSticket anmelden können. Des Weiteren sollen die Schulen selbst bestimmen, wer einen Zugang zum Portal erhalten soll, um Tickets erstellen zu können.
+\\
+Die angemeldeten IT-ManagerInnen müssen Probleme mit der Infrastruktur melden können und Anfragen zur Beschaffung von Ressourcen bzw. Komponenten einreichen können.
+\\
+SystembetreuerInnen müssen die Tickets der IT-ManagerInnen empfangen, welche sich in ihrem Cluster befinden. Die eingereichten Tickets sollen von den Systembetreuern bearbeitet werden können.
+
+\subsection{Soll Anforderungen}
+Es soll eine neue Weboberfläche entwickelt werden, die auf dem HTML \& CSS Framework Bootstrap basiert. Dieses soll sich auf Einfachheit in der Anwendung und Benutzerfreundlichkeit fokussieren. Die Latenzzeit sollte so niedrig wie möglich gehalten werden um ein Reibungsloses Arbeiten zu ermöglichen.
+
+%todo: Testfälle sind furchtbar und müssen generell nocheinmal überarbeitet werden
 \subsection{Testszenarien und Testfälle}
+Die Testfälle in unserem Projekt beziehen sich auf das Ticketingsystem OSTicket.
+
+\section{Testfälle}
+\subsection{Testfall A}
 \begin{itemize}
-	\item Beschreibung der Testmethodik
-	\item Testfall 1
-	\item Testfall 2
-	\item \ldots
+	\item \textbf{Beschreibung:} Ein IT-Manager möchte ein Ticket erstellen.
+	\item \textbf{Vorbedingung:} Der User benötigt ein internetfähiges Gerät und muss im Portal eingeloggt sein.
+	\item \textbf{Aktion:} Der Benutzer wählt den Tab "Neues Ticket" und füllt die notwendigen Felder aus.
+	\item \textbf{Soll-Reaktion:} Das System setzt das Ticket für den zuständigen Systembetreuer sichtbar.
 \end{itemize}
+Tester:
+\\M
+Datum:
+
+\subsection{Testfall B}
+\begin{itemize}
+	\item \textbf{Beschreibung:} Ein Systembetreuer möchte ein Ticket bearbeiten.
+	\item \textbf{Vorbedingung:} Der Systembetreuer benötigt ein internetfähiges Gerät und muss im Portal eingeloggt sein.
+	\item \textbf{Aktion:} Der Systembetreuer wählt den Tab "Meine Tickets" und wählt ein Ticket aus das Bearbeitet werden muss. Durch die Beschreibung des Tickets, weiß der Systembetreuer über die Problemstellung Bescheid und kann dementsprechend handeln.
+	\item \textbf{Soll-Reaktion:} Der Systembetreuer kann sich um die Problemstellung kümmern und das Ticket nach erfolgreicher Bearbeitung wieder schließen.
+\end{itemize}
+Tester:
+\\
+Datum:
+
+\subsection{Testfall C}
+\begin{itemize}
+	\item \textbf{Beschreibung:} Ein Anwender möchte ein bestimmtes Ticket suchen und dieses begutachten. 
+	\item \textbf{Vorbedingung:} Der Anwender benötigt ein internetfähiges Gerät und muss im Portal eingeloggt sein.
+	\item \textbf{Aktion:} Der Anwender gibt im Suchfeld ein Stichwort ein nach dem er suchen möchte. 
+	\item \textbf{Soll-Reaktion:} Das gesuchte Ticket soll angezeigt werden.
+\end{itemize}
+Tester:
+\\
+Datum:
+
+
+
 \subsection{Liefervereinbarung}
 \begin{itemize}
 	\item Lieferumfang
 	\item Modus
 	\item Verteilung(Deployment)
 \end{itemize}
+
+%todo: viel Bullshitten
 \section{Planung}
 \subsection{Projektstrukturplan}
 \subsection{Meilensteine}
@@ -110,38 +221,185 @@ Je höher die Zahl in der Tabelle, desto höher ist die Auswirkung bzw. Einwirku
 \chapter{Vorstellung des Produktes}
 Vorstellung des fertigen Produktes anhand von Screenshots, Bildern, Erklärungen.
 
-\chapter{Eingesetzte Technologien}
-\begin{itemize}
-	\item Kurzbeschreibung aller Technologien, die verwendet wurden.
-	\item Technologien die aus dem Unterricht bekannt sind, nur nennen und deren  Einsatzzweck im Projekt beschreiben, nicht die Technologien selbst.
-	\item Technologien die aus dem Unterricht nicht bekannt sind, im Detail beschreiben incl. deren Einsatz im Projekt
-	\item Fokus aus eingesetzten Frameworks
-\end{itemize}
+
+%----------------------------------------------
+\section{Systemdokumentation}
+%todo: Systemdokumentation aus SYP hinzufügen, ist jedoch nicht ganz so einfach da Probleme mit Packages auftreten 
+
+
+%-------------------------------------
+%todo: Formatierungschaos im Chapter Problemanalyse beheben und Inhalt überarbeiten
+%-------------------------------------
 
 \chapter{Problemanalyse}
-\section{USE-Case-Analyse}
-\begin{itemize}
-	\item UseCases auf Basis von Benutzerzielen identifizieren: 
-	\begin{itemize}
-		\item Benutzer eines Systems identifizieren
-		\item Benutzerziele identifizieren (Interviews)
-		\item Use-Case-Liste pro Benutzer definieren
-	\end{itemize}
-	\item UseCases auf Basis von Ereignissen identifizieren: 
-	\begin{itemize}
-		\item Externes Event triggert einen Prozess
-		\item zeitliches Event triggert einen Prozess (Zeitpunkt wird erreicht) 
-		\item State-Event (Zustandsänderung im System triggert einen Prozess)
-	\end{itemize}
-	\item Werkzeuge:
-	\begin{itemize}
-		\item USE-Case-Beschreibungen (textuell, tabellarisch)
-		\item USE-Case-Diagramm
-		\item Aktivitätsdiagramm für den Use-Case (Interaktion zwischen Akteur und System abbilden)
-		\item System-Sequenzdiagramm (Spezialfall eines Sequenzdiagramms: Nur 1 Akteur und 1 Objekt, das Objekt ist das komplette System, es geht um die Input/Output Requirements, die abzubilden sind)
-	\end{itemize}
-\end{itemize}
 
+\section{USE-Case-Analyse}
+{\linespread{.5}
+	\textbf{Akteure:}
+	\begin{itemize}
+		\item Systembetreuer
+		\item Anwender (IT-Manager und eventuell Lehrer, in Folgendem Anwender genannt)
+\end{itemize}}
+
+\vspace{-.5cm}
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.51]{figures/C00.png}
+	\caption{Use-Case C00}
+	\label{Abb_C00}
+\end{table}
+\newpage
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.55]{figures/C01.png}
+	\caption{Use-Case C01}
+	\label{Abb_C01}
+\end{table}
+\newpage
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.6]{figures/C02.png}
+	\caption{Use-Case C02}
+	\label{Abb_C02}
+\end{table}
+
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.62]{figures/C03.png}
+	\caption{Use-Case C03}
+	\label{Abb_C03}
+\end{table}
+\newpage
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.62]{figures/C04.png}
+	\caption{Use-Case C04}
+	\label{Abb_C04}
+\end{table}
+
+
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.62]{figures/C05.png}
+	\caption{Use-Case C05}
+	\label{Abb_C05}
+\end{table}
+\newpage
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.62]{figures/C06.png}
+	\caption{Use-Case C06}
+	\label{Abb_C06}
+\end{table}
+\newpage
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.62]{figures/C07.png}
+	\caption{Use-Case C07}
+	\label{Abb_C07}
+\end{table}
+
+\vspace{-.5cm}	
+\begin{table}[h]
+	\centering
+	\includegraphics[scale=0.62]{figures/C08.png}
+	\caption{Use-Case C08}
+	\label{Abb_C08}
+\end{table}
+
+
+\subsection{Ablaufbeschreibung}
+\textbf{C00:}
+\\ 
+Der Benutzer wird aufgefordert seine Benutzerdaten einzugeben.
+Hat er die Daten richtig eingegeben wird er angemeldet. Sind die Daten falsch kommt er zurück zur Dateneingabe.
+\\
+\textbf{C01:}
+\\
+Der Benutzer muss zuerst ein Formular öffnen, um ein Ticket erstellen zu können. Anschließend muss das Formular ausgefüllt werden. 
+\\
+Nach dem Überprüfen des Tickets kann der Benutzer sich entscheiden ob er das Ticket abschickt oder ob er Änderungen vornehmen möchte. 
+\\
+Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war, wird das Ticket in der Datenbank gespeichert.
+\\
+\textbf{C02:}
+\\
+Der Benutzer muss zuerst ein Formular öffnen um einen Incident erstellen zu können. Anschließend muss das Formular ausgefüllt werden. Nach dem Überprüfen des Incident kann der Benutzer sich entscheiden, ob er den Incident abschickt oder ob er Änderungen vornehmen möchte.
+\\
+Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war wird der Incident in der Datenbank gespeichert und der Systembetreuer erhält eine Benachrichtigung.
+\\
+\textbf{C03:}
+\\
+Der Benutzer muss das Formular öffnen um den Status zu sehen. Ist das Öffnen fehlgeschlagen kommt er wieder zum Ausgangspunkt und kann es nochmal versuchen.
+\\
+\textbf{C04:}
+\\
+Um die Löschung beantragen zu können muss der Benutzer zuerst das Ticket öffnen. Danach kann er die Löschung beantragen. Schlägt dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War der Antrag auf Löschung erfolgreich erhält der Systembetreuer eine Anfrage zur Löschung.
+\\
+\textbf{C05:}
+\\
+Um ein Ticket zu löschen muss der Systembetreuer das Ticket öffnen und löschen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das Löschen erfolgreich wurde das Ticket aus der Datenbank entfernt.
+\\
+\textbf{C06:}
+\\
+Um den Ticketstatus ändern zu können muss der Systembetreuer das Ticket öffnen und ändern. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das ändern erfolgreich wurde der Ticketstatus geändert.
+\newpage
+\textbf{C07:}
+\\
+Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen um es dann zu schließen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das schließen erfolgreich ist das Ticket geschlossen.
+
+\newpage
+\section{Wireframes}	
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.44]{figures/Wireframe_Anwender.png}
+	\caption{Mockup Anwendersicht}
+	\label{Abb_Mockup_Anwendersicht}
+\end{figure}
+
+\vspace{-.5cm}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.399]{figures/Wireframe_Systembetreuer.png}
+	\caption{Mockup Systembetreuer}
+	\label{Abb_Mockup_Systembetreuer}
+\end{figure}
+
+
+
+\vspace{.5cm}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.582]{figures/Wireframe_Ticket.png}
+	\caption{Mockup Ticketstatus}
+	\label{Abb_Mockup_Ticketstatus}
+\end{figure}	
+
+\newpage
+\section{Prototyp}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.8]{figures/Prototyp.png}
+	\caption{Prototyp Ticketstatus}
+	\label{Abb_Prototyp_Ticketstatus}
+\end{figure}
+
+
+%-------------------------------------------------
+%Chapter Problemanalyse Formatierungschaos bis zu diesem Punkt
+%-------------------------------------------------
+
+
+
+
+\newpage
 \section{Domain-Class-Modelling}
 \begin{itemize}
 	\item "Dinge" (Rollen, Einheiten, Geräte, Events etc.) identifizieren, um die es im Projekt geht
@@ -149,6 +407,7 @@ Vorstellung des fertigen Produktes anhand von Screenshots, Bildern, Erklärungen
 	\item Zustandsdiagramme (zur Darstellung des Lebenszyklus von Domain-Klassen darstellen)
 \end{itemize}
 
+\newpage
 \section{User-Interface-Design}
 \begin{itemize}
 	\item Mockups
@@ -245,6 +504,7 @@ Zu Codesequenzen:
 
 \chapter{Tests}
 
+%todo: Testfälle doch in diesem Chapter verwenden?!? Vorlage etwas unklar
 \section{Systemtests} 
 Systemtests aller implementierten Funktionalitäten lt. Pflichtenheft
 \begin{itemize}
