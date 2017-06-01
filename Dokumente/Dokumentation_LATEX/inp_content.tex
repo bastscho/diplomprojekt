@@ -233,8 +233,76 @@ OSTicket hat sich als umfangreicher herausgestellt wie zu Beginn des Projekts an
 
 Ein weiteres Hindernis ergibt sich durch die Absenz einer auch nur annähernd aktuellen Dokumentation des laufend erweiterten und angepassten OSTicket.
 \\
-Um die Realisierbarkeit zu veranschaulichen nun einige Codeauszüge aus OSTicket:
-%todo: Codebeispiele
+Um die Realisierbarkeit zu veranschaulichen nun einige Codeauszüge aus OSTicket.
+\subsection{Codebeispiele}
+\begin{lstlisting}[language=PHP, caption=Auszug aus osTicket, label=code:qj]
+<?php
+/**************************************************
+main.inc.php
+
+Master include file which must be included at the 
+start of every file.
+The brain of the whole sytem. Don't monkey with it.
+
+Peter Rotich <peter@osticket.com>
+Copyright (c)  2006-2013 osTicket
+http://www.osticket.com
+
+Released under the GNU General Public License WITHOUT
+ ANY WARRANTY.
+See LICENSE.TXT for details.
+
+vim: expandtab sw=4 ts=4 sts=4:
+***************************************************/
+
+#Disable direct access.
+if(isset($_SERVER['SCRIPT_NAME'])
+&& !strcasecmp(basename($_SERVER['SCRIPT_NAME'])
+,basename(__FILE__)))
+die('kwaheri rafiki!');
+
+require('bootstrap.php');
+Bootstrap::loadConfig();
+Bootstrap::defineTables(TABLE_PREFIX);
+Bootstrap::i18n_prep();
+Bootstrap::loadCode();
+Bootstrap::connect();
+
+#Global override
+$_SERVER['REMOTE_ADDR'] = osTicket::get_client_ip();
+
+if(!($ost=osTicket::start()) || !($cfg = $ost->getConfig()))
+Bootstrap::croak(__('Unable to load config info 
+from DB. Get tech support.'));
+
+//Init
+$session = $ost->getSession();
+
+//System defaults we might want to make global//
+#pagenation default - user can override it!
+define('DEFAULT_PAGE_LIMIT', $cfg->getPageSize()?$cfg->getPageSize():25);
+
+#Cleanup magic quotes crap.
+if(function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
+$_POST=Format::strip_slashes($_POST);
+$_GET=Format::strip_slashes($_GET);
+$_REQUEST=Format::strip_slashes($_REQUEST);
+}
+
+// extract system messages
+$errors = array();
+$msg=$warn=$sysnotice='';
+if ($_SESSION['::sysmsgs']) {
+extract($_SESSION['::sysmsgs']);
+unset($_SESSION['::sysmsgs']);
+}
+?>
+
+\end{lstlisting}
+%todo: Zitate (Codezitate des Programmierers, Netzer fragen)
+%todo: wie genau soll man den begründen das da Code a scheiß is?
+In diesem Codeauszug wird die Komplexität von osTicket sehr gut veranschaulicht, der Aufruf von elf statischen Funktionen und der dürftigen Dokumentation der Programmierer "Don't monkey around with it", machen den Code unlesbar.
+
 
 
 
