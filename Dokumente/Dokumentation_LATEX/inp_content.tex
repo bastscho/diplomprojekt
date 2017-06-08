@@ -503,9 +503,30 @@ Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen u
 
 \chapter{Systementwurf}
 
+\def \currentAuthor{Jakob Tomasi}
+
+Aufgrund der bereits geschilderten Umstände der Nicht Durchführbarkeit einer Adaption von \getOst\ wurde ein Prototyp für ein Ticketsystem entworfen, welcher die vom Landesschulrat und den Tiroler Schulen benötigten Funktionen mitbringt. Die Anforderungen für dieses System sind im Grunde die gleichen, welche zu Beginn an die \getOst-Adaption gestellt wurden. 
+\\
+Zusammengefasst sind diese:
+
+\begin{itemize}
+	\item Usability: Das System soll ohne lange Schulungsphasen oder Einlernzeit verwendet werden können. Unter Verwendung ist hauptsächlich das Absetzten von Supporttickets definiert.
+	\item Mobility: Das Web-Frontend soll auch auf Smartphones und Tablets verwendet werden können und die gleichen Funktionen wie auf dem PC liefern.
+	\item Adaptability: Sollten sich Anforderungen, Best Practices oder Sicherheitsanforderungen ändern, sollen diese mit so geringem Aufwand als möglich implementiert werden können.
+\end{itemize}
+
+\section{Technologie}
+Für den Prototyp des Ticketsystems wurde Java Enterprise Edition ausgesucht. Diese Entscheidung basiert auf der Absicht, die bei \getOst\ gezogenen Schlüsse zu beachten und die Probleme die bei \getOst\ auftraten, zu vermeiden. JavaEE erscheint hierfür besonders geeignet, da es (in dem Verwendungsmodus, der an der Schule gelehrt wurde) von sich aus das MVC-Entwurfsmuster anwendet (mehr im nächsten Abschnitt). Des Weiteren eignet sich JavaEE für die Beseitigung der Schwächen \getOst s durch die relativ strengen Sprachkonventionen und die (beinahe) unausweichliche Objektorientierung.
+
 \section{Architektur}
-Darstellung und Beschreibung der Systemarchitektur (z.B. Komponentendiagramme). 
-Beispiele für Architekturen:
+Als Basis für die Systemarchitektur wird das Model View Controller Muster verwendet. Das bedeutet die Trennung zwischen JavaBeans (Model), die direkt mit der Persistenzebene (Datenbank) arbeitet, der Benutzerschnittstelle (View; Webschicht) und der Logik (Controller; Anwendungsschicht).
+
+%todo: Zitatquelle einfügen: Schießer, Schmollinger; Workshop Java EE 7
+Das Lehrbuch fasst das Entwurfsmuster wie folgt zusammen und bringt dessen Sinn sowie Existenzberechtigung im Evaluationsprogramm \glqq Ticketsystem\grqq\ auf den Punkt:
+\blockcquote[2015]{JavaEE ABC}{
+Das MVC ist ein Muster, das vorgibt, wie Darstellung, Logik und Daten in einer Applikation getrennt werden sollen. Ziel dieser Trennung ist die Verbesserung der Programmstruktur und damit die Wartbarkeit, Erweiterbarkeit, und Wiederverwendbarkeit des Codes.
+Das Modell kapselt die Daten und enthält je nach MVC-Ausprägung ggf. auch die fachliche Logik. Die View visualisiert das Modell und der Controller realisiert die Anwendungssteuerung Der Controller reagiert auf Benutzerinteraktionen innerhalb der View und aktualisiert ggf. die Daten am Modell. Die View wiederum passt sich je nach Ausprägung des MVC entweder automatisch an das veränderte Modell an oder wird durch den Controller über die Ausprägung informiert.
+}
 
 \begin{itemize}
 	\item MVC
@@ -519,6 +540,7 @@ Beispiele für Architekturen:
 Kompletter Entwurf aller Benutzerschnittstellen
 
 \section{Datenbankentwurf}
+\def \currentAuthor{Elias Gabl}
 
 \subsection{Beschreibung der Tabellen OSTicket}
 
@@ -1032,6 +1054,13 @@ Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Prio
 
 \section{Klassenentwurf}
 Design jedes einzelnen USE-Cases
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{figures/klassenentwurf_java_ticketsys_export.png}
+	\caption{Klassenentwurf Java EE Ticketsystem}
+	\label{Abb_Klassendesign_TicketSys}
+\end{figure}
 
 \begin{itemize}
 	\item Design-Klassendiagramme vom Domain-Klassendiagramm ableiten (incl. detaillierter Darstellung und Verwendung von Vererbungshierarchichen, abstrakten Klassen, Interfaces)
