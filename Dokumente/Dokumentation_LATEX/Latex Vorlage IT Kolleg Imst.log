@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.27)  8 JUN 2017 11:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.27)  8 JUN 2017 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3078,8 +3078,8 @@ Package babel Info: Redefining ngerman shorthand "~
 [39
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 538--538
-[]|\T1/lmr/bx/n/12 Column Na-
+Underfull \hbox (badness 1521) in paragraph at lines 540--541
+[]|\T1/lmr/m/n/12 Eindeutige ID des An-han-ges. Die-ser
  []
 
 
@@ -4000,7 +4000,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
 Here is how much of TeX's memory you used:
  28662 strings out of 493013
  516002 string characters out of 6136993
- 916767 words of memory out of 5000000
+ 915767 words of memory out of 5000000
  31334 multiletter control sequences out of 15000+600000
  76282 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4019,7 +4019,7 @@ type1/public/lm/lmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri
 /fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
 c/lm/lmtt12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 >
-Output written on "Latex Vorlage IT Kolleg Imst.pdf" (72 pages, 6586648 bytes).
+Output written on "Latex Vorlage IT Kolleg Imst.pdf" (72 pages, 6587155 bytes).
 
 PDF statistics:
  1113 PDF objects out of 1200 (max. 8388607)
