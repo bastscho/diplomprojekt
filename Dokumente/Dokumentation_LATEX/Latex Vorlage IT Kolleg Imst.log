@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.29)  23 MAY 2017 19:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.9.27)  8 JUN 2017 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1354,7 +1354,14 @@ Package cleveref Info: no abbreviation of names on input line 7493.
 (./inp_titlepage_kolleg.tex
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (./Latex Vorlage IT Kolleg Imst.aux)
+ (./Latex Vorlage IT Kolleg Imst.aux
+
+LaTeX Warning: Label `code:qj' multiply defined.
+
+
+LaTeX Warning: Label `code:qj@cref' multiply defined.
+
+)
 \openout1 = `"Latex Vorlage IT Kolleg Imst.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1371,8 +1378,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 3.
-
-(c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (c:/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 3.
@@ -1463,14 +1469,14 @@ Package cleveref Info: loaded `ngerman' language definitions on input line 179.
 Package scrbase Info: activating ngerman \lstlistingname on input line 179.
 Package Listings Info: Made | a short reference for \lstinline on input line 18
 0.
- <Logo_Projektpartner.jpg, id=292, 128.2385pt x 86.94136pt>
+ <Logo_Projektpartner.jpg, id=300, 128.2385pt x 86.94136pt>
 File: Logo_Projektpartner.jpg Graphic file (type jpg)
 
 <use Logo_Projektpartner.jpg>
 Package pdftex.def Info: Logo_Projektpartner.jpg used on input line 183.
 (pdftex.def)             Requested size: 125.90767pt x 85.35826pt.
 
-<Logo_Kolleg_Imst.png, id=293, 623.32875pt x 487.8225pt>
+<Logo_Kolleg_Imst.png, id=301, 623.32875pt x 487.8225pt>
 File: Logo_Kolleg_Imst.png Graphic file (type png)
 
 <use Logo_Kolleg_Imst.png>
@@ -1609,13 +1615,13 @@ Package babel Info: Redefining ngerman shorthand "~
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 78.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
+(babel)             in language  on input line 78.
  [9])
 \tf@toc=\write5
 \openout5 = `"Latex Vorlage IT Kolleg Imst.toc"'.
@@ -1740,7 +1746,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 54.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 54.
-[14] <figures/matrix.png, id=444, 619.02696pt x 466.74374pt>
+[14] <figures/matrix.png, id=454, 619.02696pt x 466.74374pt>
 File: figures/matrix.png Graphic file (type png)
 
 <use figures/matrix.png>
@@ -1768,7 +1774,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 68.
 
-<figures/Ist_Login.png, id=453, 631.93233pt x 364.79143pt>
+<figures/Ist_Login.png, id=463, 631.93233pt x 364.79143pt>
 File: figures/Ist_Login.png Graphic file (type png)
 
 <use figures/Ist_Login.png>
@@ -1941,240 +1947,1059 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 223.
 
-Overfull \hbox (3.15378pt too wide) in paragraph at lines 234--238
+Overfull \hbox (3.15378pt too wide) in paragraph at lines 234--237
 \T1/lmr/m/n/12 Um die Rea-li-sier-bar-keit zu ver-an-schau-li-chen nun ei-ni-ge
- Co-de-aus-zü-ge aus OSTicket: 
+ Co-de-aus-zü-ge aus OSTicket. 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 244.
+(babel)             in language  on input line 237.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 244.
+(babel)             in language  on input line 237.
+(c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(c:/texlive/2016/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 238.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 238.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 238.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
-[23
+(babel)             in language  on input line 238.
+ [23
 
 ]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 238.
+
+
+(c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+Package xcolor Warning: Incompatible color definition on input line 240.
+
+
+Package xcolor Warning: Incompatible color definition on input line 240.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 241.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 244.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 245.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 247.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 248.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 249.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 251.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 252.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 253.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 255.
+
+
+Package xcolor Warning: Incompatible color definition on input line 256.
+
+
+Package xcolor Warning: Incompatible color definition on input line 256.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 258.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 259.
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 260.
+
+
+Package xcolor Warning: Incompatible color definition on input line 261.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 262.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 264.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
+
+Package xcolor Warning: Incompatible color definition on input line 271.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
- [24]
+(babel)             in language  on input line 272.
+[24]
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 272.
+
+
+Package xcolor Warning: Incompatible color definition on input line 274.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 276.
+
+
+Package xcolor Warning: Incompatible color definition on input line 278.
+
+
+Package xcolor Warning: Incompatible color definition on input line 278.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 281.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 282.
+
+
+Package xcolor Warning: Incompatible color definition on input line 283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 283.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 285.
+
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 286.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 292.
+
+
+Package xcolor Warning: Incompatible color definition on input line 293.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 295.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+
+Package xcolor Warning: Incompatible color definition on input line 297.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 305.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 305.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 305.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 305.
+[25]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 312.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 312.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 320.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 320.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 320.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 320.
+ [26]
 chapter 3.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
+(babel)             in language  on input line 320.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 254.
+(babel)             in language  on input line 322.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 254.
-<figures/C00.png, id=499, 516.64447pt x 410.39035pt>
+(babel)             in language  on input line 322.
+<figures/C00.png, id=586, 516.64447pt x 410.39035pt>
 File: figures/C00.png Graphic file (type png)
  <use figures/C00.png>
-Package pdftex.def Info: figures/C00.png used on input line 265.
+Package pdftex.def Info: figures/C00.png used on input line 333.
 (pdftex.def)             Requested size: 263.48518pt x 209.29631pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 337.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 337.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 337.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 337.
 
-[25
+[27
 
- <./figures/C00.png>] <figures/C01.png, id=507, 469.00218pt x 436.63126pt>
+ <./figures/C00.png>] <figures/C01.png, id=593, 469.00218pt x 436.63126pt>
 File: figures/C01.png Graphic file (type png)
 
 <use figures/C01.png>
-Package pdftex.def Info: figures/C01.png used on input line 273.
+Package pdftex.def Info: figures/C01.png used on input line 341.
 (pdftex.def)             Requested size: 257.952pt x 240.14793pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 277.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 277.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 277.
+(babel)             in language  on input line 345.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 277.
- [26 <./figures/C01.png>]
-<figures/C02.png, id=514, 422.43536pt x 394.04356pt>
+(babel)             in language  on input line 345.
+ [28 <./figures/C01.png>]
+<figures/C02.png, id=600, 422.43536pt x 394.04356pt>
 File: figures/C02.png Graphic file (type png)
  <use figures/C02.png>
-Package pdftex.def Info: figures/C02.png used on input line 281.
+Package pdftex.def Info: figures/C02.png used on input line 349.
 (pdftex.def)             Requested size: 253.46317pt x 236.42796pt.
 
-<figures/C03.png, id=515, 421.14482pt x 352.74643pt>
+<figures/C03.png, id=601, 421.14482pt x 352.74643pt>
 File: figures/C03.png Graphic file (type png)
  <use figures/C03.png>
-Package pdftex.def Info: figures/C03.png used on input line 289.
+Package pdftex.def Info: figures/C03.png used on input line 357.
 (pdftex.def)             Requested size: 261.10709pt x 218.70052pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 361.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 361.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 293.
+(babel)             in language  on input line 361.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 293.
-[27 <./figures/C02.png>] <figures/C04.png, id=522, 418.13358pt x 314.89072pt>
+(babel)             in language  on input line 361.
+[29 <./figures/C02.png>] <figures/C04.png, id=608, 418.13358pt x 314.89072pt>
 File: figures/C04.png Graphic file (type png)
 
 <use figures/C04.png>
-Package pdftex.def Info: figures/C04.png used on input line 297.
+Package pdftex.def Info: figures/C04.png used on input line 365.
 (pdftex.def)             Requested size: 259.24013pt x 195.23021pt.
- <figures/C05.png, id=523, 430.60875pt x 323.92447pt>
+ <figures/C05.png, id=609, 430.60875pt x 323.92447pt>
 File: figures/C05.png Graphic file (type png)
 
 <use figures/C05.png>
-Package pdftex.def Info: figures/C05.png used on input line 306.
+Package pdftex.def Info: figures/C05.png used on input line 374.
 (pdftex.def)             Requested size: 266.97466pt x 200.83109pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 378.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 378.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 310.
+(babel)             in language  on input line 378.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 310.
-[28 <./figures/C03.png> <./figures/C04.png>]
-<figures/C06.png, id=532, 423.72589pt x 335.53929pt>
+(babel)             in language  on input line 378.
+[30 <./figures/C03.png> <./figures/C04.png>]
+<figures/C06.png, id=618, 423.72589pt x 335.53929pt>
 File: figures/C06.png Graphic file (type png)
  <use figures/C06.png>
-Package pdftex.def Info: figures/C06.png used on input line 314.
+Package pdftex.def Info: figures/C06.png used on input line 382.
 (pdftex.def)             Requested size: 262.70734pt x 208.0322pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 386.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 318.
+(babel)             in language  on input line 386.
 
-[29 <./figures/C05.png> <./figures/C06.png>]
-<figures/C07.png, id=541, 422.00517pt x 394.90393pt>
+[31 <./figures/C05.png> <./figures/C06.png>]
+<figures/C07.png, id=628, 422.00517pt x 394.90393pt>
 File: figures/C07.png Graphic file (type png)
  <use figures/C07.png>
-Package pdftex.def Info: figures/C07.png used on input line 322.
+Package pdftex.def Info: figures/C07.png used on input line 390.
 (pdftex.def)             Requested size: 261.6405pt x 244.83789pt.
 
-<figures/C08.png, id=542, 427.5975pt x 317.90196pt>
+<figures/C08.png, id=629, 427.5975pt x 317.90196pt>
 File: figures/C08.png Graphic file (type png)
  <use figures/C08.png>
-Package pdftex.def Info: figures/C08.png used on input line 330.
+Package pdftex.def Info: figures/C08.png used on input line 398.
 (pdftex.def)             Requested size: 265.1077pt x 197.09717pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 336.
+(babel)             in language  on input line 404.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 336.
+(babel)             in language  on input line 404.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 371.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 371.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 371.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 371.
-[30 <./figures/C07.png>]
+(babel)             in language  on input line 439.
+[32 <./figures/C07.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 371.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 371.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 371.
+(babel)             in language  on input line 439.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 371.
- [31 <./figures/C08.png>]
+(babel)             in language  on input line 439.
+ [33 <./figures/C08.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 376.
+(babel)             in language  on input line 444.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 376.
+(babel)             in language  on input line 444.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 376.
+(babel)             in language  on input line 444.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 376.
- [32]
+(babel)             in language  on input line 444.
+ [34]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 377.
+(babel)             in language  on input line 445.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 377.
+(babel)             in language  on input line 445.
 
-<figures/Wireframe_Anwender.png, id=560, 791.95876pt x 566.115pt>
+<figures/Wireframe_Anwender.png, id=646, 791.95876pt x 566.115pt>
 File: figures/Wireframe_Anwender.png Graphic file (type png)
 
 <use figures/Wireframe_Anwender.png>
-Package pdftex.def Info: figures/Wireframe_Anwender.png used on input line 380.
+Package pdftex.def Info: figures/Wireframe_Anwender.png used on input line 448.
 
 (pdftex.def)             Requested size: 348.46294pt x 249.09137pt.
 
-<figures/Wireframe_Systembetreuer.png, id=561, 791.20593pt x 567.62062pt>
+<figures/Wireframe_Systembetreuer.png, id=647, 791.20593pt x 567.62062pt>
 File: figures/Wireframe_Systembetreuer.png Graphic file (type png)
 
 <use figures/Wireframe_Systembetreuer.png>
 Package pdftex.def Info: figures/Wireframe_Systembetreuer.png used on input lin
-e 388.
+e 456.
 (pdftex.def)             Requested size: 315.69203pt x 226.48123pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Wireframe_Ticket.png, id=562, 543.53062pt x 391.4625pt>
+<figures/Wireframe_Ticket.png, id=648, 543.53062pt x 391.4625pt>
 File: figures/Wireframe_Ticket.png Graphic file (type png)
 
 <use figures/Wireframe_Ticket.png>
-Package pdftex.def Info: figures/Wireframe_Ticket.png used on input line 398.
+Package pdftex.def Info: figures/Wireframe_Ticket.png used on input line 466.
 (pdftex.def)             Requested size: 316.33443pt x 227.83089pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 403.
+(babel)             in language  on input line 471.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 403.
+(babel)             in language  on input line 471.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 403.
+(babel)             in language  on input line 471.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 403.
-[33 <./figures/Wireframe_Anwender.png>]
+(babel)             in language  on input line 471.
+[35 <./figures/Wireframe_Anwender.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 404.
+(babel)             in language  on input line 472.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 404.
+(babel)             in language  on input line 472.
 
-<figures/Prototyp.png, id=568, 589.77483pt x 479.21893pt>
+<figures/Prototyp.png, id=654, 589.77483pt x 479.21893pt>
 File: figures/Prototyp.png Graphic file (type png)
 
 <use figures/Prototyp.png>
-Package pdftex.def Info: figures/Prototyp.png used on input line 407.
+Package pdftex.def Info: figures/Prototyp.png used on input line 475.
 (pdftex.def)             Requested size: 471.82051pt x 383.37566pt.
 
-Overfull \hbox (45.02911pt too wide) in paragraph at lines 407--408
+Overfull \hbox (45.02911pt too wide) in paragraph at lines 475--476
  [][] 
  []
 
@@ -2182,190 +3007,520 @@ Overfull \hbox (45.02911pt too wide) in paragraph at lines 407--408
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 420.
+(babel)             in language  on input line 488.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 420.
+(babel)             in language  on input line 488.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 420.
+(babel)             in language  on input line 488.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 420.
-[34 <./figures/Wireframe_Systembetreuer.png>]
+(babel)             in language  on input line 488.
+[36 <./figures/Wireframe_Systembetreuer.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 421.
+(babel)             in language  on input line 489.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 421.
+(babel)             in language  on input line 489.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 428.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 428.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 428.
+(babel)             in language  on input line 496.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 428.
- [35 <./figures/Wireframe_Ticket.png>]
+(babel)             in language  on input line 496.
+ [37 <./figures/Wireframe_Ticket.png>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 429.
+(babel)             in language  on input line 497.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 429.
+(babel)             in language  on input line 497.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 436.
+(babel)             in language  on input line 504.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 436.
+(babel)             in language  on input line 504.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 436.
+(babel)             in language  on input line 504.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 436.
- [36 <./figures/Prototyp.png>]
+(babel)             in language  on input line 504.
+ [38 <./figures/Prototyp.png>]
 chapter 4.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 436.
+(babel)             in language  on input line 504.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 436.
+(babel)             in language  on input line 504.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 506.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 438.
+(babel)             in language  on input line 506.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 450.
+(babel)             in language  on input line 518.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 450.
+(babel)             in language  on input line 518.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 521.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 453.
+(babel)             in language  on input line 521.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 456.
+(babel)             in language  on input line 523.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 456.
+(babel)             in language  on input line 523.
+
+Underfull \hbox (badness 10000) in paragraph at lines 525--530
+
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 460.
+(babel)             in language  on input line 530.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 460.
+(babel)             in language  on input line 530.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 460.
+(babel)             in language  on input line 530.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 460.
-[37
+(babel)             in language  on input line 530.
+[39
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 536--555
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 559.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 489.
+(babel)             in language  on input line 559.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 559.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 559.
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 567--567
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 565--589
+[][] 
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 598.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
- [38]
+(babel)             in language  on input line 598.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 598.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 598.
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 602--602
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 600--616
+[][] 
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 621.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
- [39]
+(babel)             in language  on input line 621.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 621.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 621.
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 629--629
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 627--649
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 660--660
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (6.73996pt too wide) in paragraph at lines 673--673
+[]|\T1/lmr/m/n/12 autores_email_id| 
+ []
+
+
+Overfull \hbox (14.90494pt too wide) in paragraph at lines 685--685
+[]|\T1/lmr/m/n/12 group_membership| 
+ []
+
+
+Overfull \hbox (27.04036pt too wide) in paragraph at lines 687--687
+[]|\T1/lmr/m/n/12 ticket_auto_response| 
+ []
+
+
+Overfull \hbox (39.90031pt too wide) in paragraph at lines 689--689
+[]|\T1/lmr/m/n/12 message_auto_response| 
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 658--698
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 710--710
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 708--732
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 740.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 740.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 740.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 740.
+[43]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 742.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--745
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (33.04623pt too wide) in paragraph at lines 792--792
+[]|\T1/lmr/m/n/12 show_assigned_tickets| 
+ []
+
+
+Overfull \hbox (1.58751pt too wide) in paragraph at lines 794--794
+[]|\T1/lmr/m/n/12 changed_passwd| 
+ []
+
+
+Overfull \hbox (9.67621pt too wide) in paragraph at lines 798--798
+[]|\T1/lmr/m/n/12 auto_refresh_rate| 
+ []
+
+
+Overfull \hbox (37.4203pt too wide) in paragraph at lines 800--800
+[]|\T1/lmr/m/n/12 default_signature_type| 
+ []
+
+
+Overfull \hbox (15.22554pt too wide) in paragraph at lines 802--802
+[]|\T1/lmr/m/n/12 default_paper_size| 
+ []
+
+
+Underfull \hbox (badness 6575) in paragraph at lines 802--802
+[]|\T1/lmr/m/n/12 ENUM('Letter', 'Le-
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 802--802
+\T1/lmr/m/n/12 gal', 'Led-ger', 'A4',
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 804--805
+[]|\T1/lmr/m/n/12 Hier kön-nen zu-sätz-li-che In-for-ma-tio-nen
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 743--817
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 186.39923pt on input line 818.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 822.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 822.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 822.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 822.
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--862
+[]|\T1/lmr/m/n/12 ENUM(Web, Email,
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 829--885
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 23.29942pt on input line 886.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 888.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 888.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 888.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 888.
+[45]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 888.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 888.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 888.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 888.
+ [46]
+Underfull \hbox (badness 10000) in paragraph at lines 897--897
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (5.04318pt too wide) in paragraph at lines 904--904
+[]|\T1/lmr/m/n/12 default_email_id| 
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 895--916
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 927--927
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 925--952
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 956.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 956.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 956.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 956.
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 966--966
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (2.10957pt too wide) in paragraph at lines 976--976
+[]|\T1/lmr/m/n/12 priority_urgency| 
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 964--981
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 992--992
+[]|\T1/lmr/bx/n/12 Column Na-
+ []
+
+
+Overfull \hbox (29.06398pt too wide) in paragraph at lines 990--1024
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1029.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1029.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1050.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1050.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1050.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1050.
+[48]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1062.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1062.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+ [49]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+ [50]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+ [51]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1065.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1065.
+ [52]
 chapter 5.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 1065.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 492.
+(babel)             in language  on input line 1065.
 
-LaTeX Warning: Reference `qj' on page 1 undefined on input line 512.
+LaTeX Warning: Reference `qj' on page 1 undefined on input line 1085.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 515.
+(babel)             in language  on input line 1088.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 515.
+(babel)             in language  on input line 1088.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 515.
+(babel)             in language  on input line 1088.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 515.
-[40
+(babel)             in language  on input line 1088.
+[53
 
 ]
 chapter 6.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 515.
+(babel)             in language  on input line 1088.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 515.
+(babel)             in language  on input line 1088.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 1096.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 1096.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 1096.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 523.
-[41
+(babel)             in language  on input line 1096.
+[54
 
 ]
 chapter 7.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 1096.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 523.
+(babel)             in language  on input line 1096.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 526.
+(babel)             in language  on input line 1099.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 526.
+(babel)             in language  on input line 1099.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 1109.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 536.
+(babel)             in language  on input line 1109.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 538.
+(babel)             in language  on input line 1111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 538.
+(babel)             in language  on input line 1111.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 538.
+(babel)             in language  on input line 1111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 538.
-[42
+(babel)             in language  on input line 1111.
+[55
 
 ]
 chapter 8.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 538.
+(babel)             in language  on input line 1111.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 538.
+(babel)             in language  on input line 1111.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 541.
+(babel)             in language  on input line 1114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 541.
+(babel)             in language  on input line 1114.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 541.
+(babel)             in language  on input line 1114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 541.
-[43
+(babel)             in language  on input line 1114.
+[56
 
 ]
 chapter 9.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 541.
+(babel)             in language  on input line 1114.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 541.
+(babel)             in language  on input line 1114.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 1117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 1117.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 1117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 544.
-[44
+(babel)             in language  on input line 1117.
+[57
 
 ]
 chapter 10.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 1117.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 544.
+(babel)             in language  on input line 1117.
 ) (./inp_examples.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -2375,7 +3530,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [45
+ [58
 
 ]
 chapter 11.
@@ -2395,14 +3550,14 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 17.
-[46
+[59
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
- <figures/Arduino_Example.jpg, id=651, 5203.44pt x 3468.96pt>
+ <figures/Arduino_Example.jpg, id=807, 5203.44pt x 3468.96pt>
 File: figures/Arduino_Example.jpg Graphic file (type jpg)
 
 <use figures/Arduino_Example.jpg>
@@ -2423,7 +3578,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 39.
 
-<figures/shift_reg.png, id=653, 234.1247pt x 277.78781pt>
+<figures/shift_reg.png, id=809, 234.1247pt x 277.78781pt>
 <use figures/shift_reg.png> <use figures/shift_reg.png>
 <use figures/shift_reg.png>
 File: figures/shift_reg.png Graphic file (type png)
@@ -2438,7 +3593,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 72.
- [47]
+ [60]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 73.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2451,7 +3606,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 90.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 90.
- [48 <./figures/Arduino_Example.jpg>]
+ [61 <./figures/Arduino_Example.jpg>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 105.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2464,22 +3619,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 107.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 107.
- [49 <./figures/shift_reg.png>]
+ [62 <./figures/shift_reg.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 110.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 110.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 111.
 
-
-(c:/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 
 Package xcolor Warning: Incompatible color definition on input line 112.
 
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 112.
 
 Package xcolor Warning: Incompatible color definition on input line 112.
 
@@ -2539,7 +3687,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 129.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 129.
-[50]
+[63]
 
 Package xcolor Warning: Incompatible color definition on input line 129.
 
@@ -2680,7 +3828,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 160.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 160.
-[51]
+[64]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 165.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2694,7 +3842,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 189.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 189.
- [52]
+ [65]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2703,7 +3851,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 191.
- [53]
+ [66]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 191.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2722,7 +3870,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 193.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 193.
- [54
+ [67
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2759,7 +3907,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 195.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 195.
-[55
+[68
 
 ]
 chapter without number
@@ -2781,7 +3929,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-[56
+[69
 
 ]
 chapter without number
@@ -2797,7 +3945,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 67.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 67.
-[57
+[70
 
 ]) (./inp_appendix.tex
 Package babel Info: Redefining ngerman shorthand "|
@@ -2808,7 +3956,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [58]
+ [71]
 chapter A.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
@@ -2827,7 +3975,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 204.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 204.
- [59
+ [72
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
@@ -2839,21 +3987,24 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
 Package rerunfilecheck Info: File `"Latex Vorlage IT Kolleg Imst".out' has not 
 changed.
-(rerunfilecheck)             Checksum: 7FF1A24EBC6D8DD22E78E3B24E2CA551;4484.
+(rerunfilecheck)             Checksum: B46AA0BBD3802D171F07BA9B6F6928AA;4639.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
- 26595 strings out of 493013
- 479929 string characters out of 6136993
- 700775 words of memory out of 5000000
- 29375 multiletter control sequences out of 15000+600000
+ 28662 strings out of 493013
+ 516002 string characters out of 6136993
+ 916767 words of memory out of 5000000
+ 31334 multiletter control sequences out of 15000+600000
  76282 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,18n,66p,8843b,2115s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,18n,66p,8843b,3811s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2016/tex
 mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2016/texmf-dist/fonts/enc/
 dvips/base/8r.enc}{c:/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:
@@ -2868,11 +4019,11 @@ type1/public/lm/lmr6.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri
 /fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
 c/lm/lmtt12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb
 >
-Output written on "Latex Vorlage IT Kolleg Imst.pdf" (59 pages, 6547533 bytes).
+Output written on "Latex Vorlage IT Kolleg Imst.pdf" (72 pages, 6586648 bytes).
 
 PDF statistics:
- 927 PDF objects out of 1000 (max. 8388607)
- 811 compressed objects within 9 object streams
- 245 named destinations out of 1000 (max. 500000)
- 676 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1113 PDF objects out of 1200 (max. 8388607)
+ 983 compressed objects within 10 object streams
+ 348 named destinations out of 1000 (max. 500000)
+ 692 words of extra memory for PDF output out of 10000 (max. 10000000)
 
