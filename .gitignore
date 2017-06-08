@@ -54,3 +54,12 @@ Temporary Items
 *.bbl
 *.blg
 Dokumente/Dokumentation_LATEX/figures/klassenentwurf_java_ticketsys_export.png
+
+*.aux
+*.log
+*.lol
+*.lof
+*.lot
+*.pdf
+*.gz
+*.toc
