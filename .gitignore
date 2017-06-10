@@ -63,3 +63,6 @@ Dokumente/Dokumentation_LATEX/figures/klassenentwurf_java_ticketsys_export.png
 *.pdf
 *.gz
 *.toc
+*.bak
+
+*.sav
