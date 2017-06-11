@@ -1,4 +1,4 @@
-\def \currentAuthor {Gabi Sorglos} %so kann jederzeit der Autor geändert werden -> wird in der Fusszeile angezeigt.
+\def \currentAuthor {Das Projektteam} %so kann jederzeit der Autor geändert werden -> wird in der Fusszeile angezeigt.
 
 \chapter*{Einleitende Bemerkungen}
 
@@ -218,22 +218,51 @@ Datum:
 \subsection{Pläne zur Evaluierung}
 \subsection{Ergänzungen und zu klärende Punkte}
 
-\chapter{Vorstellung des Produktes}
-In diesem Kapitel werden die einzelnen Ansätze aufgelistet und evaluiert, die während des Projekts durchprobiert wurden.
-\section{Realisierbarkeit OSTicket}
-OSTicket hat sich als umfangreicher herausgestellt wie zu Beginn des Projekts angenommen wurde. Nach Ausarbeitung des konzeptuellen Ziels des Projektes erfolgte eine lange Phase der Evaluation, Einarbeitung und Dokumentation von OSTicket. Nach ca. 30 Stunden dieser Phase, in der die Komplexität und Schwerfälligkeit des Systems OSTicket langsam zu Tage gefördert wurde. Die Anzahl der Dateien setzt sich folgendermaßen zusammen:
-\begin{itemize}
-	\item 414 .php Dateien
-	\item 15 .css Dateien
-	\item 9 .less Dateien
-	\item 61 .sql Dateien
-	\item 1 .html Datei
-	\item \textbf{Ges. 500 Dateien}
-\end{itemize}
+\chapter{Produktvorstellung}
+In diesem Kapitel wird das Softwaresystem \getOst\ dokumentiert bzw. vorgestellt sowie dessen Eignung für die Anforderungen des Projektauftraggebers bearbeitet. Die im Zuge des Projektes geplante Modifikation von \getOst\ wird behandelt und es wird erläutert, warum diese nicht in einem angemessenen Rahmen durchführbar ist. Des Weiteren werden die Ansätze und unternommenen Schritte um das ursprüngliche Projektziel zu erreichen, dargestellt.
 
-Ein weiteres Hindernis ergibt sich durch die Absenz einer auch nur annähernd aktuellen Dokumentation des laufend erweiterten und angepassten OSTicket.
-\\
-Um die Realisierbarkeit zu veranschaulichen nun einige Codeauszüge aus OSTicket.
+\section{Realisierbarkeit mit \getOst}
+\getOst\ hat sich als umfangreicher herausgestellt wie zu Beginn des Projekts angenommen wurde. Nach Ausarbeitung des konzeptuellen Zieles des Projektes erfolgte eine lange Phase der Evaluation, Einarbeitung und Dokumentation von \getOst. Nach ca. 30 Stunden dieser (viel zu langen) Phase, in der die Komplexität und Schwerfälligkeit des Systems \getOst\ sich nicht bezwingen lassen wollte. Die Anzahl der Dateien setzt sich folgendermaßen zusammen:
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline 
+		Dateityp	& Dateianzahl \\ 
+		\hline 
+		.php		& 414 \\ 
+		\hline 
+		.css		& 15 \\ 
+		\hline 
+		.less		& 9 \\ 
+		\hline 
+		.sql		& 61 \\ 
+		\hline 
+		.html		& 1 \\ 
+		\hline
+		\hline 
+		Gesamt		& 500 \\ 
+		\hline 
+	\end{tabular}
+
+	\label{tbl_ost_dateianzahl}
+	\caption{Anzahl der unterschiedlichen Dateitypen in \getOst}
+\end{table}
+
+Ein weiteres Hindernis ergibt sich durch den Mangel an einer auch nur annähernd aktuellen Dokumentation des laufend erweiterten und angepassten \getOst.
+
+Damit ist \getOst\ nicht nur wegen der fehlenden Dokumentation kaum zu bändigen, sondern aufgrund seines ständigen Wachstums zu \glqq crufty\grqq , um mit sinvollem Aufwand angepasst zu werden:
+
+\blockcquote{cmdlinestephenson}{
+	 In the jargon of hackers\footnote{Der Kontext, aus dem dieses Zitat stammt (die IT-Welt um 1999), verwendet den Begriff \glqq Hacker\grqq\ auch für Personen, die Pionierarbeit in der Softwareentwicklung leisteten.}, it is called
+	\glqq cruft.\grqq\ An operating system that has many, many layers of it is described as \glqq crufty.\grqq \\
+	Hackers hate to do things twice, but when they see something crufty, their first impulse
+	is to rip it out, throw it away, and start anew.
+	[...]
+	Like an upgrade to an old building, cruft always seems like a good idea when the first layers of it go on – just routine maintenance, sound prudent management. This is especially true if (as it were) you never look into the cellar, or behind the drywall. But if you are a hacker who spends all his time looking at it from that point of view, cruft is fundamentally disgusting, and you can’t avoid wanting to go after it with a crowbar. Or, better yet, simply walk out of the building – let the Leaning Tower of Pisa fall over – and go make a new one THAT DOESN’T LEAN.
+}
+
+Um die Realisierbarkeit zu veranschaulichen nun einige Codeauszüge aus \getOst.
 \subsection{Codebeispiele}
 \begin{lstlisting}[language=PHP, caption=Auszug aus osTicket, label=code:qj]
 <?php
@@ -312,6 +341,7 @@ In diesem Codeauszug wird die Komplexität von osTicket sehr gut veranschaulicht
 \section{Systemdokumentation}
 %todo: Systemdokumentation aus SYP hinzufügen, ist jedoch nicht ganz so einfach da Probleme mit Packages auftreten 
 
+\input{inp_systemdoku.tex}
 
 %todo: Abklären, ob Position der OST-DB Doku hier angemessen ist
 % Elias' OST DB DOKU:
