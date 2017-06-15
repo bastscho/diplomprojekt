@@ -55,7 +55,7 @@ public class Datenbankanbindung
     }
     
     
-    public ArrayList getroles()
+    public ArrayList getRoles()
     {
         ArrayList <tpl_role> roles = new ArrayList<>();
         
@@ -76,6 +76,7 @@ public class Datenbankanbindung
                 
                 roles.add(role);
             }
+            rs.close();
             return roles;
         } 
         catch (SQLException ex) 
@@ -84,7 +85,7 @@ public class Datenbankanbindung
         }
     }
     
-    public ArrayList getusers()
+    public ArrayList getUsers()
     {
         ArrayList <tpl_user> users = new ArrayList<>();
         
@@ -120,6 +121,7 @@ public class Datenbankanbindung
                 
                 users.add(user);
             }
+            rs.close();
             return users;
         } 
         catch (SQLException ex) 
@@ -128,7 +130,7 @@ public class Datenbankanbindung
         }
     }
     
-    public ArrayList gettickets()
+    public ArrayList getTickets()
     {
         ArrayList <tpl_ticket> tickets = new ArrayList<>();
         
@@ -156,6 +158,7 @@ public class Datenbankanbindung
                 
                 tickets.add(ticket);
             }
+            rs.close();
             return tickets;
         } 
         catch (SQLException ex) 
@@ -164,7 +167,7 @@ public class Datenbankanbindung
         }
     }
     
-    public ArrayList getnotes()
+    public ArrayList getNotes()
     {
         ArrayList <tpl_note> notes = new ArrayList<>();
         
@@ -188,6 +191,7 @@ public class Datenbankanbindung
                 
                 notes.add(note);
             }
+            rs.close();
             return notes;
         } 
         catch (SQLException ex) 
@@ -196,7 +200,7 @@ public class Datenbankanbindung
         }
     }
     
-    public ArrayList getcluster()
+    public ArrayList getCluster()
     {
         ArrayList <tpl_cluster> clusters = new ArrayList<>();
         
@@ -218,6 +222,7 @@ public class Datenbankanbindung
                 
                 clusters.add(cluster);
             }
+            rs.close();
             return clusters;
         } 
         catch (SQLException ex) 
@@ -226,7 +231,7 @@ public class Datenbankanbindung
         }
     }
     
-    public ArrayList getschool()
+    public ArrayList getSchool()
     {
         ArrayList <tpl_school> schools = new ArrayList<>();
         
@@ -252,6 +257,7 @@ public class Datenbankanbindung
                 
                 schools.add(school);
             }
+            rs.close();
             return schools;
         } 
         catch (SQLException ex) 
@@ -260,7 +266,7 @@ public class Datenbankanbindung
         }
     }
 
-    public void insertrole(String name, String note)
+    public void insertRole(String name, String note)
     {
         try
         {
@@ -271,7 +277,7 @@ public class Datenbankanbindung
             System.out.println("Das Insert hat nicht funktioniert.");
         }
     }
-    public void insertuser(int role_id, int school_id, String firstname, String lastname, String email, String password, Date lastlogin, String phone, Date created)
+    public void insertUser(int role_id, int school_id, String firstname, String lastname, String email, String password, Date lastlogin, String phone, Date created)
     {
         try
         {
@@ -283,7 +289,7 @@ public class Datenbankanbindung
             System.out.println("Das Insert hat nicht funktioniert.");
         }
     }
-    public void insertticket(int user_id, String heading, Date created, Date closed, int priority)
+    public void insertTicket(int user_id, String heading, Date created, Date closed, int priority)
     {
         try
         {
@@ -294,7 +300,7 @@ public class Datenbankanbindung
             System.out.println("Das Insert hat nicht funktioniert.");
         }
     }
-    public void insertnote(int ticket, Date created, String text)
+    public void insertNote(int ticket, Date created, String text)
     {
         try
         {
@@ -305,7 +311,7 @@ public class Datenbankanbindung
             System.out.println("Das Insert hat nicht funktioniert.");
         }
     }
-    public void insertcluster(int clusterSuper, String name)
+    public void insertCluster(int clusterSuper, String name)
     {
         try
         {
@@ -316,7 +322,7 @@ public class Datenbankanbindung
             System.out.println("Das Insert hat nicht funktioniert.");
         }
     }
-    public void insertschool(int cluser_id, String designation, String address, String name)
+    public void insertSchool(int cluser_id, String designation, String address, String name)
     {
         try
         {
@@ -336,7 +342,7 @@ public class Datenbankanbindung
     {
         Datenbankanbindung con = new Datenbankanbindung();
         
-            tpl_role role = (tpl_role) (con.getroles().get(0));
+            tpl_role role = (tpl_role) (con.getRoles().get(0));
             System.out.println(role.getName());
             System.out.println(role.getId());
             System.out.println(role.getNote());

@@ -1,9 +1,10 @@
+\newpage
 \section{Datenbankentwurf}
 \def \currentAuthor{Elias Gabl}
 
 \subsection{Beschreibung der Tabellen OSTicket}
 
-In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem das für einfache Support Anwendung Entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht aber sind doch noch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
+In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem das für einfache Support Anwendung Entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht aber sind dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
 Bei gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben da es keine gute Dokumentation der Datenbank gibt und man den Inhalt der Spalten aus dem Kontext schließen muss.
 \newline
 \newline
@@ -14,7 +15,7 @@ An dieser Stelle sollte eigentlich ein Datenmodell sein aber da dieses von OSTic
 Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Tabelle. Dies beinhaltet den Datentyp, Name, und id des Anhanges. 
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:} \\
 		\hline
@@ -38,12 +39,41 @@ Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Ta
 \label{tab:ost_attachment}
 
 \newpage
+
+\subsubsection{ost\_config}
+
+In dieser Tabelle werden wichtige Informationen über das System OSTicket gespeichert. Die Werte werden mit einem Schlüssel in die Datenbank gespeichert (Key und Value).
+Diese Tabelle hat keine Referenz zu anderen Tabellen.
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		id & INT(11) & Eindeutige ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
+		Aussagekraft. \\
+		\hline
+		namespace & VARCHAR(64) & \\
+		\hline
+		key & VARCHAR(64) & Key der Information um die Suche zu erleichtern\\
+		\hline
+		value & TEXT & Informations Inhalt\\
+		\hline
+		updated & DATETIME & Erstelldatum der Information\\
+		\hline
+	\end{tabular}
+	\caption{tab:ost-config}
+\end{table}
+\label{tab:ost_config}
+\newpage
+
+
 \subsubsection{ost\_canned\_response}
 
 In dieser Tabelle werden vorgefertigte Antworten für Tickets gespeichert. Über die Antwort wird der Titel, die Sprache, der Inhalt, Erstelldatum und das Änderungsdatum gespeichert.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -71,41 +101,14 @@ In dieser Tabelle werden vorgefertigte Antworten für Tickets gespeichert. Über
 \end{table}
 \label{tab:ost_canned_response}
 
-
-\subsubsection{ost\_config}
-
-In dieser Tabelle werden wichtige Informationen über das System OSTicket gespeichert. Die Werte werden mit einem Schlüssel in die Datenbank gespeichert (Key und Value).
-Diese Tabelle hat keine Referenz zu anderen Tabellen.
-
-\begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
-		\hline
-		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
-		\hline
-		id & INT(11) & Eindeutige ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
-		Aussagekraft. \\
-		\hline
-		namespace & VARCHAR(64) & \\
-		\hline
-		key & VARCHAR(64) & Key der Information um die Suche zu erleichtern\\
-		\hline
-		value & TEXT & Informations Inhalt\\
-		\hline
-		updated & DATETIME & Erstelldatum der Information\\
-		\hline
-	\end{tabular}
-	\caption{tab:ost-config}
-\end{table}
-\label{tab:ost_config}
-
-
 \newpage
+
 \subsubsection{ost\_content}
 
 In dieser Tabelle werden Inhalte der Seiten gehalten. Es wird angeben ob der Inhalt aktiv ist oder nicht. Jeder Inhalt hat auch eine Titel und eine Body. Es werden auch noch der Typ und das Erstell/Änderungsdatum angegeben.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -131,12 +134,14 @@ In dieser Tabelle werden Inhalte der Seiten gehalten. Es wird angeben ob der Inh
 \end{table}
 \label{tab:ost_content}
 
+\newpage
+
 \subsubsection{ost\_department}
 
 Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat einen Namen und eine Signatur. Ein Feld das angibt ob die Abteilung öffentlich ist oder nicht. Es wird auch festgehalten zu welcher Gruppe die Abteilung gehört und wann die Abteilung erstellt worden ist.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -180,13 +185,15 @@ Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat e
 \end{table}
 \label{tab:ost_department}
 
+\newpage
+
 
 \subsubsection{ost\_faq}
 
 In dieser Tabelle werden die meist gestellten Fragen und die Antworten dazu gespeichert. Weiteres werden noch Schlüsselwörter und Anmerkungen zur Frage gespeichert.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -214,14 +221,16 @@ In dieser Tabelle werden die meist gestellten Fragen und die Antworten dazu gesp
 \end{table}
 \label{tab:ost_faq}
 
+\newpage
+
 \subsubsection{ost\_staff}
 
 Diese Tabelle hält sämtliche Informationen über die Staff Mitglieder des Systems OSTicket. Es wird der Vorname, Nachname, Username, das Passwort, die Email-Adresse, die Telefonnummer, die Sprache, ob das Mitglied aktiv ist, ob das Mitglied ein Administrator ist usw. gespeichert.
 Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mitglieds.
 
 
-\begin{table}[]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -264,6 +273,14 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mi
 		\hline
 		isadmin & TINYINT(1) & Gib an ob das Mitglied ein Administrator ist\\
 		\hline
+			\end{tabular}
+			\caption{tab:ost-staff}
+		\end{table}
+		\label{tab:ost_staff}
+		\newpage
+		\begin{table}[h]
+			\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
 		isvisible & TINYINT(1) & Gib an ob das Mitglied für andere sichtbar ist \\
 		\hline
 		onvacation & TINYINT(1) & Gib an ob der Mitarbeiter im Urlaub ist \\
@@ -295,19 +312,19 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mi
 		updated & DATETIME & Änderungsdatum des Mitgliedes \\
 		\hline
 	\end{tabular}
-	\caption{tab:ost-staff}
+	\caption{tab:ost-staff2}
 \end{table}
-\label{tab:ost_staff}
-
+\label{tab:ost_staff2}
 
 \newpage
+
 \subsubsection{ost\_ticket}
 
 Sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticket abgesetzt hat, die Erkennungsnummer, die Email-Adresse des Absenders, das Thema des Tickets und wer es bearbeiten muss. Es gibt auch ein Feld das speichert ob man auf das Ticket schon geantwortet hat, wann es erstellt und gegebenenfalls verändert worden ist und ob es schon geschlossen worden ist.
 
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -340,6 +357,14 @@ Sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticke
 		\hline
 		ip\_address & VARCHAR(64) & Die IP-Adresse von der das Ticket abgesetzt worden ist \\
 		\hline
+			\end{tabular}
+			\caption{tab:ost-ticket}
+		\end{table}
+		\label{tab:ost_ticket}
+		\newpage
+		\begin{table}[h]
+			\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
 		source & ENUM(Web, Email, Phone, API, Other) &\\
 		\hline
 		source\_extra & VARCHAR(40)&\\
@@ -363,17 +388,19 @@ Sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticke
 		updated & DATETIME & Änderungsdatum des Tickets\\
 		\hline
 	\end{tabular}
-	\caption{tab:ost-ticket}
+	\caption{tab:ost-ticket2}
 \end{table}
-\label{tab:ost_ticket}
+\label{tab:ost_ticket2}
+
 \newpage
+
 
 \subsubsection{ost\_user}
 
 Hier werden die User gespeichert die keine Mitglieder sind. Diese User können im OS Ticketsystem nur Tickets abschicken. Es wird der Name, der Status und wann er erstellt wurde gespeichert. Weiteres kann er auch einer Organisation zugeordnet werden.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -398,12 +425,14 @@ Hier werden die User gespeichert die keine Mitglieder sind. Diese User können i
 \end{table}
 \label{tab:ost_user}
 
+\newpage
+
 \subsubsection{ost\_user\_account}
 
 Hier wird auf Basis der ost\_user Tabelle ein Account abgespeichert.Der Account enthält eine Referenz auf einen User. Der Account besteht aus folgenden Informationen: Status des Users, die Sprache, in welcher Zeitzone er sich aufhält, den Username, das Passwort und wann er registriert wurde.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -442,7 +471,7 @@ Diese Tabelle enthält alle Informationen über die Priorität die ein Ticket ha
 Im gesamten kann ein Ticket eine von vier Prioritäten haben.
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -463,12 +492,14 @@ Im gesamten kann ein Ticket eine von vier Prioritäten haben.
 \end{table}
 \label{tab:ost_ticket_priotity}
 
+\newpage
+
 \subsubsection{ost\_help\_topic}
 
 Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Priorität zugeordnet werden. Weiter könne Themen auch bestimmten Abteilungen, Teams, Administratoren oder Mitarbeiter zugeteilt werden.   
 
 \begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{7.2cm}|}
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
@@ -505,6 +536,179 @@ Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Prio
 	\caption{tab:ost-help-topic}
 \end{table}
 \label{tab:ost_help_topic}
+
+\newpage
+
+\subsection{Beschreibung der Tabellen der Java EE Anwendung}
+Dieser Teil der Dokumentation beschreibt die Datenbank unserer neu erstellten Java EE Anwendung. Diese Java EE Anwendung erfüllt im Grunde alle Anforderungen die an das Ticketsystem gestellt wurden.\\
+Hinter dieser Anwendung steht die hier beschriebene Datenbank. Diese Datenbank wurde so konzipiert das sie einfach und Übersichtlicht ist. Es wurde auch darauf geachtet das keine unnötigen Tabellen verwendet werden müssen da wir anhand dieser Anwendung zeigen möchten wie viel unnötigen Funktionen das OSticketsystem vorweist.
+Hier haben Sie ein EER-Diagramm der Datenbank für die Grobe Übersicht.
+%todo: Einfügen des EER-Diagramms
+
+\newpage
+
+\subsubsection{tpl\_user}
+
+In dieser Tabelle werden die User des Ticketsystems gehalten. Von einem User wird der Vorname, Nachname, E-Mail-Adresse und das Password gespeichert. Optional kann auch der letzte Login, die Telefonnummer und das Datum an dem er erstellt worden ist gespeichert werden.
+Ein User muss einer Schule zugewiesen sein um vollständig im System registriert zu sein. Ein User kann auch ein Supervisor eines Clusters sein aber das ist optional.
+WICHTIG: lastlogin und created werden nach folgender Form in der Datenbank gespeichert "YYYY-MM-DD HH:MM:SS".
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		user\_id & INT & Eindeutige ID des User. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		role\_id & INT( & Referenz zu der Rolle die der User besitzt\\
+		\hline
+		school\_id & INT &  Referenz zu der Schule vom User \\
+		\hline
+		firstname & VARCHAR(32) & Vorname des Users\\
+		\hline
+		lastname & VARCHAR(32) & Nachname des Users\\
+		\hline
+		email & VARCHAR(128) & E-Mail-Adresse des Users\\
+		\hline
+		password & VARCHAR(128) & Das Passwort des Users in Hash Form \\
+		\hline
+		lastlogin & DATETIME & Das Datum, in oben angegebener Form, an dem sich der User zuletzt angemeldet hat \\
+		\hline
+		password & VARCHAR(24) & Das Passwort des Users in Hash Form \\
+		\hline
+		created & DATETIME & Das Datum, in oben angegebener Form, an dem der User angelegt worden ist\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-user}
+\end{table}
+\label{tab:tpl_user}
+
+\newpage
+
+\subsubsection{tpl\_ticket}
+
+In dieser Tabelle werden die erstellten Ticket des Ticketsystems gespeichert. Das Ticket wird genau einem User zugeordnet und kann mehrere Notizen(notes) haben. Des weiteren besteht ein Ticket aus einem Header, die Priorität und wann es erstellt und geschlossen worden ist.
+WICHTIG: closed und created werden nach folgender Form in der Datenbank gespeichert "YYYY-MM-DD HH:MM:SS".
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		ticket\_id & INT & Eindeutige ID des Tickets. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		user\_id & INT & Referenz zum User zu dem das Ticket gehört\\
+		\hline
+		heading & VARCHAR(45) &  Die Überschrift des Tickets\\
+		\hline
+		created & DATETIME & Das Datum, in oben angegebener Form, an dem das Ticket angelegt worden ist\\
+		\hline
+		closed & DATETIME & Das Datum, in oben angegebener Form, an dem das Ticket geschlossen worden ist\\
+		\hline
+		priority & INT & Hier wird die Priorität des Tickets angegeben. Kann eine Wert von 0-4 haben, der default Wert ist 0.\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-ticket}
+\end{table}
+\label{tab:tpl_ticket}
+
+\newpage
+
+\subsubsection{tpl\_note}
+
+In dieser Tabelle werden die Notizen(notes) für die Tickets gespeichert. Jeder Notiz wird ein Ticket zugewiesen. Ein Ticket kann auch mehrere Notizen haben aber eine Notiz gehört immer genau zu einem Ticket. Eine Notiz besteht aus einem Text und einem Datum das angibt wann die Notiz erzeugt worden ist.
+WICHTIG: created wird nach folgender Form in der Datenbank gespeichert "YYYY-MM-DD HH:MM:SS".
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		note\_id & INT & Eindeutige ID der Notiz. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		ticket\_id & INT & Referenz zum Ticket dem diese Notiz angehört\\
+		\hline
+		created & DATETIME & Das Datum, in oben angegebener Form, an dem die Notiz angelegt worden ist\\
+		\hline
+		text & VARCHAR(255) & Ein Text der Informationen zum Ticket beinhaltet\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-note}
+\end{table}
+\label{tab:tpl_note}
+
+\newpage
+
+\subsubsection{tpl\_role}
+
+In dieser Tabelle werden die Rollen gespeichert die ein User annehmen kann. Eine Rolle besteht lediglich aus einem Namen und einer Notiz. Ein User kann genau eine Rolle haben aber eine Rolle kann von mehreren User genutzt werden. 
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		role\_id & INT & Eindeutige ID der Rolle. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		name & VARCHAR(45) & Name der Rolle\\
+		\hline
+		note & VARCHAR(45) & Informationen über die Rolle\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-role}
+\end{table}
+\label{tab:tpl_role}
+
+\newpage
+
+\subsubsection{tpl\_school}
+
+In dieser Tabelle werden die Schulen gespeichert die bei diesem Ticketsystem dabei sind.
+Eine Schule wird mit Ihrer Bezeichnung, Adresse und Namen abgespeichert. Weiteres kann eine Schule einem Cluster zugeordnet werden. 
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		school\_id & INT & Eindeutige ID der Schule. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		cluster\_id & INT & Referenz zu dem Cluster dem die Schule angehört\\
+		\hline
+		designation & VARCHAR(45) & Schulbezeichnung der Schule\\
+		\hline
+		address & VARCHAR(45) & Die Adresse der Schule\\
+		\hline
+		name & VARCHAR(45) & Name der Schule\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-school}
+\end{table}
+\label{tab:tpl_school}
+
+\newpage
+
+\subsubsection{tpl\_cluster}
+
+In dieser Tabelle werden die Cluster festgelegt. Ein Cluster ist ein Mengen von Schule die zu einer Organisation zusammen geschlossen worden sind. Jeder Cluster hat einen Supervisor der für die Bearbeitung der anfallenden Ticket in diesem Cluster verantwortlich ist.
+Der Supervisor wird per Referenz zur User-Tabelle festgelegt ein Cluster hat immer genau einen Supervisor. Zusätzlich wird noch ein Name für den Cluster festgelegt.
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		cluster\_id & INT & Eindeutige ID des Clusters. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		clusterSupervisor & INT & Referenz zu dem User der in diesem Cluster der Supervisor ist\\
+		\hline
+		name & VARCHAR(45) & Name des Clusters\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-cluster}
+\end{table}
+\label{tab:tpl_cluster}
+
 %todo: Datenbank Doku Gendern
 %todo: Nummerierung der Tabellenname bei der Datenbank Doku
 %todo: Formatieren der Tabellen
