@@ -2,13 +2,41 @@
 \section{Datenbankentwurf}
 \def \currentAuthor{Elias Gabl}
 
-\subsection{Beschreibung der Tabellen OSTicket}
+\subsection{Tabellenbeschreibung OSTicket}
 
 In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem das für einfache Support Anwendung Entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht aber sind dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
 Bei gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben da es keine gute Dokumentation der Datenbank gibt und man den Inhalt der Spalten aus dem Kontext schließen muss.
 \newline
 \newline
 An dieser Stelle sollte eigentlich ein Datenmodell sein aber da dieses von OSTicket recht groß und komplex ist hat es hier nicht Platz aber Sie finden es auf dem mitgelieferten Datenträger.(Der Dateiname ist: OSTicketDB.mwb).
+
+\subsubsection{ost\_config}
+
+In dieser Tabelle werden wichtige Informationen über das System OSTicket gespeichert. Die Werte werden mit einem Schlüssel in die Datenbank gespeichert (Key und Value).
+Diese Tabelle hat keine Referenz zu anderen Tabellen.
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		id & INT(11) & Eindeutige ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
+		Aussagekraft. \\
+		\hline
+		namespace & VARCHAR(64) & \\
+		\hline
+		key & VARCHAR(64) & Key der Information um die Suche zu erleichtern\\
+		\hline
+		value & TEXT & Informations Inhalt\\
+		\hline
+		updated & DATETIME & Erstelldatum der Information\\
+		\hline
+	\end{tabular}
+	\caption{tab:ost-config}
+\end{table}
+\label{tab:ost_config}
+\newpage
+
 
 \subsubsection{ost\_attachment}
 
@@ -39,34 +67,6 @@ Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Ta
 \label{tab:ost_attachment}
 
 \newpage
-
-\subsubsection{ost\_config}
-
-In dieser Tabelle werden wichtige Informationen über das System OSTicket gespeichert. Die Werte werden mit einem Schlüssel in die Datenbank gespeichert (Key und Value).
-Diese Tabelle hat keine Referenz zu anderen Tabellen.
-
-\begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
-		\hline
-		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
-		\hline
-		id & INT(11) & Eindeutige ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
-		Aussagekraft. \\
-		\hline
-		namespace & VARCHAR(64) & \\
-		\hline
-		key & VARCHAR(64) & Key der Information um die Suche zu erleichtern\\
-		\hline
-		value & TEXT & Informations Inhalt\\
-		\hline
-		updated & DATETIME & Erstelldatum der Information\\
-		\hline
-	\end{tabular}
-	\caption{tab:ost-config}
-\end{table}
-\label{tab:ost_config}
-\newpage
-
 
 \subsubsection{ost\_canned\_response}
 
@@ -170,9 +170,9 @@ Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat e
 		\hline
 		group\_membership & TINYINT(1) & Gib an zu welcher Gruppe die Abteilung gehört \\
 		\hline
-		ticket\_auto\_response & TINYINT(1) & Das vordefinierte Standartticket der Abteilung \\
+		ticket\_auto\_ response & TINYINT(1) & Das vordefinierte Standartticket der Abteilung \\
 		\hline
-		message\_auto\_response & TINYINT(1) & Die vordefinierte Standartantwort der Abteilung auf Tickets \\
+		message\_auto\_ response & TINYINT(1) & Die vordefinierte Standartantwort der Abteilung auf Tickets \\
 		\hline
 		path & VARCHAR & Pfad der Abteilung\\
 		\hline
@@ -287,7 +287,7 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mi
 		\hline
 		assigned\_only & TINYINT(1) & \\
 		\hline
-		show\_assigned\_tickets & TINYINT(1) & Hat das Mitglied zugeteilte Tickets \\
+		show\_assigned\_ tickets & TINYINT(1) & Hat das Mitglied zugeteilte Tickets \\
 		\hline
 		changed\_passwd & TINYINT(1) & Gib an ob das Mitglied das Passwort schon mal geändert hat\\
 		\hline
@@ -295,7 +295,7 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mi
 		\hline
 		auto\_refresh\_rate & INT(10) & Gib die Taktrate an wie oft die Übersichtsseite des Mitgliedes automatisch aktualisiert werden soll \\
 		\hline
-		default\_signature\_type & ENUM('none', 'mine', 'dept') & Gib die default Signatur bei der Beantwortung eines Tickets an \\
+		default\_signature\_ type & ENUM('none', 'mine', 'dept') & Gib die default Signatur bei der Beantwortung eines Tickets an \\
 		\hline
 		default\_paper\_size & ENUM('Letter', 'Legal', 'Ledger', 'A4', 'A3') & Gib das default Format der Antwort auf ein Ticket an \\
 		\hline
@@ -539,11 +539,129 @@ Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Prio
 
 \newpage
 
-\subsection{Beschreibung der Tabellen der Java EE Anwendung}
+
+\subsection{Beschreibung der Datenbankanbindung von OSTicket}
+Die Datenbankanbindung in diesem System ist in der Klasse mysqli.php verankert. In dieser Klasse befinden sich Funktionen um eine Datenbankverbindung herzustellen, eine Query abzusetzen und die Verbindung wieder zu trennen.
+Um diese Funktionen nutzen zu können muss die Klasse mysqli.php einfach, indem zu bearbeiteten Quellcode, mit einem Include Statement eingebunden werden.
+Die Klasse besitzt im gesamten eine globale Variable namens \$\_\_db und 32 Funktionen. Die Variabel wird am Anfang der Klasse mit dem Wert Null Initialisiert und nach dem Aufrufen der db\_connect Funktion hält sie eine Mysqli Objekt.
+Im folgenden Abschnitt werden die wichtigsten Funktionen im Detail beschrieben.
+
+\subsubsection{function db\_connect}
+Diese Funktion stellt die Verbindung zu einer Datenbank her. Um eine Verbindung herstellen zu können benötigt sie folgende Parameter:
+	\begin{itemize}
+		\item \textbf{\$host} ist die Hostadresse unter der die Datenbank erreicht werden kann.
+		\item \textbf{\$user} ist ein User der die benötigen Rechte hat um lesend und schreiben auf die Datenbank zugreifen zu können.
+		\item \textbf{\$passwd} ist das Passwort des User.
+		\item \textbf{\$options} ist ein Array das Informationen über den Secure Sockets Layer (SSL) und den Namen der zu selektierenden Datenbank beinhaltet
+	\end{itemize}
+Diese Funktion kann man als Herzstück dieser Klasse bezeichnen, da man immer zuerst eine Verbindung zu der Datenbank herstellen muss um mit ihr arbeiten zu können. Um eine andere Funktion dieser Klasse nützten zu können muss man zuerst die Funktion db\_connect aufrufen.
+Eine Verbindung besteht solange bis man mit der Funktion db\_close die Verbindung beendet.
+\newpage
+
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect1, firstnumber=21]
+function db_connect($host, $user, $passwd, $options = array()) {
+global $__db;
+
+//Assert
+if(!strlen($user) || !strlen($host))
+return NULL;
+
+if (!($__db = mysqli_init()))
+return NULL;
+\end{lstlisting}
+
+In diesem Abschnitt des Codes wird zuerst die Variabel \textbf{\$\_\_db} als global deklariert. Anschließen wird durch die String-Funktion strlen geprüft welche Länge die Parameter \textbf{\$user} und \textbf{\$host} haben. Hat einer der beiden Parameter eine Länge von 0 dann liefert die Funktion den Wert Null für die Variable \textbf{\$\_\_db} zurück.\\
+Nach dem Überprüfen der beiden Parameter \textbf{\$user} und \textbf{\$host} wird bei der nächsten IF-Anweisung geprüft ob ein Mysqli Objekt instanziiert werden kann.
+
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect2, firstnumber=32]
+if (isset($options['ssl']))
+$__db->ssl_set(
+$options['ssl']['key'],
+$options['ssl']['cert'],
+$options['ssl']['ca'],
+null, null);
+elseif(!$passwd)
+return NULL;
+\end{lstlisting}
+In diesem Codeteil wird zuerst überprüft ob im Array \$options Werte mit dem Schlüssel 'ssl' abgelegt sind wenn das der Fall ist übergibt er die Werte 'key', 'cert', und 'ca' der Datenbankverbindung. Nach der Überprüfung des Arrays überprüft er noch ob ein Passwort gesetzt ist, ist keines gesetzt gibt die Funktion wieder Null zurück.
+
+\newpage
+
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect3, firstnumber=41]
+$port = ini_get("mysqli.default_port");
+$socket = ini_get("mysqli.default_socket");
+$persistent = stripos($host, 'p:') === 0;
+if ($persistent)
+$host = substr($host, 2);
+if (strpos($host, ':') !== false) {
+list($host, $portspec) = explode(':', $host);
+// PHP may not honor the port number 
+// if connecting to 'localhost'
+if ($portspec && is_numeric($portspec)) {
+if (!strcasecmp($host, 'localhost'))
+// XXX: Looks like PHP gethostbyname() is IPv4 only
+$host = gethostbyname($host);
+$port = (int) $portspec;
+}
+elseif ($portspec) {
+$socket = $portspec;
+}
+}
+
+if ($persistent)
+$host = 'p:' . $host;
+\end{lstlisting}
+
+In diesem Teilbereich des Codes werden Port, Socket und Hostname der Verbindung festgelegt. Zu beginn des Abschnittes wird mit Hilfe der Funktion ini\_get der default Wert vom MySql Port und Socket den Variablen \$port und \$socket zugewiesen.\\
+Anschließend wird mit Hilfe der Funktion stripos der Variable \$persistent der Wert true zugewiesen wenn der Value 'p:' am Anfang des Strings \$host steht oder false wenn 'p:' nicht am Anfang des Strings zu finden ist.\\
+Danach wird durch eine IF-Anweisung geprüft welchen Wert die Variable \$persistent angenommen hat. Hat sie den Wert true wird der Variable \$host durch die Funktion substr der gleiche Wert wie sie schon hatte nur ohne den ersten zwei Zeichen zugewiesen.\\
+In der nächsten IF-Anweisung wird geprüft ob sich im String der Variable \$host ein ':' befindet. Befindet sich im String ein Doppelpunkt so wird alles was sich Links vom Doppelpunkt befindet der Variable \$host zugewiesen und alles was sich Recht davon befindet wird der Variable \$portspec zugewiesen. Anschließen wird geprüft ob die Variable \$portspec einen Wert hat und ob dieser Wert Nummerisch ist. Trifft beides zu wird noch geprüft ob die Variable \$host den Wert 'localhost' hat. Hat die Variable \$host nicht den Wert 'localhost' wird durch die Funktion gethostbyname die IPv4 Adresse oder der unveränderte Hostnamen der Variable \$host zugewiesen und der Variable \$port wird der zu verwendende Port zugewiesen.
+
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect4, firstnumber=63]
+	    // Connect
+	    $start = microtime(true);
+	    if (!@$__db->real_connect($host, $user, $passwd, null, $port, $socket))
+	    return NULL;
+	    //Select the database, if any.
+	    if(isset($options['db'])) $__db->select_db($options['db']);
+	    
+	    @$__db->query('SET NAMES "utf8"');
+	    @$__db->query('SET CHARACTER SET "utf8"');
+	    @$__db->query('SET COLLATION_CONNECTION=utf8_general_ci');
+	    $__db->set_charset('utf8');
+\end{lstlisting}
+In diesem Abschnitt wird anhand der oben gesammelten Informationen die Verbindung zur Datenbank aufgebaut und die ausgewählte Datenbank selektiert.\\
+Anschließend werden noch Informationen über den verwendeten Zeichencode übergeben.\\
+\\
+Der Rückgabewerte dieser Funktion ist, wenn keine Fehler vorkommt, eine Mysqli Objekt. 
+\newpage
+
+\subsubsection{function db\_query}
+
+Mithilfe dieser Funktion kann man eine Query an die Datenbank abschicken. Ist die Query ein SELECT Statment bekommt man ein Result Set zurück ist es aber eine Query bei der man nur schreibend zugreift bekommt man nichts zurück. Um eine Query absetzten zu könne benötigt diese Funktion folgende Parameter:
+
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query1, firstnumber=154]
+function db_query($query, $logError=true, $buffered=true) {
+global $ost, $__db;
+
+if ($__db->unbuffered_result) {
+$__db->unbuffered_result->free();
+$__db->unbuffered_result = false;
+}
+\end{lstlisting}
+
+\newpage
+
+\subsection{Tabellenbeschreibung unserer Anwendung}
 Dieser Teil der Dokumentation beschreibt die Datenbank unserer neu erstellten Java EE Anwendung. Diese Java EE Anwendung erfüllt im Grunde alle Anforderungen die an das Ticketsystem gestellt wurden.\\
 Hinter dieser Anwendung steht die hier beschriebene Datenbank. Diese Datenbank wurde so konzipiert das sie einfach und Übersichtlicht ist. Es wurde auch darauf geachtet das keine unnötigen Tabellen verwendet werden müssen da wir anhand dieser Anwendung zeigen möchten wie viel unnötigen Funktionen das OSticketsystem vorweist.
-Hier haben Sie ein EER-Diagramm der Datenbank für die Grobe Übersicht.
-%todo: Einfügen des EER-Diagramms
+Hier haben Sie ein EER-Diagramm der Datenbank für die grobe Übersicht.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.8]{figures/EER-Diagramm-Java-EE-Anwendung.PNG}
+	\caption{EER-Diagramm-Java-EE-Anwendung}
+	\label{EER-Diagramm-Java-EE-Anwendung}
+\end{figure}
 
 \newpage
 
@@ -659,7 +777,6 @@ In dieser Tabelle werden die Rollen gespeichert die ein User annehmen kann. Eine
 \end{table}
 \label{tab:tpl_role}
 
-\newpage
 
 \subsubsection{tpl\_school}
 
@@ -708,6 +825,45 @@ Der Supervisor wird per Referenz zur User-Tabelle festgelegt ein Cluster hat imm
 	\caption{tab:tpl-cluster}
 \end{table}
 \label{tab:tpl_cluster}
+
+\newpage
+
+\subsection{Beschreibung der Datenbankanbindung unserer Anwendung}
+
+Die Datenbankanbindung wird durch die jdbc Api ermöglicht.
+
+\begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/getRoles-Methode, firstnumber=59]
+public ArrayList getRoles()
+{
+ArrayList <tpl_role> roles = new ArrayList<>();
+
+String value = "role_id";
+String value1 = "name";
+String value2 = "note";
+try 
+{
+ResultSet rs = dbconnect().executeQuery("SELECT * FROM tpl_role");
+
+while(rs.next())
+{
+tpl_role role = new tpl_role();
+
+role.setName(rs.getString(value1));
+role.setId(rs.getInt(value));
+role.setNote(rs.getString(value2));
+
+roles.add(role);
+}
+rs.close();
+return roles;
+} 
+catch (SQLException ex) 
+{
+return null;
+}
+}
+
+\end{lstlisting}
 
 %todo: Datenbank Doku Gendern
 %todo: Nummerierung der Tabellenname bei der Datenbank Doku
