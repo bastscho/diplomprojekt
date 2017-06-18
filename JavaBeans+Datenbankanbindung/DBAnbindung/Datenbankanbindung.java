@@ -18,6 +18,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Logger;
 
 /**
  *
@@ -258,6 +259,7 @@ public class Datenbankanbindung
                 schools.add(school);
             }
             rs.close();
+            
             return schools;
         } 
         catch (SQLException ex) 
@@ -265,75 +267,80 @@ public class Datenbankanbindung
             return null;
         }
     }
-
-    public void insertRole(String name, String note)
+    
+    public String insertRole(String name, String note)
     {
         try
         {
             dbconnect().executeUpdate("INSERT INTO tpl_role (name, note) VALUES (\""+ name +"\", \""+ note +"\")");
+            return "Das Insert hat funktioniert";
         }
         catch(SQLException e)
         {
-            System.out.println("Das Insert hat nicht funktioniert.");
+            return null;
         }
     }
-    public void insertUser(int role_id, int school_id, String firstname, String lastname, String email, String password, Date lastlogin, String phone, Date created)
+    public String insertUser(int role_id, int school_id, String firstname, String lastname, String email, String password, Date lastlogin, String phone, Date created)
     {
         try
         {
             dbconnect().executeUpdate("INSERT INTO tpl_user (role_id, school_id, firstname, lastname, email, password, lastlogin, phone, created) "
                     + "VALUES ("+ role_id +", "+ school_id +", \""+ firstname +"\", \""+ lastname +"\", \""+ email +"\", \"" +password+"\", \"" +lastlogin+"\", \"" +phone+"\", \"" +created+"\")"); 
+            return "Das Insert hat funktioniert";
         }
         catch(SQLException e)
         {
-            System.out.println("Das Insert hat nicht funktioniert.");
+            return null;
         }
     }
-    public void insertTicket(int user_id, String heading, Date created, Date closed, int priority)
+    public String insertTicket(int user_id, String heading, Date created, Date closed, int priority)
     {
         try
         {
             dbconnect().executeUpdate("INSERT INTO tpl_ticket (user_id, heading, created, closed, priority) VALUES (\""+ user_id +"\", \""+ heading +"\", \""+ created +"\", \""+ closed +"\", \""+ priority +"\")");
+            return "Das Insert hat funktioniert";
         }
         catch(SQLException e)
         {
-            System.out.println("Das Insert hat nicht funktioniert.");
+            return null;
         }
     }
-    public void insertNote(int ticket, Date created, String text)
+    public String insertNote(int ticket, Date created, String text)
     {
         try
         {
             dbconnect().executeUpdate("INSERT INTO tpl_note (ticket_id, created, text) VALUES (\""+ ticket +"\", \""+ created +"\", \""+ text +"\")");
+            return "Das Insert hat funktioniert";
         }
         catch(SQLException e)
         {
-            System.out.println("Das Insert hat nicht funktioniert.");
+            return null;
         }
     }
-    public void insertCluster(int clusterSuper, String name)
+    public String insertCluster(int clusterSuper, String name)
     {
         try
         {
             dbconnect().executeUpdate("INSERT INTO tpl_cluster (clusterSupervisor, name) VALUES (\""+ clusterSuper +"\", \""+ name +"\")");
+            return "Das Insert hat funktioniert";
         }
         catch(SQLException e)
         {
-            System.out.println("Das Insert hat nicht funktioniert.");
+            return null;
         }
     }
-    public void insertSchool(int cluser_id, String designation, String address, String name)
+    public String insertSchool(int cluser_id, String designation, String address, String name)
     {
         try
         {
             dbconnect().executeUpdate("INSERT INTO tpl_school(cluster_id, designation, address, name) VALUES (\""+ cluser_id +"\", \""+ designation +"\", \""+ address +"\", \""+ name +"\")");
+            return "Das Insert hat funktioniert";
         }
         catch(SQLException e)
         {
-            System.out.println("Das Insert hat nicht funktioniert.");
+            return null;
         }
     }
-    
    
     /**
      * @param args the command line arguments
@@ -342,10 +349,10 @@ public class Datenbankanbindung
     {
         Datenbankanbindung con = new Datenbankanbindung();
         
-            tpl_role role = (tpl_role) (con.getRoles().get(0));
-            System.out.println(role.getName());
-            System.out.println(role.getId());
-            System.out.println(role.getNote());
+//            tpl_role role = (tpl_role) (con.getRoles().get(0));
+//            System.out.println(role.getName());
+//            System.out.println(role.getId());
+//            System.out.println(role.getNote());
             //franz.insertrole("huber","bubble");
     }
 }

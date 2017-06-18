@@ -2,13 +2,15 @@
 \section{Datenbankentwurf}
 \def \currentAuthor{Elias Gabl}
 
-\subsection{Tabellenbeschreibung OSTicket}
+\subsection{Tabellenbeschreibung der Datenbank von OSTicket}
 
 In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem das für einfache Support Anwendung Entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht aber sind dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
 Bei gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben da es keine gute Dokumentation der Datenbank gibt und man den Inhalt der Spalten aus dem Kontext schließen muss.
 \newline
 \newline
 An dieser Stelle sollte eigentlich ein Datenmodell sein aber da dieses von OSTicket recht groß und komplex ist hat es hier nicht Platz aber Sie finden es auf dem mitgelieferten Datenträger.(Der Dateiname ist: OSTicketDB.mwb).
+
+\newpage
 
 \subsubsection{ost\_config}
 
@@ -20,7 +22,7 @@ Diese Tabelle hat keine Referenz zu anderen Tabellen.
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
-		id & INT(11) & Eindeutige ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
+		id & INT(11) & Eindeutg ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
 		Aussagekraft. \\
 		\hline
 		namespace & VARCHAR(64) & \\
@@ -51,7 +53,7 @@ Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Ta
 		\hline
 		object\_id & int(11) & Referenz auf ein Object das dem Anhang übergeben wird \\
 		\hline
-		type & CHAR(1) & Datentyp des Anhanges hat \\
+		type & CHAR(1) & Datentyp des Anhanges \\
 		\hline
 		file\_id & int(11) & Referenz auf das File das sich im Anhang befindet\\
 		\hline
@@ -59,7 +61,7 @@ Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Ta
 		\hline
 		inline & TINYINT(1) & Beschreibt den Zitierstil des Anhangs \\
 		\hline
-		lang & VARCHAR(16) & Die Sprache in der Abteilung \\
+		lang & VARCHAR(16) & Die Sprache in der, der Anhang verfasst wurde \\
 		\hline
 	\end{tabular}
 	\caption{tab:ost-attachment}
@@ -80,9 +82,9 @@ In dieser Tabelle werden vorgefertigte Antworten für Tickets gespeichert. Über
 		canned\_id & INT(10) & Eindeutige ID der Nachricht. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
 		Aussagekraft.\\
 		\hline
-		dept\_id & int(10) & Referenz auf die Abteilung die diese Nachricht verwenden können\\
+		dept\_id & int(10) & Referenz auf die Abteilungen die diese Nachricht verwenden können\\
 		\hline
-		isenabled & TINYINT(1) & Ob die Nachricht freigegeben ist oder nicht.\\
+		isenabled & TINYINT(1) & Gibt an ob die Nachricht freigegeben ist oder nicht.\\
 		\hline
 		titel & VARCHAR(255) & Titel der Nachricht\\
 		\hline
@@ -320,7 +322,7 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mi
 
 \subsubsection{ost\_ticket}
 
-Sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticket abgesetzt hat, die Erkennungsnummer, die Email-Adresse des Absenders, das Thema des Tickets und wer es bearbeiten muss. Es gibt auch ein Feld das speichert ob man auf das Ticket schon geantwortet hat, wann es erstellt und gegebenenfalls verändert worden ist und ob es schon geschlossen worden ist.
+Diese Tabelle enthält sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticket abgesetzt hat, die Erkennungsnummer, die Email-Adresse des Absenders, das Thema des Tickets und wer es bearbeiten muss. Es gibt auch ein Feld das speichert ob man auf das Ticket schon geantwortet hat, wann es erstellt und gegebenenfalls verändert worden ist und ob es schon geschlossen worden ist.
 
 
 \begin{table}[h]
@@ -397,7 +399,7 @@ Sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticke
 
 \subsubsection{ost\_user}
 
-Hier werden die User gespeichert die keine Mitglieder sind. Diese User können im OS Ticketsystem nur Tickets abschicken. Es wird der Name, der Status und wann er erstellt wurde gespeichert. Weiteres kann er auch einer Organisation zugeordnet werden.
+Hier werden die User gespeichert die keine Mitglieder sind. Diese User können im OS Ticketsystem nur Tickets abschicken. Es wird der Name, der Status und wann er erstellt worden ist gespeichert. Weiteres kann er auch einer Organisation zugeordnet werden.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -496,7 +498,7 @@ Im gesamten kann ein Ticket eine von vier Prioritäten haben.
 
 \subsubsection{ost\_help\_topic}
 
-Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Priorität zugeordnet werden. Weiter könne Themen auch bestimmten Abteilungen, Teams, Administratoren oder Mitarbeiter zugeteilt werden.   
+Diese Tabelle speichert die Hilfsthemen. Es kann jedem Thema eine bestimmte Priorität zugeordnet werden. Weiters können Themen auch bestimmten Abteilungen, Teams, Administratoren oder Mitarbeiter zugeteilt werden.   
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -519,23 +521,44 @@ Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Prio
 		\hline
 		priotity\_id & TINYINT(4) & Referenz zu einem Plugin für das Thema\\
 		\hline
-		topic\_id & INT(10) & Referenz zu einem Plugin für das Thema\\
+			\end{tabular}
+			\caption{tab:ost-help-topic}
+		\end{table}
+		\label{tab:ost_help_topic}
+		\newpage
+		
+		\begin{table}[h]
+			\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
-		topic\_id & INT(10) & Referenz zu einem Plugin für das Thema\\
+		dept\_id & INT(10) & Referenz zu einer Abteilung die dieses Thema bearbeiten\\
 		\hline
-		topic\_id & INT(10) & Referenz zu einem Plugin für das Thema\\
+		staff\_id & INT(10) & Referenz zu einem Staff-Mitglied das diesem Thema bearbeitet\\
 		\hline
-		topic\_id & INT(10) & Referenz zu einem Plugin für das Thema\\
+		team\_id & INT(10) & Referenz zu einem Team das diesem Thema bearbeitet\\
 		\hline
-		topic\_id & INT(10) & Referenz zu einem Plugin für das Thema\\
+		sla\_id & INT(10) & Referenz zu einer SLA-Vorlage für das Thema\\
 		\hline
-		topic\_id & INT(10) & Referenz zu einem Plugin für das Thema\\
+		page\_id & INT(10) & Referenz zu der Seite des Themas\\
+		\hline
+		sequence\_id & INT(10) & Referenz zu der Sequenz für das Thema\\
+		\hline
+		sort & INT(10) & Gibt an wie das Thema gereiht werden soll\\
+		\hline
+		topic & VARCHAR(32) & Die Themen Beschreibung\\
+		\hline
+		number\_format & VARCHAR(32) & \\
+		\hline
+		notes & TEXT & Zusätzliche Informationen zu dem Thema\\
+		\hline
+		created & DATETIME & Erstelldatum des Themas\\
+		\hline
+		updated & DATETIME & Änderungsdatum des Themas\\
 		\hline
 		
 	\end{tabular}
-	\caption{tab:ost-help-topic}
+	\caption{tab:ost-help-topic2}
 \end{table}
-\label{tab:ost_help_topic}
+\label{tab:ost_help_topic2}
 
 \newpage
 
@@ -543,7 +566,7 @@ Diese Tabelle speichert die Hilfethemen. Es kann jedem Thema eine bestimmte Prio
 \subsection{Beschreibung der Datenbankanbindung von OSTicket}
 Die Datenbankanbindung in diesem System ist in der Klasse mysqli.php verankert. In dieser Klasse befinden sich Funktionen um eine Datenbankverbindung herzustellen, eine Query abzusetzen und die Verbindung wieder zu trennen.
 Um diese Funktionen nutzen zu können muss die Klasse mysqli.php einfach, indem zu bearbeiteten Quellcode, mit einem Include Statement eingebunden werden.
-Die Klasse besitzt im gesamten eine globale Variable namens \$\_\_db und 32 Funktionen. Die Variabel wird am Anfang der Klasse mit dem Wert Null Initialisiert und nach dem Aufrufen der db\_connect Funktion hält sie eine Mysqli Objekt.
+Die Klasse besitzt im gesamten eine globale Variable namens \$\_\_db und 32 Funktionen. Die Variabel wird am Anfang der Klasse deklariert und nach dem Aufrufen der db\_connect Funktion hält sie eine Mysqli Objekt.
 Im folgenden Abschnitt werden die wichtigsten Funktionen im Detail beschrieben.
 
 \subsubsection{function db\_connect}
@@ -556,6 +579,7 @@ Diese Funktion stellt die Verbindung zu einer Datenbank her. Um eine Verbindung 
 	\end{itemize}
 Diese Funktion kann man als Herzstück dieser Klasse bezeichnen, da man immer zuerst eine Verbindung zu der Datenbank herstellen muss um mit ihr arbeiten zu können. Um eine andere Funktion dieser Klasse nützten zu können muss man zuerst die Funktion db\_connect aufrufen.
 Eine Verbindung besteht solange bis man mit der Funktion db\_close die Verbindung beendet.
+Tritt in dieser Funktion ein Fehler auf so gibt sie den Wert null zurück.
 \newpage
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect1, firstnumber=21]
@@ -570,8 +594,10 @@ if (!($__db = mysqli_init()))
 return NULL;
 \end{lstlisting}
 
-In diesem Abschnitt des Codes wird zuerst die Variabel \textbf{\$\_\_db} als global deklariert. Anschließen wird durch die String-Funktion strlen geprüft welche Länge die Parameter \textbf{\$user} und \textbf{\$host} haben. Hat einer der beiden Parameter eine Länge von 0 dann liefert die Funktion den Wert Null für die Variable \textbf{\$\_\_db} zurück.\\
-Nach dem Überprüfen der beiden Parameter \textbf{\$user} und \textbf{\$host} wird bei der nächsten IF-Anweisung geprüft ob ein Mysqli Objekt instanziiert werden kann.
+In diesem Abschnitt des Codes wird zuerst die Variabel \textbf{\$\_\_db} als globale Variable deklariert. Anschließen wird durch die String-Funktion strlen geprüft welche Länge die Parameter \textbf{\$user} und \textbf{\$host} haben. Hat einer der beiden Parameter eine Länge von 0 dann liefert die Funktion den Wert null zurück.\\
+Nach dem Überprüfen der beiden Parameter \textbf{\$user} und \textbf{\$host} wird bei der nächsten IF-Anweisung geprüft ob ein Mysqli Objekt instantiiert werden kann. Ist das nicht der Fall gib die Funktion wieder den Wert null zurück
+
+\newpage
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect2, firstnumber=32]
 if (isset($options['ssl']))
@@ -583,7 +609,7 @@ null, null);
 elseif(!$passwd)
 return NULL;
 \end{lstlisting}
-In diesem Codeteil wird zuerst überprüft ob im Array \$options Werte mit dem Schlüssel 'ssl' abgelegt sind wenn das der Fall ist übergibt er die Werte 'key', 'cert', und 'ca' der Datenbankverbindung. Nach der Überprüfung des Arrays überprüft er noch ob ein Passwort gesetzt ist, ist keines gesetzt gibt die Funktion wieder Null zurück.
+In diesem Codeteil wird zuerst überprüft ob im Array \$options Werte mit dem Schlüssel 'ssl' abgelegt sind wenn das der Fall ist übergibt er die Werte 'key', 'cert', und 'ca' der Datenbankverbindung. Nach der Überprüfung des Arrays überprüft er noch ob ein Passwort gesetzt ist, ist keines gesetzt gibt die Funktion wieder null zurück.
 
 \newpage
 
@@ -638,7 +664,12 @@ Der Rückgabewerte dieser Funktion ist, wenn keine Fehler vorkommt, eine Mysqli 
 
 \subsubsection{function db\_query}
 
-Mithilfe dieser Funktion kann man eine Query an die Datenbank abschicken. Ist die Query ein SELECT Statment bekommt man ein Result Set zurück ist es aber eine Query bei der man nur schreibend zugreift bekommt man nichts zurück. Um eine Query absetzten zu könne benötigt diese Funktion folgende Parameter:
+Mithilfe dieser Funktion kann man eine Query an die Datenbank schicken. Ist die Query ein SELECT Statement bekommt man ein Result Set zurück ist es aber eine Query mit einem INSERT, UPDATE oder DELETE Statement bekommt man true zurück wenn es erfolgreich war und false wenn es nicht erfolgreich war. Um eine Query absetzten zu könne benötigt diese Funktion folgende Parameter:
+\begin{itemize}
+	\item \textbf{\$query} Mit diesem Parameter wird die abzuschickende Query angeben.
+	\item \textbf{\$logError} Dieser Parameter ist Standard mäßig immer true.
+	\item \textbf{\$buffered} Dieser Parameter ist Standard mäßig immer true.
+\end{itemize}
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query1, firstnumber=154]
 function db_query($query, $logError=true, $buffered=true) {
@@ -650,10 +681,50 @@ $__db->unbuffered_result = false;
 }
 \end{lstlisting}
 
+In diesem Teilabschnitt werden zuerst mal die Variablen \$ost und \$\_\_db als global Variablen deklariert.
+Anschließen wird geprüft ob die Variable \$\_\_db ein Unbuffered Result beinhaltet. Ist dies der Fall wird das Unbuffered Result geleert und der Wert auf false gesetzt.
+
+\newpage
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query2, firstnumber=163]
+$tries = 3;
+do {
+$res = $__db->query($query,
+$buffered ? MYSQLI_STORE_RESULT : MYSQLI_USE_RESULT);
+// Retry the query due to deadlock error (#1213)
+// TODO: Consider retry on #1205 (lock wait timeout exceeded)
+// TODO: Log warning
+} while (!$res && --$tries && $__db->errno == 1213);
+\end{lstlisting}
+
+Dieser Teil des Codes schickt mit Hilfe der query Funktion eine Anfrage mit der Query an die Datenbank und speichert das Ergebnis in der Variable \$res. Anschließen wird geprüft ob die Abfrage erfolgreich war, ob \$\_\_db->errno gleich 1213 ist und zusätzlich wird die Variable \$tries um eins verkleinert. Treffen alle Argumente zu war die Query erfolglos und wird noch mal geschickt. Nach drei Versuche bricht die do-while-Schleife ab und es wird nicht mehr Versucht eine Anfrage an die Datenbank zu schicken.
+War das Abschicken der Query erfolgreich wird die do-while-Schleife ebenfalls abgebrochen und die nächste IF-Anweisung wird nicht durchgeführt.  
 \newpage
 
-\subsection{Tabellenbeschreibung unserer Anwendung}
-Dieser Teil der Dokumentation beschreibt die Datenbank unserer neu erstellten Java EE Anwendung. Diese Java EE Anwendung erfüllt im Grunde alle Anforderungen die an das Ticketsystem gestellt wurden.\\
+\begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query3, firstnumber=173]
+if(!$res && $logError && $ost) { //error reporting
+// Allow $logError() callback to determine if logging is necessary
+if (is_callable($logError) && !($logError($__db->errno)))
+return $res;
+
+$msg='['.$query.']'."\n\n".db_error();
+$ost->logDBError('DB Error #'.db_errno(), $msg);
+//echo $msg; #uncomment during debuging or dev.
+}
+
+if (is_object($res) && !$buffered)
+$__db->unbuffered_result = $res;
+
+return $res;
+\end{lstlisting}
+
+Wenn, wie im oberen Abschnitt schon erwähnt, die do-while-Schliefe den Versuch eine Query an die Datenbank zu schicken Abgebrochen hat wird als nächstes geprüft ob die Variable \$res etwas beinhaltet und ob die Variablen \$logError und \$ost deklariert wurden. Treffen alle Parameter zu wird bei der nächsten IF-Anweisung geprüft ob die Variable \$logError eine Wert beinhaltet der als Funktion aufgerufen werden kann und ob der Aufruf dieser Funktion mit dem Parameter \$\_\_db->errno false zurück gibt.
+Triff dies auch zu wird die Variable \$res mit dem Wert null zurück gegeben. Anschließen wird der Variable \$msg noch der Fehlertext übergeben und es wird mit der Variable \$ost  die Funktion logDBError aufgerufen. Als Parameter werden dieser Funktion der Errorcode und der Errortext mitgegeben.
+In der letzten IF-Anweisung wird noch geprüft ob die Variabel \$res ein Objekt ist und ob die Variable \$buffered den Wert false hält. Ist dies der Fall wird der Wert der Variable \$res dem Datenfeld unbuffered\_result des Objektes \$\_\_db übergeben. 
+Zuletzt wird noch die Variable \$res zurückgegeben.
+\newpage
+
+\subsection{Tabellenbeschreibung der Datenbank von unserem Java EE Prototyp}
+Dieser Teil der Dokumentation beschreibt die Datenbank von unserem Java EE Prototypen. Dieser Java EE Prototyp erfüllt im Grunde alle Anforderungen die an das Ticketsystem gestellt wurden.\\
 Hinter dieser Anwendung steht die hier beschriebene Datenbank. Diese Datenbank wurde so konzipiert das sie einfach und Übersichtlicht ist. Es wurde auch darauf geachtet das keine unnötigen Tabellen verwendet werden müssen da wir anhand dieser Anwendung zeigen möchten wie viel unnötigen Funktionen das OSticketsystem vorweist.
 Hier haben Sie ein EER-Diagramm der Datenbank für die grobe Übersicht.
 \begin{figure}[h]
@@ -828,11 +899,83 @@ Der Supervisor wird per Referenz zur User-Tabelle festgelegt ein Cluster hat imm
 
 \newpage
 
-\subsection{Beschreibung der Datenbankanbindung unserer Anwendung}
+\subsection{Beschreibung der Datenbankanbindung von unserem Java EE Prototyp}
 
-Die Datenbankanbindung wird durch die jdbc Api ermöglicht.
+Da unsere Anwendung nur ein Prototyp ist wurde auch die Datenbankanbindung nur mit den wichtigsten Funktionen konzipiert. Deshalb ist die Klasse Datenbankanbindung.java auch sehr statisch und redundant geschrieben. 
+Die Datenbankanbindung wurde mit Hilfe der Java Api JDBC realisiert.\\
+Mithilfe der get-Methoden kann man die einzelnen Tabellen aus der Datenbank auslesen und mit Hilfe der insert-Methoden kann man Einträge in die Tabellen einfügen.
+Mit der Methode dbconnect stellt man die Verbindung zu der Datenbank her.\\
+\\
+Am Anfang der Klasse werden drei String Variablen mit Informationen über den Datenbank Zugang initialisiert.
+\begin{itemize}
+	\item \textbf{url} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner da es noch ein Prototyp ist.
+	\item \textbf{username} ist ein User der die benötigen Rechte hat um lesend und schreiben auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu da sie ja nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
+	\item \textbf{\$password} ist das Passwort des User. 
+\end{itemize}
+\begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Datenfelder, firstnumber=30]
+private String url = "jdbc:mysql://localhost:3306/java_ee_database";
+private String username = "root";
+private String password = "";
+\end{lstlisting}
+\newpage
+Im folgenden werden die Methoden Klasse Datenbankanbindung.java im Detail beschrieben.
+ 
+\subsubsection{Methode dbconnect\(\)}
+Diese Methode stellt eine Verbindung zu der Datenbank her und liefert ein Statement Objekt zurück. Das Statement Objekt wird benötigt um eine Query an die Datenbank zu schicken.
+Um ein Statement Objekt erzeugen zu könne muss man zuerst ein Connection Objekt erzeugen. Dies erfolgt durch die Methode getConnection mit den Parameter url, username, password. Konnte keine Verbindung zu der Datenbank hergestellt werden wird durch den Catch-Block die SQLException gefangen und der Wert null zurück gegeben.
 
-\begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/getRoles-Methode, firstnumber=59]
+\begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-dbconnect, firstnumber=44]
+public Statement dbconnect()
+{   
+try
+{
+Connection connection = (Connection) DriverManager.getConnection(url, username, password);
+Statement stmt = connection.createStatement();
+return stmt;
+}
+catch(SQLException e)
+{
+return null;
+}
+}
+\end{lstlisting}
+
+\newpage
+
+\subsubsection{Methode insertRole\(\)}
+
+In dieser Methode wird ein Insert-Statement erzeugt und anschließen an die Datenbank geschickt, zurück bekommen wir den String 'Das Insert hat funktioniert.' oder null wenn das Insert nicht funktioniert hat. Als Parameter werden die Values benötigt die man in die Datenbank schreiben möchte. Zuerst wird mit der Methode dbconnect\(\) ein Statment Objekt erstellt und anschließen wird mit Hilfe der executeUpdate Methode die Query an die Datenbank geschickt. Ist das abschicken der Query nicht erfolgreich bekommt man den Wert null zurück.\\
+Dieser Methodenaufbau finden wir bei allen insert-Methoden in dieser Klasse.
+
+\begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-dbconnect, firstnumber=271]
+public String insertRole(String name, String note)
+{
+try
+{
+dbconnect().executeUpdate("INSERT INTO tpl_role 
+(name, note) VALUES (\""+ name +"\", \""+ note +"\")");
+return "Das Insert hat funktioniert";
+}
+catch(SQLException e)
+{
+return null;
+}
+}
+\end{lstlisting}
+\newpage
+\subsubsection{Methode getRoles\(\)}
+
+Mit der Methode getRoles kann man alle Rollen aus der Datenbanktabelle role auslesen.
+Zuerst wird in dieser Methode eine ArrayList roles Initialisiert, anschließen werden String Variablen definiert die benötigt werden um aus dem ResultSet die Datenfelder der Role zu lesen.
+Im try-Block wird nun ein SELECT-Statement an die Datenbank geschickt und ein ResultSet Objekt rs erzeugt. 
+Um aus dem ResultSet die einzelnen Rollen auszulesen benötigen wir eine while-Schleife. Diese iterieren solange durch das ResultSet bis kein Eintrag mehr vorhanden ist(bis rs.next() false zurück gib).
+In dieser while-Schleife wird zuerst ein role Objekt erzeugt und mit Hilfe der set-Methoden die Datenfelder des Rollen Objekt gesetzt. Zum Schluss wird das Rollen Objekt noch der ArrayList roles hinzugefügt. Wurde durch alle Einträge des ResultSet iteriert wird das Statement geschlossen. Tritt werden dem durchlaufen des Try-Blockes ein Fehler auf so wird durch den Catch-Block der Wert null zurückgegeben.\\ 
+Dieser Methodenaufbau findet wir bei allen get-Methoden in dieser Klasse.
+
+\newpage
+
+
+\begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-getRoles, firstnumber=59]
 public ArrayList getRoles()
 {
 ArrayList <tpl_role> roles = new ArrayList<>();
@@ -847,11 +990,9 @@ ResultSet rs = dbconnect().executeQuery("SELECT * FROM tpl_role");
 while(rs.next())
 {
 tpl_role role = new tpl_role();
-
 role.setName(rs.getString(value1));
 role.setId(rs.getInt(value));
 role.setNote(rs.getString(value2));
-
 roles.add(role);
 }
 rs.close();
@@ -862,12 +1003,12 @@ catch (SQLException ex)
 return null;
 }
 }
-
 \end{lstlisting}
 
+\newpage
+
+
 %todo: Datenbank Doku Gendern
-%todo: Nummerierung der Tabellenname bei der Datenbank Doku
 %todo: Formatieren der Tabellen
-%todo: Einfügen der Datanbankanbindungs Doku OSTicket und Java ee Projekt
-%todo: Einfügen der Datenbank Doku der Java ee Datenbank
 %todo: Verschieben nach Kap. 2 (Vorstellung des Produktes; hier die JavaeEE Doku)
+%todo: Dokumentation kontrollieren
