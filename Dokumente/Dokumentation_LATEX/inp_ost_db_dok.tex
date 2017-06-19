@@ -4,17 +4,19 @@
 
 \subsection{Tabellenbeschreibung der Datenbank von OSTicket}
 
-In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem das für einfache Support Anwendung Entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht aber sind dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
-Bei gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben da es keine gute Dokumentation der Datenbank gibt und man den Inhalt der Spalten aus dem Kontext schließen muss.
+In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem, das für einfache Support Anwendung entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen, von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht, sind aber dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
+In gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben, da es keine gute Dokumentation der Datenbank gibt und man den Inhalt der Spalten aus dem Kontext erschließen muss.
 \newline
 \newline
-An dieser Stelle sollte eigentlich ein Datenmodell sein aber da dieses von OSTicket recht groß und komplex ist hat es hier nicht Platz aber Sie finden es auf dem mitgelieferten Datenträger.(Der Dateiname ist: OSTicketDB.mwb).
+An dieser Stelle sollte ein Datenmodell stehen, aber da jenes von OSTicket recht groß und komplex ist, hat es hier nicht Platz. Sie finden es auf dem mitgelieferten Datenträger.(Der Dateiname ist: OSTicketDB.mwb).
+
+%todo: EER Diagramm einfuegen oder nicht?
 
 \newpage
 
 \subsubsection{ost\_config}
 
-In dieser Tabelle werden wichtige Informationen über das System OSTicket gespeichert. Die Werte werden mit einem Schlüssel in die Datenbank gespeichert (Key und Value).
+In dieser Tabelle werden wichtige Informationen über das System OSTicket gespeichert. Die Werte werden mit einem Schlüssel in der Datenbank abgelegt (Key und Value).
 Diese Tabelle hat keine Referenz zu anderen Tabellen.
 
 \begin{table}[h]
@@ -42,7 +44,7 @@ Diese Tabelle hat keine Referenz zu anderen Tabellen.
 
 \subsubsection{ost\_attachment}
 
-Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Tabelle. Dies beinhaltet den Datentyp, Name, und id des Anhanges. 
+Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Tabelle. Beinhaltet sind der Datentyp, der Name, und die id des Anhanges. 
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -72,7 +74,7 @@ Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Ta
 
 \subsubsection{ost\_canned\_response}
 
-In dieser Tabelle werden vorgefertigte Antworten für Tickets gespeichert. Über die Antwort wird der Titel, die Sprache, der Inhalt, Erstelldatum und das Änderungsdatum gespeichert.
+In dieser Tabelle werden vorgefertigte Antworten für Tickets abgelegt. Über die Antwort wird der Titel, die Sprache, der Inhalt, das Erstelldatum und das Änderungsdatum gespeichert.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -107,7 +109,7 @@ In dieser Tabelle werden vorgefertigte Antworten für Tickets gespeichert. Über
 
 \subsubsection{ost\_content}
 
-In dieser Tabelle werden Inhalte der Seiten gehalten. Es wird angeben ob der Inhalt aktiv ist oder nicht. Jeder Inhalt hat auch eine Titel und eine Body. Es werden auch noch der Typ und das Erstell/Änderungsdatum angegeben.
+In dieser Tabelle werden Inhalte der Seiten aufgenommen. Es wird angeben, ob der Inhalt aktiv ist oder nicht. Jeder Inhalt umfasst auch einen Titel und einen Body. Zusätzlich werden noch der Typ und das Erstell- /Änderungsdatum angegeben.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -140,7 +142,7 @@ In dieser Tabelle werden Inhalte der Seiten gehalten. Es wird angeben ob der Inh
 
 \subsubsection{ost\_department}
 
-Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat einen Namen und eine Signatur. Ein Feld das angibt ob die Abteilung öffentlich ist oder nicht. Es wird auch festgehalten zu welcher Gruppe die Abteilung gehört und wann die Abteilung erstellt worden ist.
+Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat einen Namen und eine Signatur. Ein Feld, das angibt, ob die Abteilung öffentlich ist oder nicht. Zudem wird festgehalten, zu welcher Gruppe die Abteilung gehört und wann diese erstellt worden ist.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -192,7 +194,7 @@ Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat e
 
 \subsubsection{ost\_faq}
 
-In dieser Tabelle werden die meist gestellten Fragen und die Antworten dazu gespeichert. Weiteres werden noch Schlüsselwörter und Anmerkungen zur Frage gespeichert.
+In dieser Tabelle werden die am häufigsten gestellten Fragen und die jeweiligen Antworten dazu gespeichert. Des Weiteren werden noch Schlüsselwörter und Anmerkungen zur Frage erfasst.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -227,8 +229,8 @@ In dieser Tabelle werden die meist gestellten Fragen und die Antworten dazu gesp
 
 \subsubsection{ost\_staff}
 
-Diese Tabelle hält sämtliche Informationen über die Staff Mitglieder des Systems OSTicket. Es wird der Vorname, Nachname, Username, das Passwort, die Email-Adresse, die Telefonnummer, die Sprache, ob das Mitglied aktiv ist, ob das Mitglied ein Administrator ist usw. gespeichert.
-Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mitglieds.
+Diese Tabelle enhält sämtliche Informationen über die  Mitarbeiter\_innen einer Firma, welche das OSTicket- System verwenden. Es werden unter anderem der Vorname, der Nachname, der Username, das Passwort, die Email-Adresse, die Telefonnummer, die Sprache, ob der/die Mitarbeiter\_in aktiv ist und ob er/sie ein Administrator ist, gespeichert.
+Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des/der Mitarbeiter\_in.
 
 
 \begin{table}[h]
@@ -322,7 +324,7 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des Mi
 
 \subsubsection{ost\_ticket}
 
-Diese Tabelle enthält sämtlicher Informationen über ein Ticket. Dazu gehören der User der das Ticket abgesetzt hat, die Erkennungsnummer, die Email-Adresse des Absenders, das Thema des Tickets und wer es bearbeiten muss. Es gibt auch ein Feld das speichert ob man auf das Ticket schon geantwortet hat, wann es erstellt und gegebenenfalls verändert worden ist und ob es schon geschlossen worden ist.
+Diese Tabelle enthält sämtliche Informationen über ein Ticket. Dazu gehören die id eines Users, welcher das Ticket abgesetzt hat, die Ticket- Erkennungsnummer, die Email-Adresse des Absenders, das Thema des Tickets und wer es bearbeiten muss. Außerdem gibt es ein Feld, das speichert, ob auf das Ticket schon geantwortet wurde, wann es erstellt und gegebenenfalls verändert wurde und ob es schon geschlossen wurde.
 
 
 \begin{table}[h]
@@ -399,7 +401,7 @@ Diese Tabelle enthält sämtlicher Informationen über ein Ticket. Dazu gehören
 
 \subsubsection{ost\_user}
 
-Hier werden die User gespeichert die keine Mitglieder sind. Diese User können im OS Ticketsystem nur Tickets abschicken. Es wird der Name, der Status und wann er erstellt worden ist gespeichert. Weiteres kann er auch einer Organisation zugeordnet werden.
+Hier werden jene User gespeichert, die nicht zur den Mitarbeiter\_innen gehören. Diese User können im OS-Ticketsystem lediglich Tickets abschicken. Es werden der Name, der Status und wann das Ticket erstellt worden ist, gespeichert. Des Weiteren kann der User auch einer Organisation zugeordnet werden.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -431,7 +433,7 @@ Hier werden die User gespeichert die keine Mitglieder sind. Diese User können i
 
 \subsubsection{ost\_user\_account}
 
-Hier wird auf Basis der ost\_user Tabelle ein Account abgespeichert.Der Account enthält eine Referenz auf einen User. Der Account besteht aus folgenden Informationen: Status des Users, die Sprache, in welcher Zeitzone er sich aufhält, den Username, das Passwort und wann er registriert wurde.
+Hier wird auf Basis der ost\_user Tabelle ein Account abgespeichert. Der Account beinhaltet eine Referenz auf einen User. Der Account besteht aus folgenden Informationen: der Status des Users, die Sprache des Users, in welcher Zeitzone dieser sich aufhält, den Usernamen, das Passwort und wann der User registriert wurde.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -469,8 +471,8 @@ Hier wird auf Basis der ost\_user Tabelle ein Account abgespeichert.Der Account 
 
 \subsubsection{ost\_ticket\_priotity}
 
-Diese Tabelle enthält alle Informationen über die Priorität die ein Ticket haben kann.
-Im gesamten kann ein Ticket eine von vier Prioritäten haben.
+Diese Tabelle enthält alle Informationen über die Priorität, die ein Ticket haben kann.
+Im gesamten kann einem Ticket eine von vier Prioritäten zugewiesen werden.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -498,7 +500,7 @@ Im gesamten kann ein Ticket eine von vier Prioritäten haben.
 
 \subsubsection{ost\_help\_topic}
 
-Diese Tabelle speichert die Hilfsthemen. Es kann jedem Thema eine bestimmte Priorität zugeordnet werden. Weiters können Themen auch bestimmten Abteilungen, Teams, Administratoren oder Mitarbeiter zugeteilt werden.   
+Diese Tabelle speichert die Hilfsthemen. Jedem Thema kann eine bestimmte Priorität zugeordnet werden. Zusätzlich können Themen auch bestimmten Abteilungen, Teams, Administrator\_innen oder Mitarbeiter\_innen zugeteilt werden.   
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -564,22 +566,22 @@ Diese Tabelle speichert die Hilfsthemen. Es kann jedem Thema eine bestimmte Prio
 
 
 \subsection{Beschreibung der Datenbankanbindung von OSTicket}
-Die Datenbankanbindung in diesem System ist in der Klasse mysqli.php verankert. In dieser Klasse befinden sich Funktionen um eine Datenbankverbindung herzustellen, eine Query abzusetzen und die Verbindung wieder zu trennen.
-Um diese Funktionen nutzen zu können muss die Klasse mysqli.php einfach, indem zu bearbeiteten Quellcode, mit einem Include Statement eingebunden werden.
-Die Klasse besitzt im gesamten eine globale Variable namens \$\_\_db und 32 Funktionen. Die Variabel wird am Anfang der Klasse deklariert und nach dem Aufrufen der db\_connect Funktion hält sie eine Mysqli Objekt.
+Die Datenbankanbindung in diesem System ist in der Klasse mysqli.php verankert. In dieser Klasse sind Funktionen vorhanden, um eine Datenbankverbindung herzustellen, eine Query abzusetzen und die Verbindung wieder zu trennen.
+Um diese Funktionen nutzen zu können, muss die Klasse mysqli.php lediglich in dem zu bearbeiteten Quellcode durch ein Include Statement eingebunden werden.
+Die Klasse besitzt im gesamten eine globale Variable namens \$\_\_db sowie 32 Funktionen. Die Variable wird am Anfang der Klasse deklariert, nach dem Aufrufen der db\_connect- Funktion hält sie ein Mysqli- Objekt.
 Im folgenden Abschnitt werden die wichtigsten Funktionen im Detail beschrieben.
 
 \subsubsection{function db\_connect}
 Diese Funktion stellt die Verbindung zu einer Datenbank her. Um eine Verbindung herstellen zu können benötigt sie folgende Parameter:
 	\begin{itemize}
-		\item \textbf{\$host} ist die Hostadresse unter der die Datenbank erreicht werden kann.
-		\item \textbf{\$user} ist ein User der die benötigen Rechte hat um lesend und schreiben auf die Datenbank zugreifen zu können.
-		\item \textbf{\$passwd} ist das Passwort des User.
-		\item \textbf{\$options} ist ein Array das Informationen über den Secure Sockets Layer (SSL) und den Namen der zu selektierenden Datenbank beinhaltet
+		\item \textbf{\$host} ist die Hostadresse, unter der die Datenbank erreicht werden kann.
+		\item \textbf{\$user} ist ein User, der die benötigen Rechte hat um lesend und schreibend auf die Datenbank zugreifen zu können.
+		\item \textbf{\$passwd} ist das Passwort des Users.
+		\item \textbf{\$options} ist ein Array, das Informationen über den Secure Sockets Layer (SSL) und den Namen der zu selektierenden Datenbank beinhaltet
 	\end{itemize}
-Diese Funktion kann man als Herzstück dieser Klasse bezeichnen, da man immer zuerst eine Verbindung zu der Datenbank herstellen muss um mit ihr arbeiten zu können. Um eine andere Funktion dieser Klasse nützten zu können muss man zuerst die Funktion db\_connect aufrufen.
-Eine Verbindung besteht solange bis man mit der Funktion db\_close die Verbindung beendet.
-Tritt in dieser Funktion ein Fehler auf so gibt sie den Wert null zurück.
+Diese Funktion kann als Herzstück dieser Klasse bezeichnet werden, da immer zuerst eine Verbindung zu der Datenbank hergestellt werden muss, um mit ihr arbeiten zu können. Damit eine andere Funktion dieser Klasse genützt werden können, muss zuerst die Funktion db\_connect aufgerufen werden.
+Eine Verbindung besteht solange, bis Die Verbindung mit Hilfe der Funktion db\_close beendet wird.
+Sollte in dieser Funktion ein Fehler vorliegen, so gibt sie den Wert null zurück.
 \newpage
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect1, firstnumber=21]
@@ -594,8 +596,8 @@ if (!($__db = mysqli_init()))
 return NULL;
 \end{lstlisting}
 
-In diesem Abschnitt des Codes wird zuerst die Variabel \textbf{\$\_\_db} als globale Variable deklariert. Anschließen wird durch die String-Funktion strlen geprüft welche Länge die Parameter \textbf{\$user} und \textbf{\$host} haben. Hat einer der beiden Parameter eine Länge von 0 dann liefert die Funktion den Wert null zurück.\\
-Nach dem Überprüfen der beiden Parameter \textbf{\$user} und \textbf{\$host} wird bei der nächsten IF-Anweisung geprüft ob ein Mysqli Objekt instantiiert werden kann. Ist das nicht der Fall gib die Funktion wieder den Wert null zurück
+In diesem Abschnitt des Codes wird zuerst die Variable \textbf{\$\_\_db} als globale Variable deklariert. Anschließen wird durch die String-Funktion strlen geprüft, welche Länge die Parameter \textbf{\$user} und \textbf{\$host} haben. Hat einer der beiden Parameter eine Länge von 0, dann liefert die Funktion den Wert null.\\
+Nach dem Überprüfen der beiden Parameter \textbf{\$user} und \textbf{\$host}, wird bei der nächsten IF-Anweisung geprüft, ob ein Mysqli- Objekt instantiiert werden kann. Ist das nicht der Fall, gibt die Funktion wieder den Wert null zurück,
 
 \newpage
 
@@ -609,7 +611,7 @@ null, null);
 elseif(!$passwd)
 return NULL;
 \end{lstlisting}
-In diesem Codeteil wird zuerst überprüft ob im Array \$options Werte mit dem Schlüssel 'ssl' abgelegt sind wenn das der Fall ist übergibt er die Werte 'key', 'cert', und 'ca' der Datenbankverbindung. Nach der Überprüfung des Arrays überprüft er noch ob ein Passwort gesetzt ist, ist keines gesetzt gibt die Funktion wieder null zurück.
+In diesem Codeteil wird zuerst überprüft, ob im Array \$options Werte mit dem Schlüssel ssl abgelegt sind. Wenn dies der Fall ist, werden die Werte key, cert, und ca der Datenbankverbindung übergeben. Nach der Überprüfung des Arrays erfolgt die Kontrolle, ob ein Passwort gesetzt ist. Ist dies nicht der Fall, gibt die Funktion wieder null zurück.
 
 \newpage
 
@@ -638,10 +640,10 @@ if ($persistent)
 $host = 'p:' . $host;
 \end{lstlisting}
 
-In diesem Teilbereich des Codes werden Port, Socket und Hostname der Verbindung festgelegt. Zu beginn des Abschnittes wird mit Hilfe der Funktion ini\_get der default Wert vom MySql Port und Socket den Variablen \$port und \$socket zugewiesen.\\
-Anschließend wird mit Hilfe der Funktion stripos der Variable \$persistent der Wert true zugewiesen wenn der Value 'p:' am Anfang des Strings \$host steht oder false wenn 'p:' nicht am Anfang des Strings zu finden ist.\\
-Danach wird durch eine IF-Anweisung geprüft welchen Wert die Variable \$persistent angenommen hat. Hat sie den Wert true wird der Variable \$host durch die Funktion substr der gleiche Wert wie sie schon hatte nur ohne den ersten zwei Zeichen zugewiesen.\\
-In der nächsten IF-Anweisung wird geprüft ob sich im String der Variable \$host ein ':' befindet. Befindet sich im String ein Doppelpunkt so wird alles was sich Links vom Doppelpunkt befindet der Variable \$host zugewiesen und alles was sich Recht davon befindet wird der Variable \$portspec zugewiesen. Anschließen wird geprüft ob die Variable \$portspec einen Wert hat und ob dieser Wert Nummerisch ist. Trifft beides zu wird noch geprüft ob die Variable \$host den Wert 'localhost' hat. Hat die Variable \$host nicht den Wert 'localhost' wird durch die Funktion gethostbyname die IPv4 Adresse oder der unveränderte Hostnamen der Variable \$host zugewiesen und der Variable \$port wird der zu verwendende Port zugewiesen.
+In diesem Teilbereich des Codes werden Port, Socket und Hostname der Verbindung festgelegt. Zu Beginn des Abschnittes wird mit Hilfe der Funktion ini\_get der default Wert vom MySql Port und Socket den Variablen \$port und \$socket zugewiesen.\\
+Anschließend wird mit Hilfe der Funktion stripos der Variable \$persistent der Wert true zugewiesen, wenn der Value 'p:' am Anfang des Strings \$host steht oder false wenn 'p:' nicht am Anfang des Strings zu finden ist.\\
+Danach wird durch eine IF-Anweisung geprüft, welchen Wert die Variable \$persistent angenommen hat. Hat sie den Wert true, wird der Variable \$host durch die Funktion substr der vorherige Wert zugewiesen, lediglich die ersten zwei Zeichen des ursprünglichen Strings werden ausgelassen. \\
+In der nächsten IF-Anweisung wird geprüft, ob sich im String der Variable \$host ein ':' befindet. Ist ein Doppelpunkt im String vorhanden, so wird alles, was sich Links vom Doppelpunkt befindet, der Variable \$host zugewiesen und alles, was rechts davon steht, wird der Variable \$portspec zugewiesen. Anschließend wird kontrolliert, ob die Variable \$portspec einen Wert hat und ob dieser Wert nummerisch ist. Trifft beides zu, wird noch festgestellt, ob die Variable \$host den Wert 'localhost' beinhaltet. Hat die Variable \$host den Wert localhost nicht, wird der ihr durch die Funktion gethostbyname die IPv4 Adresse oder der unveränderte Hostname zugewiesen. Außerdem wird der Variable \$port der zu verwendende Port übergeben.
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect4, firstnumber=63]
 	    // Connect
@@ -656,19 +658,19 @@ In der nächsten IF-Anweisung wird geprüft ob sich im String der Variable \$hos
 	    @$__db->query('SET COLLATION_CONNECTION=utf8_general_ci');
 	    $__db->set_charset('utf8');
 \end{lstlisting}
-In diesem Abschnitt wird anhand der oben gesammelten Informationen die Verbindung zur Datenbank aufgebaut und die ausgewählte Datenbank selektiert.\\
-Anschließend werden noch Informationen über den verwendeten Zeichencode übergeben.\\
+In diesem Abschnitt wird anhand der oben gesammelten Informationen die Verbindung zur Datenbank aufgebaut und jene ausgewählte Datenbank selektiert.\\
+Anschließend werden Informationen über den verwendeten Zeichencode übergeben.\\
 \\
 Der Rückgabewerte dieser Funktion ist, wenn keine Fehler vorkommt, eine Mysqli Objekt. 
 \newpage
 
 \subsubsection{function db\_query}
 
-Mithilfe dieser Funktion kann man eine Query an die Datenbank schicken. Ist die Query ein SELECT Statement bekommt man ein Result Set zurück ist es aber eine Query mit einem INSERT, UPDATE oder DELETE Statement bekommt man true zurück wenn es erfolgreich war und false wenn es nicht erfolgreich war. Um eine Query absetzten zu könne benötigt diese Funktion folgende Parameter:
+Mithilfe dieser Funktion lässt sich eine Query an die Datenbank schicken. Ist die Query ein SELECT Statement, bekommt man ein ResultSet zurück. Handelt es sich aber um eine Query mit einem INSERT-, UPDATE- oder DELETE- Statement, liefert die Funktion nach erfolreichem Durchlaufen den Wert true. Ist dies nicht der Fall, liefert sie den Wert false. Um eine Query absetzen zu können, benötigt diese Funktion folgende Parameter:
 \begin{itemize}
 	\item \textbf{\$query} Mit diesem Parameter wird die abzuschickende Query angeben.
-	\item \textbf{\$logError} Dieser Parameter ist Standard mäßig immer true.
-	\item \textbf{\$buffered} Dieser Parameter ist Standard mäßig immer true.
+	\item \textbf{\$logError} Dieser Parameter ist standardmäßig immer true.
+	\item \textbf{\$buffered} Dieser Parameter ist standardmäßig immer true.
 \end{itemize}
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query1, firstnumber=154]
@@ -681,8 +683,8 @@ $__db->unbuffered_result = false;
 }
 \end{lstlisting}
 
-In diesem Teilabschnitt werden zuerst mal die Variablen \$ost und \$\_\_db als global Variablen deklariert.
-Anschließen wird geprüft ob die Variable \$\_\_db ein Unbuffered Result beinhaltet. Ist dies der Fall wird das Unbuffered Result geleert und der Wert auf false gesetzt.
+In diesem Teilabschnitt werden zunächst die Variablen \$ost und \$\_\_db als global- Variablen deklariert.
+Im Anschluss wird geprüft, ob die Variable \$\_\_db ein Unbuffered Result beinhaltet. Ist dies der Fall, wird das Unbuffered Result geleert und der Wert auf false gesetzt.
 
 \newpage
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query2, firstnumber=163]
@@ -696,8 +698,8 @@ $buffered ? MYSQLI_STORE_RESULT : MYSQLI_USE_RESULT);
 } while (!$res && --$tries && $__db->errno == 1213);
 \end{lstlisting}
 
-Dieser Teil des Codes schickt mit Hilfe der query Funktion eine Anfrage mit der Query an die Datenbank und speichert das Ergebnis in der Variable \$res. Anschließen wird geprüft ob die Abfrage erfolgreich war, ob \$\_\_db->errno gleich 1213 ist und zusätzlich wird die Variable \$tries um eins verkleinert. Treffen alle Argumente zu war die Query erfolglos und wird noch mal geschickt. Nach drei Versuche bricht die do-while-Schleife ab und es wird nicht mehr Versucht eine Anfrage an die Datenbank zu schicken.
-War das Abschicken der Query erfolgreich wird die do-while-Schleife ebenfalls abgebrochen und die nächste IF-Anweisung wird nicht durchgeführt.  
+Dieser Teil des Codes schickt mit Hilfe der query Funktion eine Anfrage mit der Query an die Datenbank und speichert das Ergebnis in der Variable \$res. Anschließend wird kontrolliert, ob die Abfrage erfolgreich war und ob \$\_\_db->errno gleich 1213 ist. Zusätzlich wird die Variable \$tries um eins verkleinert. Treffen alle Argumente zu, war das Abschicken der Query erfolglos und wird noch einmal vorgenommen. Nach drei Versuchen bricht die do-while-Schleife ab und es wird nicht mehr versucht eine Anfrage an die Datenbank zu schicken.
+War das Abschicken der Query hingegen erfolgreich, wird die do-while-Schleife ebenfalls abgebrochen und die nächste IF-Anweisung wird nicht durchgeführt.  
 \newpage
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query3, firstnumber=173]
@@ -717,9 +719,9 @@ $__db->unbuffered_result = $res;
 return $res;
 \end{lstlisting}
 
-Wenn, wie im oberen Abschnitt schon erwähnt, die do-while-Schliefe den Versuch eine Query an die Datenbank zu schicken Abgebrochen hat wird als nächstes geprüft ob die Variable \$res etwas beinhaltet und ob die Variablen \$logError und \$ost deklariert wurden. Treffen alle Parameter zu wird bei der nächsten IF-Anweisung geprüft ob die Variable \$logError eine Wert beinhaltet der als Funktion aufgerufen werden kann und ob der Aufruf dieser Funktion mit dem Parameter \$\_\_db->errno false zurück gibt.
-Triff dies auch zu wird die Variable \$res mit dem Wert null zurück gegeben. Anschließen wird der Variable \$msg noch der Fehlertext übergeben und es wird mit der Variable \$ost  die Funktion logDBError aufgerufen. Als Parameter werden dieser Funktion der Errorcode und der Errortext mitgegeben.
-In der letzten IF-Anweisung wird noch geprüft ob die Variabel \$res ein Objekt ist und ob die Variable \$buffered den Wert false hält. Ist dies der Fall wird der Wert der Variable \$res dem Datenfeld unbuffered\_result des Objektes \$\_\_db übergeben. 
+Wenn, wie im oberen Abschnitt schon erwähnt, die do-while-Schleife den Versuch eine Query an die Datenbank zu schicken abgebrochen hat, wird in einem nächsten Schritt geprüft ob, die Variable \$res etwas beinhaltet und ob die Variablen \$logError und \$ost deklariert wurden. Treffen alle Parameter zu, wird bei der nächsten IF-Anweisung kontrolliert, ob die Variable \$logError einen Wert beinhaltet, der als Funktion aufgerufen werden kann und ob der Aufruf dieser Funktion mit dem Parameter \$\_\_db->errno den Wert false zurück gibt.
+Trifft dies auch zu, wird die Variable \$res mit dem Wert null zurück gegeben. Anschließend wird der Variable \$msg der Fehlertext übergeben und mit der Variable \$ost  wird die Funktion logDBError aufgerufen. Als Parameter werden dieser Funktion der Errorcode und der Errortext mitgegeben.
+In der letzten IF-Anweisung soll noch geprüft werden, ob die Variable \$res ein Objekt ist und ob die Variable \$buffered den Wert false hält. Ist dies der Fall, wird der Wert der Variable \$res dem Datenfeld unbuffered\_result des Objektes \$\_\_db übergeben. 
 Zuletzt wird noch die Variable \$res zurückgegeben.
 \newpage
 
@@ -1012,3 +1014,4 @@ return null;
 %todo: Formatieren der Tabellen
 %todo: Verschieben nach Kap. 2 (Vorstellung des Produktes; hier die JavaeEE Doku)
 %todo: Dokumentation kontrollieren
+%todo: ost ticket: User gendern? Betreuungslehrer fragen
