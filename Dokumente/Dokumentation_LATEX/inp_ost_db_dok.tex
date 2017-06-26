@@ -726,9 +726,9 @@ Zuletzt wird noch die Variable \$res zurückgegeben.
 \newpage
 
 \subsection{Tabellenbeschreibung der Datenbank von unserem Java EE Prototyp}
-Dieser Teil der Dokumentation beschreibt die Datenbank von unserem Java EE Prototypen. Dieser Java EE Prototyp erfüllt im Grunde alle Anforderungen die an das Ticketsystem gestellt wurden.\\
-Hinter dieser Anwendung steht die hier beschriebene Datenbank. Diese Datenbank wurde so konzipiert das sie einfach und Übersichtlicht ist. Es wurde auch darauf geachtet das keine unnötigen Tabellen verwendet werden müssen da wir anhand dieser Anwendung zeigen möchten wie viel unnötigen Funktionen das OSticketsystem vorweist.
-Hier haben Sie ein EER-Diagramm der Datenbank für die grobe Übersicht.
+Dieser Teil der Dokumentation beschreibt die Datenbank von unserem Java EE Prototypen. Dieser erfüllt grundsätzlich alle Anforderungen, die an das Ticketsystem gestellt wurden.\\
+Hinter der Anwendung steht die hier beschriebene Datenbank. Sie wurde konzipiert, möglichst einfach und übersichtlich zu sein. Es wurde auch darauf geachtet, dass keine unnötigen Tabellen verwendet werden müssen, da wir anhand dieser Anwendung zeigen möchten, wie viele überflüssige Funktionen dem OSticketsystem zugrunde liegen.
+Für eine grobe Übersicht, finden Sie hier ein EER-Diagramm der Datenbank.
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.8]{figures/EER-Diagramm-Java-EE-Anwendung.PNG}
@@ -740,8 +740,8 @@ Hier haben Sie ein EER-Diagramm der Datenbank für die grobe Übersicht.
 
 \subsubsection{tpl\_user}
 
-In dieser Tabelle werden die User des Ticketsystems gehalten. Von einem User wird der Vorname, Nachname, E-Mail-Adresse und das Password gespeichert. Optional kann auch der letzte Login, die Telefonnummer und das Datum an dem er erstellt worden ist gespeichert werden.
-Ein User muss einer Schule zugewiesen sein um vollständig im System registriert zu sein. Ein User kann auch ein Supervisor eines Clusters sein aber das ist optional.
+In dieser Tabelle werden die User des Ticketsystems gehalten. Von jedem User werden der Vorname, Nachname, E-Mail-Adresse und das Passwort gespeichert. Optional kann auch der letzte Login, die Telefonnummer und das Datum, an dem der Account erstellt wurde, gespeichert werden.
+Ein User muss einer Schule zugewiesen sein, um vollständig im System registriert zu werden. Ein User kann optional auch die Funktion des Supervisors eines Clusters einnehmen.
 WICHTIG: lastlogin und created werden nach folgender Form in der Datenbank gespeichert "YYYY-MM-DD HH:MM:SS".
 
 \begin{table}[h]
@@ -778,7 +778,7 @@ WICHTIG: lastlogin und created werden nach folgender Form in der Datenbank gespe
 
 \subsubsection{tpl\_ticket}
 
-In dieser Tabelle werden die erstellten Ticket des Ticketsystems gespeichert. Das Ticket wird genau einem User zugeordnet und kann mehrere Notizen(notes) haben. Des weiteren besteht ein Ticket aus einem Header, die Priorität und wann es erstellt und geschlossen worden ist.
+In dieser Tabelle werden die erstellten Tickets des Ticketsystems gespeichert. Das Ticket wird genau einem User zugeordnet und kann mehrere Notizen (notes) beinhalten. Des weiteren besteht ein Ticket aus einem Header, der Priorität und an welchem Datum das Ticket erstellt und geschlossen wurde.
 WICHTIG: closed und created werden nach folgender Form in der Datenbank gespeichert "YYYY-MM-DD HH:MM:SS".
 
 \begin{table}[h]
@@ -807,8 +807,8 @@ WICHTIG: closed und created werden nach folgender Form in der Datenbank gespeich
 
 \subsubsection{tpl\_note}
 
-In dieser Tabelle werden die Notizen(notes) für die Tickets gespeichert. Jeder Notiz wird ein Ticket zugewiesen. Ein Ticket kann auch mehrere Notizen haben aber eine Notiz gehört immer genau zu einem Ticket. Eine Notiz besteht aus einem Text und einem Datum das angibt wann die Notiz erzeugt worden ist.
-WICHTIG: created wird nach folgender Form in der Datenbank gespeichert "YYYY-MM-DD HH:MM:SS".
+In dieser Tabelle werden die Notizen (notes) für die Tickets gespeichert. Jeder Notiz wird ein Ticket zugewiesen. Ein Ticket kann mehrere Notizen enthalten, umgekehrt aber gehört eine Notiz immer genau zu einem Ticket. Eine Notiz besteht aus einem Text und einem Datum, das angibt, wann die Notiz erzeugt worden ist.
+WICHTIG: created wird in folgendem Format in der Datenbank gespeichert: "YYYY-MM-DD HH:MM:SS".
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -832,7 +832,7 @@ WICHTIG: created wird nach folgender Form in der Datenbank gespeichert "YYYY-MM-
 
 \subsubsection{tpl\_role}
 
-In dieser Tabelle werden die Rollen gespeichert die ein User annehmen kann. Eine Rolle besteht lediglich aus einem Namen und einer Notiz. Ein User kann genau eine Rolle haben aber eine Rolle kann von mehreren User genutzt werden. 
+In dieser Tabelle werden die Rollen gespeichert, die ein User annehmen kann. Eine Rolle besteht lediglich aus einem Namen und einer Notiz. Ein User kann genau eine Rolle haben, aber eine Rolle kann umgekehrt von mehreren Usern genutzt werden.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -853,8 +853,8 @@ In dieser Tabelle werden die Rollen gespeichert die ein User annehmen kann. Eine
 
 \subsubsection{tpl\_school}
 
-In dieser Tabelle werden die Schulen gespeichert die bei diesem Ticketsystem dabei sind.
-Eine Schule wird mit Ihrer Bezeichnung, Adresse und Namen abgespeichert. Weiteres kann eine Schule einem Cluster zugeordnet werden. 
+In dieser Tabelle werden die Schulen gespeichert, die diese Ticketsystem verwenden.
+Eine Schule wird mit ihrer Bezeichnung, Adresse und Namen abgespeichert. Des Weiteren kann eine Schule einem Cluster zugeordnet werden. 
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -880,8 +880,8 @@ Eine Schule wird mit Ihrer Bezeichnung, Adresse und Namen abgespeichert. Weitere
 
 \subsubsection{tpl\_cluster}
 
-In dieser Tabelle werden die Cluster festgelegt. Ein Cluster ist ein Mengen von Schule die zu einer Organisation zusammen geschlossen worden sind. Jeder Cluster hat einen Supervisor der für die Bearbeitung der anfallenden Ticket in diesem Cluster verantwortlich ist.
-Der Supervisor wird per Referenz zur User-Tabelle festgelegt ein Cluster hat immer genau einen Supervisor. Zusätzlich wird noch ein Name für den Cluster festgelegt.
+In dieser Tabelle werden die Cluster festgelegt. Als Cluster wird eine Mengen von Schulen, die zu einer Organisation zusammen geschlossen wurden, bezeichnet. Jeder Cluster hat einen Supervisor, der für die Bearbeitung der anfallenden Tickets in ebendiesem Cluster verantwortlich ist.
+Der Supervisor wird per Referenz zur User-Tabelle festgelegt. Ein Cluster hat immer genau einen Supervisor. Zusätzlich wird noch ein Name für den Cluster festgelegt.
 
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
@@ -903,17 +903,18 @@ Der Supervisor wird per Referenz zur User-Tabelle festgelegt ein Cluster hat imm
 
 \subsection{Beschreibung der Datenbankanbindung von unserem Java EE Prototyp}
 
-Da unsere Anwendung nur ein Prototyp ist wurde auch die Datenbankanbindung nur mit den wichtigsten Funktionen konzipiert. Deshalb ist die Klasse Datenbankanbindung.java auch sehr statisch und redundant geschrieben. 
+Da unsere Anwendung nur ein Prototyp ist, wurde auch die Datenbankanbindung nur mit den wichtigsten Funktionen konzipiert. Deshalb ist die Klasse Datenbankanbindung.java auch sehr statisch und redundant geschrieben. 
 Die Datenbankanbindung wurde mit Hilfe der Java Api JDBC realisiert.\\
-Mithilfe der get-Methoden kann man die einzelnen Tabellen aus der Datenbank auslesen und mit Hilfe der insert-Methoden kann man Einträge in die Tabellen einfügen.
-Mit der Methode dbconnect stellt man die Verbindung zu der Datenbank her.\\
+Mit Hilfe der get-Methoden lassen sich die einzelnen Tabellen aus der Datenbank auslesen und durch die insert-Methoden werden Einträge in die Tabelle eingefügt.
+Mit der Methode dbconnect kann die Verbindung zu der Datenbank hergestellt werden.\\
 \\
-Am Anfang der Klasse werden drei String Variablen mit Informationen über den Datenbank Zugang initialisiert.
+Am Anfang der Klasse werden drei String Variablen mit Informationen über den Datenbank-Zugang initialisiert.
 \begin{itemize}
-	\item \textbf{url} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner da es noch ein Prototyp ist.
-	\item \textbf{username} ist ein User der die benötigen Rechte hat um lesend und schreiben auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu da sie ja nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
-	\item \textbf{\$password} ist das Passwort des User. 
+	\item \textbf{url} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner, da es sich noch um einen Prototypen handelt.
+	\item \textbf{username} Ist ein User, der die benötigen Rechte hat, um lesend und schreibend auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu, da sie nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
+	\item \textbf{\$password} Ist das Passwort des User. 
 \end{itemize}
+
 \begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Datenfelder, firstnumber=30]
 private String url = "jdbc:mysql://localhost:3306/java_ee_database";
 private String username = "root";
@@ -923,8 +924,8 @@ private String password = "";
 Im folgenden werden die Methoden Klasse Datenbankanbindung.java im Detail beschrieben.
  
 \subsubsection{Methode dbconnect\(\)}
-Diese Methode stellt eine Verbindung zu der Datenbank her und liefert ein Statement Objekt zurück. Das Statement Objekt wird benötigt um eine Query an die Datenbank zu schicken.
-Um ein Statement Objekt erzeugen zu könne muss man zuerst ein Connection Objekt erzeugen. Dies erfolgt durch die Methode getConnection mit den Parameter url, username, password. Konnte keine Verbindung zu der Datenbank hergestellt werden wird durch den Catch-Block die SQLException gefangen und der Wert null zurück gegeben.
+Diese Methode stellt eine Verbindung zu der Datenbank her und liefert ein Statement Objekt zurück. Das Statement Objekt wird benötigt, um eine Query an die Datenbank zu schicken.
+Um ein Statement Objekt erzeugen zu können, muss zuerst ein Connection Objekt erzeugt werden. Dies erfolgt durch die Methode getConnection mit den Parameter url, username, password. Konnte keine Verbindung zu der Datenbank hergestellt werden, wird durch den Catch-Block die SQLException gefangen und der Wert null zurück gegeben.
 
 \begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-dbconnect, firstnumber=44]
 public Statement dbconnect()
@@ -946,8 +947,8 @@ return null;
 
 \subsubsection{Methode insertRole\(\)}
 
-In dieser Methode wird ein Insert-Statement erzeugt und anschließen an die Datenbank geschickt, zurück bekommen wir den String 'Das Insert hat funktioniert.' oder null wenn das Insert nicht funktioniert hat. Als Parameter werden die Values benötigt die man in die Datenbank schreiben möchte. Zuerst wird mit der Methode dbconnect\(\) ein Statment Objekt erstellt und anschließen wird mit Hilfe der executeUpdate Methode die Query an die Datenbank geschickt. Ist das abschicken der Query nicht erfolgreich bekommt man den Wert null zurück.\\
-Dieser Methodenaufbau finden wir bei allen insert-Methoden in dieser Klasse.
+Bei dieser Methode wird ein Insert-Statement erzeugt und anschließend an die Datenbank geschickt, zurück bekommen wir den String 'Das Insert hat funktioniert.' oder null, wenn das Insert nicht funktioniert hat. Als Parameter werden die Values benötigt, welche man in die Datenbank schreiben möchte. Zuerst wird mit der Methode dbconnect\(\) ein Statment Objekt erstellt und darauffolgend wird mit Hilfe der executeUpdate Methode die Query an die Datenbank geschickt. Ist das Abschicken der Query nicht erfolgreich, bekommt man den Wert null zurück.\\
+Dieser Methodenaufbau finden wir bei allen insert-Methoden dieser Klasse.
 
 \begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-dbconnect, firstnumber=271]
 public String insertRole(String name, String note)
@@ -967,12 +968,12 @@ return null;
 \newpage
 \subsubsection{Methode getRoles\(\)}
 
-Mit der Methode getRoles kann man alle Rollen aus der Datenbanktabelle role auslesen.
-Zuerst wird in dieser Methode eine ArrayList roles Initialisiert, anschließen werden String Variablen definiert die benötigt werden um aus dem ResultSet die Datenfelder der Role zu lesen.
+Mithilfe der Methode getRoles lassen sich alle Rollen aus der Datenbanktabelle role auslesen.
+Zuerst wird in dieser Methode eine ArrayList roles initialisiert, anschließend werden String Variablen definiert, die benötigt werden, um aus dem ResultSet die Datenfelder der Role zu lesen.
 Im try-Block wird nun ein SELECT-Statement an die Datenbank geschickt und ein ResultSet Objekt rs erzeugt. 
-Um aus dem ResultSet die einzelnen Rollen auszulesen benötigen wir eine while-Schleife. Diese iterieren solange durch das ResultSet bis kein Eintrag mehr vorhanden ist(bis rs.next() false zurück gib).
-In dieser while-Schleife wird zuerst ein role Objekt erzeugt und mit Hilfe der set-Methoden die Datenfelder des Rollen Objekt gesetzt. Zum Schluss wird das Rollen Objekt noch der ArrayList roles hinzugefügt. Wurde durch alle Einträge des ResultSet iteriert wird das Statement geschlossen. Tritt werden dem durchlaufen des Try-Blockes ein Fehler auf so wird durch den Catch-Block der Wert null zurückgegeben.\\ 
-Dieser Methodenaufbau findet wir bei allen get-Methoden in dieser Klasse.
+Um aus dem ResultSet die einzelnen Rollen auszulesen, benötigen wir eine while-Schleife. Diese iterieren solange durch das ResultSet, bis kein Eintrag mehr vorhanden ist(bis rs.next() false zurück gibt).
+In dieser while-Schleife wird zuerst ein role Objekt erzeugt und mit Hilfe der set-Methoden die Datenfelder dieses Rollenobjekts gesetzt. Zum Schluss wird das Rollenobjekt noch der ArrayList roles hinzugefügt. Wurde durch alle Einträge des ResultSet iteriert, wird das Statement geschlossen. Tritt während dem Durchlaufen des Try-Blockes ein Fehler auf, so wird der Wert null durch den Catch-Block zurückgegeben.\\ 
+Diesen Methodenaufbau finden wir bei allen get-Methoden dieser Klasse.
 
 \newpage
 
@@ -1015,3 +1016,5 @@ return null;
 %todo: Verschieben nach Kap. 2 (Vorstellung des Produktes; hier die JavaeEE Doku)
 %todo: Dokumentation kontrollieren
 %todo: ost ticket: User gendern? Betreuungslehrer fragen
+%todo: null groß?
+%todo: doppelpunkte bei aufzählung
