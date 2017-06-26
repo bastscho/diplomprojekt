@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditTplClusterTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditTplClusterLabel_clusterId}" for="clusterId" />
+                    <h:inputText id="clusterId" value="#{tplClusterController.selected.clusterId}" title="#{bundle.EditTplClusterTitle_clusterId}" required="true" requiredMessage="#{bundle.EditTplClusterRequiredMessage_clusterId}"/>
+                    <h:outputLabel value="#{bundle.EditTplClusterLabel_name}" for="name" />
+                    <h:inputText id="name" value="#{tplClusterController.selected.name}" title="#{bundle.EditTplClusterTitle_name}" required="true" requiredMessage="#{bundle.EditTplClusterRequiredMessage_name}"/>
+                    <h:outputLabel value="#{bundle.EditTplClusterLabel_clusterSupervisor}" for="clusterSupervisor" />
+                    <h:selectOneMenu id="clusterSupervisor" value="#{tplClusterController.selected.clusterSupervisor}" title="#{bundle.EditTplClusterTitle_clusterSupervisor}" >
+                        <f:selectItems value="#{tplUserController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{tplClusterController.update}" value="#{bundle.EditTplClusterSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditTplClusterViewLink}"/>
+                <br />
+                <h:commandLink action="#{tplClusterController.prepareList}" value="#{bundle.EditTplClusterShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditTplClusterIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewTplUserTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewTplUserLabel_userId}"/>
+                    <h:outputText value="#{tplUserController.selected.userId}" title="#{bundle.ViewTplUserTitle_userId}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_firstname}"/>
+                    <h:outputText value="#{tplUserController.selected.firstname}" title="#{bundle.ViewTplUserTitle_firstname}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_lastname}"/>
+                    <h:outputText value="#{tplUserController.selected.lastname}" title="#{bundle.ViewTplUserTitle_lastname}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_email}"/>
+                    <h:outputText value="#{tplUserController.selected.email}" title="#{bundle.ViewTplUserTitle_email}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_password}"/>
+                    <h:outputText value="#{tplUserController.selected.password}" title="#{bundle.ViewTplUserTitle_password}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_lastlogin}"/>
+                    <h:outputText value="#{tplUserController.selected.lastlogin}" title="#{bundle.ViewTplUserTitle_lastlogin}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_phone}"/>
+                    <h:outputText value="#{tplUserController.selected.phone}" title="#{bundle.ViewTplUserTitle_phone}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_created}"/>
+                    <h:outputText value="#{tplUserController.selected.created}" title="#{bundle.ViewTplUserTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_roleId}"/>
+                    <h:outputText value="#{tplUserController.selected.roleId}" title="#{bundle.ViewTplUserTitle_roleId}"/>
+                    <h:outputText value="#{bundle.ViewTplUserLabel_schoolId}"/>
+                    <h:outputText value="#{tplUserController.selected.schoolId}" title="#{bundle.ViewTplUserTitle_schoolId}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{tplUserController.destroyAndView}" value="#{bundle.ViewTplUserDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewTplUserEditLink}"/>
+                <br />
+                <h:commandLink action="#{tplUserController.prepareCreate}" value="#{bundle.ViewTplUserCreateLink}" />
+                <br />
+                <h:commandLink action="#{tplUserController.prepareList}" value="#{bundle.ViewTplUserShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewTplUserIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

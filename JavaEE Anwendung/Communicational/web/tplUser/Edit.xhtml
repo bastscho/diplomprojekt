@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditTplUserTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_userId}" for="userId" />
+                    <h:inputText id="userId" value="#{tplUserController.selected.userId}" title="#{bundle.EditTplUserTitle_userId}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_userId}"/>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_firstname}" for="firstname" />
+                    <h:inputText id="firstname" value="#{tplUserController.selected.firstname}" title="#{bundle.EditTplUserTitle_firstname}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_firstname}"/>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_lastname}" for="lastname" />
+                    <h:inputText id="lastname" value="#{tplUserController.selected.lastname}" title="#{bundle.EditTplUserTitle_lastname}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_lastname}"/>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{tplUserController.selected.email}" title="#{bundle.EditTplUserTitle_email}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_email}"/>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_password}" for="password" />
+                    <h:inputText id="password" value="#{tplUserController.selected.password}" title="#{bundle.EditTplUserTitle_password}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_password}"/>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_lastlogin}" for="lastlogin" />
+                    <h:inputText id="lastlogin" value="#{tplUserController.selected.lastlogin}" title="#{bundle.EditTplUserTitle_lastlogin}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_phone}" for="phone" />
+                    <h:inputText id="phone" value="#{tplUserController.selected.phone}" title="#{bundle.EditTplUserTitle_phone}" />
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{tplUserController.selected.created}" title="#{bundle.EditTplUserTitle_created}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_roleId}" for="roleId" />
+                    <h:selectOneMenu id="roleId" value="#{tplUserController.selected.roleId}" title="#{bundle.EditTplUserTitle_roleId}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_roleId}">
+                        <f:selectItems value="#{tplRoleController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditTplUserLabel_schoolId}" for="schoolId" />
+                    <h:selectOneMenu id="schoolId" value="#{tplUserController.selected.schoolId}" title="#{bundle.EditTplUserTitle_schoolId}" required="true" requiredMessage="#{bundle.EditTplUserRequiredMessage_schoolId}">
+                        <f:selectItems value="#{tplSchoolController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{tplUserController.update}" value="#{bundle.EditTplUserSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditTplUserViewLink}"/>
+                <br />
+                <h:commandLink action="#{tplUserController.prepareList}" value="#{bundle.EditTplUserShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditTplUserIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

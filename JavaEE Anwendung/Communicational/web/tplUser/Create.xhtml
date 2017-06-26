@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTplUserTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_userId}" for="userId" />
+                    <h:inputText id="userId" value="#{tplUserController.selected.userId}" title="#{bundle.CreateTplUserTitle_userId}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_userId}"/>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_firstname}" for="firstname" />
+                    <h:inputText id="firstname" value="#{tplUserController.selected.firstname}" title="#{bundle.CreateTplUserTitle_firstname}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_firstname}"/>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_lastname}" for="lastname" />
+                    <h:inputText id="lastname" value="#{tplUserController.selected.lastname}" title="#{bundle.CreateTplUserTitle_lastname}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_lastname}"/>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_email}" for="email" />
+                    <h:inputText id="email" value="#{tplUserController.selected.email}" title="#{bundle.CreateTplUserTitle_email}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_email}"/>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_password}" for="password" />
+                    <h:inputText id="password" value="#{tplUserController.selected.password}" title="#{bundle.CreateTplUserTitle_password}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_password}"/>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_lastlogin}" for="lastlogin" />
+                    <h:inputText id="lastlogin" value="#{tplUserController.selected.lastlogin}" title="#{bundle.CreateTplUserTitle_lastlogin}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_phone}" for="phone" />
+                    <h:inputText id="phone" value="#{tplUserController.selected.phone}" title="#{bundle.CreateTplUserTitle_phone}" />
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{tplUserController.selected.created}" title="#{bundle.CreateTplUserTitle_created}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_roleId}" for="roleId" />
+                    <h:selectOneMenu id="roleId" value="#{tplUserController.selected.roleId}" title="#{bundle.CreateTplUserTitle_roleId}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_roleId}">
+                        <f:selectItems value="#{tplRoleController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.CreateTplUserLabel_schoolId}" for="schoolId" />
+                    <h:selectOneMenu id="schoolId" value="#{tplUserController.selected.schoolId}" title="#{bundle.CreateTplUserTitle_schoolId}" required="true" requiredMessage="#{bundle.CreateTplUserRequiredMessage_schoolId}">
+                        <f:selectItems value="#{tplSchoolController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{tplUserController.create}" value="#{bundle.CreateTplUserSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{tplUserController.prepareList}" value="#{bundle.CreateTplUserShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTplUserIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditTplTicketTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditTplTicketLabel_ticketId}" for="ticketId" />
+                    <h:inputText id="ticketId" value="#{tplTicketController.selected.ticketId}" title="#{bundle.EditTplTicketTitle_ticketId}" required="true" requiredMessage="#{bundle.EditTplTicketRequiredMessage_ticketId}"/>
+                    <h:outputLabel value="#{bundle.EditTplTicketLabel_heading}" for="heading" />
+                    <h:inputText id="heading" value="#{tplTicketController.selected.heading}" title="#{bundle.EditTplTicketTitle_heading}" />
+                    <h:outputLabel value="#{bundle.EditTplTicketLabel_created}" for="created" />
+                    <h:inputText id="created" value="#{tplTicketController.selected.created}" title="#{bundle.EditTplTicketTitle_created}" required="true" requiredMessage="#{bundle.EditTplTicketRequiredMessage_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditTplTicketLabel_closed}" for="closed" />
+                    <h:inputText id="closed" value="#{tplTicketController.selected.closed}" title="#{bundle.EditTplTicketTitle_closed}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditTplTicketLabel_priority}" for="priority" />
+                    <h:inputText id="priority" value="#{tplTicketController.selected.priority}" title="#{bundle.EditTplTicketTitle_priority}" />
+                    <h:outputLabel value="#{bundle.EditTplTicketLabel_userId}" for="userId" />
+                    <h:selectOneMenu id="userId" value="#{tplTicketController.selected.userId}" title="#{bundle.EditTplTicketTitle_userId}" required="true" requiredMessage="#{bundle.EditTplTicketRequiredMessage_userId}">
+                        <f:selectItems value="#{tplUserController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{tplTicketController.update}" value="#{bundle.EditTplTicketSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditTplTicketViewLink}"/>
+                <br />
+                <h:commandLink action="#{tplTicketController.prepareList}" value="#{bundle.EditTplTicketShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditTplTicketIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

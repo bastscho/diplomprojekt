@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewTplNoteTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewTplNoteLabel_noteId}"/>
+                    <h:outputText value="#{tplNoteController.selected.noteId}" title="#{bundle.ViewTplNoteTitle_noteId}"/>
+                    <h:outputText value="#{bundle.ViewTplNoteLabel_created}"/>
+                    <h:outputText value="#{tplNoteController.selected.created}" title="#{bundle.ViewTplNoteTitle_created}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewTplNoteLabel_text}"/>
+                    <h:outputText value="#{tplNoteController.selected.text}" title="#{bundle.ViewTplNoteTitle_text}"/>
+                    <h:outputText value="#{bundle.ViewTplNoteLabel_ticketId}"/>
+                    <h:outputText value="#{tplNoteController.selected.ticketId}" title="#{bundle.ViewTplNoteTitle_ticketId}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{tplNoteController.destroyAndView}" value="#{bundle.ViewTplNoteDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewTplNoteEditLink}"/>
+                <br />
+                <h:commandLink action="#{tplNoteController.prepareCreate}" value="#{bundle.ViewTplNoteCreateLink}" />
+                <br />
+                <h:commandLink action="#{tplNoteController.prepareList}" value="#{bundle.ViewTplNoteShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewTplNoteIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

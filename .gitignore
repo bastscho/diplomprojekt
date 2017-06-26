@@ -62,3 +62,5 @@ Dokumente/Dokumentation_LATEX/figures/klassenentwurf_java_ticketsys_export.png
 *.bak
 
 *.sav
+/JavaEE Anwendung/Communicational/nbproject/private/
+/JavaEE Anwendung/Communicational/build/

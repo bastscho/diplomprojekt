@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTplRoleTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListTplRoleEmpty}" rendered="#{tplRoleController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{tplRoleController.items.rowCount > 0}">
+                    <h:outputText value="#{tplRoleController.pagination.pageFirstItem + 1}..#{tplRoleController.pagination.pageLastItem + 1}/#{tplRoleController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{tplRoleController.previous}" value="#{bundle.Previous} #{tplRoleController.pagination.pageSize}" rendered="#{tplRoleController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{tplRoleController.next}" value="#{bundle.Next} #{tplRoleController.pagination.pageSize}" rendered="#{tplRoleController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{tplRoleController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplRoleTitle_roleId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.roleId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplRoleTitle_name}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplRoleTitle_note}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.note}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{tplRoleController.prepareView}" value="#{bundle.ListTplRoleViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tplRoleController.prepareEdit}" value="#{bundle.ListTplRoleEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tplRoleController.destroy}" value="#{bundle.ListTplRoleDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{tplRoleController.prepareCreate}" value="#{bundle.ListTplRoleCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListTplRoleIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

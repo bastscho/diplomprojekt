@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTplTicketTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListTplTicketEmpty}" rendered="#{tplTicketController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{tplTicketController.items.rowCount > 0}">
+                    <h:outputText value="#{tplTicketController.pagination.pageFirstItem + 1}..#{tplTicketController.pagination.pageLastItem + 1}/#{tplTicketController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{tplTicketController.previous}" value="#{bundle.Previous} #{tplTicketController.pagination.pageSize}" rendered="#{tplTicketController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{tplTicketController.next}" value="#{bundle.Next} #{tplTicketController.pagination.pageSize}" rendered="#{tplTicketController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{tplTicketController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplTicketTitle_ticketId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.ticketId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplTicketTitle_heading}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.heading}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplTicketTitle_created}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.created}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplTicketTitle_closed}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.closed}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplTicketTitle_priority}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.priority}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTplTicketTitle_userId}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.userId}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{tplTicketController.prepareView}" value="#{bundle.ListTplTicketViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tplTicketController.prepareEdit}" value="#{bundle.ListTplTicketEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tplTicketController.destroy}" value="#{bundle.ListTplTicketDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{tplTicketController.prepareCreate}" value="#{bundle.ListTplTicketCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListTplTicketIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
