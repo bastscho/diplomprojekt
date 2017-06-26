@@ -209,7 +209,7 @@ Datum:
 	\item Verteilung(Deployment)
 \end{itemize}
 
-%todo: viel Bullshitten
+%todo: Bullshitten
 \section{Planung}
 \subsection{Projektstrukturplan}
 \subsection{Meilensteine}
@@ -221,7 +221,7 @@ Datum:
 \chapter{Produktvorstellung}
 In diesem Kapitel wird das Softwaresystem \getOst\ dokumentiert bzw. vorgestellt sowie dessen Eignung für die Anforderungen des Projektauftraggebers bearbeitet. Die im Zuge des Projektes geplante Modifikation von \getOst\ wird behandelt und es wird erläutert, warum diese nicht in einem angemessenen Rahmen durchführbar ist. Des Weiteren werden die Ansätze und unternommenen Schritte um das ursprüngliche Projektziel zu erreichen, dargestellt.
 
-\section{Realisierbarkeit mit \getOst}
+\section{Realisierbarkeit mit \getOst} \label{Realisierbarkeit mit \getOst}
 \getOst\ hat sich als umfangreicher herausgestellt wie zu Beginn des Projekts angenommen wurde. Nach Ausarbeitung des konzeptuellen Zieles des Projektes erfolgte eine lange Phase der Evaluation, Einarbeitung und Dokumentation von \getOst. Nach ca. 30 Stunden dieser (viel zu langen) Phase, in der die Komplexität und Schwerfälligkeit des Systems \getOst\ sich nicht bezwingen lassen wollte. Die Anzahl der Dateien setzt sich folgendermaßen zusammen:
 
 \begin{table}
@@ -265,8 +265,7 @@ Damit ist \getOst\ nicht nur wegen der fehlenden Dokumentation kaum zu bändigen
 Um die Realisierbarkeit zu veranschaulichen nun einige Codeauszüge aus OSTicket.
 \newpage
 \subsection{Codeausschnitte osTicket}
-%todo: Zeilennummerierung anpassen (18-31)
-\begin{lstlisting}[language=PHP, caption=main.inc.php]
+\begin{lstlisting}[language=PHP, caption=main.inc.php, firstnumber=18]
 #Disable direct access.
 if(isset($_SERVER['SCRIPT_NAME'])
 && !strcasecmp(basename($_SERVER['SCRIPT_NAME'])
@@ -284,11 +283,9 @@ Bootstrap::connect();
 $_SERVER['REMOTE_ADDR'] = osTicket::get_client_ip();
 
 \end{lstlisting}
-%todo: Zitate (Codezitate des Programmierers, Netzer fragen)
 In diesem Codeauszug wird die Lesbarkeit des Codes sehr gut veranschaulicht, der Aufruf von elf statischen Funktionen ohne Dokumentation erschwert die Erweiterbarkeit um ein vielfaches. Der einzige Kommentar des Programmierers \textit{Don't Monkey around with} it ist weder aussagekräftig noch hilfreich.
 \newpage
-%todo: Zeilennummerierung anpassen (51-65)
-\begin{lstlisting}[language=PHP, caption=pwreset.php]
+\begin{lstlisting}[language=PHP, caption=pwreset.php, firstnumber=51]
 $inc = 'register.confirmed.inc.php';
 $acct->confirm();
 // FIXME: The account has to be uncached in order for the lookup
@@ -307,8 +304,7 @@ $acct->forcePasswdReset();
 \end{lstlisting}
 Auch in der Datei \textit{pwreset.php} ist nur eine sehr dürftige Dokumentation vorzufinden. Es sind lediglich vier Inhaltslose Kommentare wie \textit{makes includes happy} und ein \textit{FIXME} vorzufinden. Diese geben keinerlei Aufschluss über die Funktionalität und Zuständigkeit des Codes.
 \newpage
-%todo: Zeilennummerierung anpassen (16-23)
-\begin{lstlisting}[language=PHP, caption=offline.php]
+\begin{lstlisting}[language=PHP, caption=offline.php, firstnumber=16]
 require_once('client.inc.php');
 if(is_object($ost) && $ost->isSystemOnline()) {
 @header('Location: index.php'); //Redirect if the system is online.
@@ -320,8 +316,8 @@ require(CLIENTINC_DIR.'header.inc.php');
 \end{lstlisting}
 Der einzige Kommentar des Programmierers \textit{modify to fit your needs} erschwert die Lesbarkeit dieser Datei enorm.
 
-%todo: Zeilennummerierung anpassen (38-48)
-\begin{lstlisting}[language=PHP, caption=client.inc.php]
+
+\begin{lstlisting}[language=PHP, caption=client.inc.php, firstnumber=38]
 /* include what is needed on client stuff */
 require_once(INCLUDE_DIR.'class.client.php');
 require_once(INCLUDE_DIR.'class.ticket.php');
@@ -337,7 +333,15 @@ $thisclient = UserAuthenticationBackend::getUser();
 In der Datei client.inc.php wird lediglich dokumentiert, dass diese Datei in jeder client page inkludiert wird. Der Code in dieser Datei besteht hauptsächlich aus statischen Funktionsaufrufen.
 
 \subsection{Evaluation Katak}
-In progress
+Katak, ein Fork\footnote{unabhängige Weiterentwicklung} von OSTicket, lässt sich laut Angaben der Entwickler leichter installieren, bedienen und anpassen. Das liegt, nach Informationen der Webseite von Katak\footnote{http://www.katak-support.com/en} hauptsächlich an einem vereinfachten Datenbankentwurf und der Absenz einiger weniger PHP-Klassen. Die Möglichkeit einer Anpassung von OSTicket wurde dahingehend ausgeforscht, eine Installation auf einem Testsystem vorzunehmen und gewisse Anpassungen durchzuführen. Die Ergebnisse des Problemlösungsversuch in diese Richtung sind im Abschnitt \ref{Realisierbarkeit mit \getOst} zu finden.
+
+Katak bietet laut Entwickler folgende Vorteile:
+\begin{itemize}
+	\item Internationalisierung durch Gettext, Administratoren bestimmen die Sprache des Systems.
+	\item Das Hinzufügen von mehreren Attachments für Tickets.
+	\item Der Überblick über Tickets und dessen Status wurde erweitert. Mitarbeiter können nur Tickets bearbeiten, denen sie auch zugeteilt wurden.
+	\item Passwortsicherheit wurde durch die Verwendung von SHA512\footnote{Hashfunktion} verbessert.
+\end{itemize}
 \subsection{Evaluation OSTicky}
 in progress
 
@@ -345,11 +349,9 @@ in progress
 
 %----------------------------------------------
 \section{Systemdokumentation}
-%todo: Systemdokumentation aus SYP hinzufügen, ist jedoch nicht ganz so einfach da Probleme mit Packages auftreten 
 
 \input{inp_systemdoku.tex}
 
-%todo: Abklären, ob Position der OST-DB Doku hier angemessen ist
 % Elias' OST DB DOKU:
 \input{inp_ost_db_dok}
 
