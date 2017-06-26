@@ -34,7 +34,7 @@
 	\\
 	Die Vorteile dieser Verbreitung und der damit einher gehenden Standardisierung kann für die Schulen große Vorteile mit sich bringen. Die bis jetzt verwendeten Systeme sind sehr unterschiedlich und in keiner Weise miteinander kompatibel. OSTicket soll als anwenderfreundliches System diese Schwierigkeiten vermeiden und beseitigen. Dadurch soll eine bessere Kommunikation zwischen Systembetreuern und IT Managern an Tirols Schulen ermöglicht werden.
 
-	\subsection{Bootstrap}
+	\subsection{Bootstrap} \label{Bootstrap}
 	Das Framework Bootstrap wird verwendet, um eine Anwender freundliche Mobile-first Oberfläche zu erstellen. Bootstrap bietet umfangreiche Gestaltungsvorlagen wie Formulare, Buttons, Tabellen und weitere nützliche Oberflächengestaltungssysteme.
 	
 	\begin{figure}[h]
@@ -86,12 +86,12 @@
 	MySQL und die Bibliotheken sind hauptsächlich in C und C++ geschrieben. Dies ist zurückzuführen auf die Erzielung einer gute Performance.
 	MySQL sieht grundsätzlich eine MySQL-Server vor auf dem mehrere Datenbanken erstellt werden können. In einer Datenbank könne auch mehrere Tabellen erstellt werden.
 	
-	\newpage
+
 	\section{Werkzeuge}
 	Die im Zuge der Projektdurchführung verwendeten Werkzeuge eignen sich für das Projekt aus verschiedenen Gründen.
 	
 	Ein wichtiger Punkt war die Vertrautheit mit den Werkzeugen: Ein Großteil dieser war uns bereits bekannt beziehungsweise vertraut. Des Weiteren ist die große Community im Internet sehr hilfreich bei auftretenden Problemen und Fragestellungen; meist ist die Lösung innerhalb weniger Minuten gefunden. Da es sich um weit verbreitete Entwicklungsumgebungen handelt konnte auch in der Zukunft (während der Zeit der Projektdurchführung) mit der Weiterentwicklung und Verbesserung dieser Tools gerechnet werden.
-	
+	\newpage
 	\subsection{NetBeans}
 	Die integrierte Entwicklungsumgebung NetBeans ist in Java geschrieben und bietet vielerlei Funktionen wie einen umfangreichen Editor, eine passable Codevervollständigung, Code Analysetools, Debugger und kann mit hilfreichen Plug-Ins wie beispielsweise EasyUML, einem Programm zum Erstellen von UML-Klassendiagrammen aus einem vorhandenen Projekt, erweitert werden. Wie in der Abbildung \ref{Netbeans_GUI} zu sehen ist, kann das Farbthema der Entwicklungsumgebung angepasst werden. Das schont die Augen und erhöht den Workflow.
 	
@@ -154,7 +154,7 @@
 
 	Auch die Unterstützung von Projektbetreuern und weiteren Lehrpersonen kann in Betracht gezogen werden, da die MySQL Workbench im Unterricht oft Verwendung findet.
 	
-	\newpage
+	
 
 	\begin{figure}[h]
 		\centering
@@ -176,18 +176,11 @@
 		\caption{Komprimiertes Klassendiagramm}
 		\label{Klassendiagramm_System}
 	\end{figure}
-	\newpage
-	\subsection{Komponentendiagramm}
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.6]{figures/Komponentendiagramm.png}
-		\caption{Komponentendiagramm}
-		\label{Komponentendiagramm}
-	\end{figure}
+	
 
 	\newpage
 	\section{Implementierung}
-	Bis jetzt wurden wichtige GUI Elemente erstellt und bezüglich der Funktionalität mit unserem Projektpartner besprochen.
+	Es wurden zwei GUI Prototypen mit Bootstrap\footnote{Ein Framework,  Kapitel \ref{Bootstrap}}  erstellt. Die grafische Oberfläche wurde stark vereinfacht und mit \getHammerl\ besprochen.
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.6]{figures/newTicket.png}
@@ -197,7 +190,8 @@
 	\newpage
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.6]{figures/index.png}
+		\includegraphics[scale=0.68]{figures/index.png}
 		\caption{Ticketverwaltung}
 		\label{Tickets verwalten}
 	\end{figure}
+Die Verwaltung der Tickets sollte möglichst einfach wie in der Abbildung \ref{Tickets verwalten} abgewickelt werden. Offene, geschlossene und Tickets die der eingeloggte User erstellt hat, sollen ausgewählt werden können.
