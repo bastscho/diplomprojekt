@@ -1,8 +1,6 @@
-	\section{Verwendete Technologie}
 	\subsection{OSTicket}
 	OSTicket ist ein weit verbreitetes, quelloffenes Ticketingsystem. Es verfügt über eine zentrale MySQL-Datenbank und ein Multi-User Web Interface. Dieses Webinterface gilt es im Zuge dieses Projektes so aufzubereiten, dass es neben den üblichen Auflösungen von Desktop- und Laptopbildschirmen auch Mobile Displays wie die von Smartphones oder Tablets unterstützt.
-	\newpage
-	
+		
 	\begin{wrapfigure}{r}{0.4\textwidth}
 		\vspace{-1cm}
 		\begin{center}
@@ -14,7 +12,7 @@
 		\end{center}
 	\end{wrapfigure}
 
-	Es wird eine Minimum-Impact Strategie verfolgt, das heißt dass im Zuge der Projektdurchführung die Änderungen auf das Vanilla-System so gering als möglich ausfallen. Damit wird einerseits das Ziel verfolgt, eine gewisse Übersichtlichkeit zu bewahren, was in einer kompakten Dokumentation resultieren soll.
+	Es wird eine Minimum-Impact Strategie verfolgt, das heißt dass im Zuge der Projektdurchführung die Änderungen auf das Vanilla\footnote{Von \glqq Vanilla\grqq\ spricht man, wenn ein System unangegriffen und sich in dessen Auslieferungszustand befindet.}-System so gering als möglich ausfallen. Damit wird einerseits das Ziel verfolgt, eine gewisse Übersichtlichkeit zu bewahren, was in einer kompakten Dokumentation resultieren soll.
 	
 	Des weiteren sollen nicht benötigte Funktionalitäten bewahrt bleiben, um systeminterne Reibungen zu vermeiden und Funktionen im Nachhinein mit geringem Aufwand verwenden zu können.
 	
@@ -170,6 +168,8 @@
 	\section{Modelle}
 	\subsection{Klassendiagramm}
 	Abbildung \ref{Klassendiagramm_System} soll die Klassen welche unter dem Ticketsystem Verwendung finden umreißend beschreiben. Das Diagramm dokumentiert nicht den kompletten systematischen Aufbau des Ticketsystems in seinem "Vanilla-Zustand"\footnote{"Vanilla" beschreibt ein System oder Produkt, welches in keinster Weise verändert (customized) worden ist.}, sondern ist eine Zusammenfassung der wichtigsten Klassen, die Anwendung finden und soll lediglich veranschaulichen, welche die fundamentalsten Klassen sind und in welchem Zusammenhang diese stehen.
+	
+	%todo: 0 aktuellstes diagramm verwenden
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.9]{figures/Klassendiagramm.jpg}
@@ -180,6 +180,7 @@
 
 	\newpage
 	\section{Implementierung}
+	%todo: 2 text bull (oben und unten bei beiden screenshots)
 	Es wurden zwei GUI Prototypen mit Bootstrap\footnote{Ein Framework,  Kapitel \ref{Bootstrap}}  erstellt. Die grafische Oberfläche wurde stark vereinfacht und mit \getHammerl\ besprochen.
 	\begin{figure}[h]
 		\centering
@@ -188,6 +189,7 @@
 		\label{Ein Ticket erstellen}
 	\end{figure}
 	\newpage
+	%todo: 2 neuer screencapture, kleineres browserfenster
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.68]{figures/index.png}

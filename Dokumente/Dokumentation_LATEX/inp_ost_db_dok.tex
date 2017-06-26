@@ -729,6 +729,7 @@ Zuletzt wird noch die Variable \$res zurückgegeben.
 Dieser Teil der Dokumentation beschreibt die Datenbank von unserem Java EE Prototypen. Dieser erfüllt grundsätzlich alle Anforderungen, die an das Ticketsystem gestellt wurden.\\
 Hinter der Anwendung steht die hier beschriebene Datenbank. Sie wurde konzipiert, möglichst einfach und übersichtlich zu sein. Es wurde auch darauf geachtet, dass keine unnötigen Tabellen verwendet werden müssen, da wir anhand dieser Anwendung zeigen möchten, wie viele überflüssige Funktionen dem OSticketsystem zugrunde liegen.
 Für eine grobe Übersicht, finden Sie hier ein EER-Diagramm der Datenbank.
+%todo: 3 evtll. mit dia nachbilden (AKTUELLSTE VERSION)
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.8]{figures/EER-Diagramm-Java-EE-Anwendung.PNG}
@@ -968,7 +969,7 @@ return null;
 \newpage
 \subsubsection{Methode getRoles\(\)}
 
-Mithilfe der Methode getRoles lassen sich alle Rollen aus der Datenbanktabelle role auslesen.
+Mit Hilfe der Methode getRoles lassen sich alle Rollen aus der Datenbanktabelle role auslesen.
 Zuerst wird in dieser Methode eine ArrayList roles initialisiert, anschließend werden String Variablen definiert, die benötigt werden, um aus dem ResultSet die Datenfelder der Role zu lesen.
 Im try-Block wird nun ein SELECT-Statement an die Datenbank geschickt und ein ResultSet Objekt rs erzeugt. 
 Um aus dem ResultSet die einzelnen Rollen auszulesen, benötigen wir eine while-Schleife. Diese iterieren solange durch das ResultSet, bis kein Eintrag mehr vorhanden ist(bis rs.next() false zurück gibt).

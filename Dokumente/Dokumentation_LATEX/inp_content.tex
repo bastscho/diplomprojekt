@@ -1,33 +1,23 @@
 \def \currentAuthor {Das Projektteam} %so kann jederzeit der Autor geändert werden -> wird in der Fusszeile angezeigt.
 
-\chapter*{Einleitende Bemerkungen}
-
-\chapter*{Notationen}
-Beschreibung wie Code, Hinweise, Zitate etc. formatiert werden  
-
-
 \chapter{Projektmanagement}
-%todo: Projektmanagementscheiße bullshitten
-\section{Metainformationen}
 \subsection{Team}
 \subsection{Betreuer}
 \subsection{Partner}
 \subsection{Ansprechpartner}
-\section{Vorerhebungen}
-\subsection{Projektzieleplan}
-
-
 \newpage
 
 \subsection{Risikoanalyse}
 \subsubsection{Risikoidentifikation}
+%todo: 3 Aufblasen
+
 Folgende Risiken können während der Projektdurchführung erwartet werden:
 \begin{itemize}
 	\item[\textbf{R1}] Projektmitglied steig aus dem Projekt aus.
 	\item[\textbf{R2}] Projektpartner stellt seine Kooperation ein.
 	\item[\textbf{R3}] Projektpartner ändert seine Anforderungen.
 	\item[\textbf{R4}] Termine können nicht eingehalten werden.
-	\item[\textbf{R5}] Anforderungen werden nicht erreicht.			
+	\item[\textbf{R5}] Anforderungen werden nicht erreicht.
 \end{itemize}
 
 \subsubsection{Bewertung und Behandlung}
@@ -60,7 +50,7 @@ Je höher die Zahl in der Tabelle, desto höher ist die Auswirkung bzw. Einwirku
 \section{Pflichtenheft}
 \section{IST Zustand}
 IT-ManagerInnen an Tirols Schulen können Probleme mit der Infrastruktur melden und Anfragen zur Beschaffung von Ressourcen/Komponenten stellen.
-\\
+\paragraph{}
 Sie können den Bearbeitungsverlauf ihrer Tickets beobachten. SystembetreuerInnen empfangen die Tickets der IT-ManagerInnen, welche sich in ihrem Cluster befinden. SystembetreuerInnen bearbeiten die Tickets und antworten auf die Anfragen.
 
 \begin{figure}[h]
@@ -75,6 +65,8 @@ Sie können den Bearbeitungsverlauf ihrer Tickets beobachten. SystembetreuerInne
 Bessere Usability soll mit Hilfe von Mobile-First Orientierung auf Basis von Bootstrap erreicht und wenn möglich die Ticketerstellung vereinfacht werden.
 \\
 Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten ermöglichen und eine Erweiterung von Landesebene auf Bundesebene zulassen. Des Weiteren gilt es, den AnwenderInnen den Ticketingprozess intuitiver zu gestalten.
+
+%todo: 2 Erklärung SMART und Sinnhaftigkeit darstellen
 
 \subsection{SMART}
 \begin{description}
@@ -93,7 +85,7 @@ Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten 
 
 \subsection{Produkteinsatz und Umgebung}
 %--------------------------------
-%todo: Anwender des Systems beschreiben (steht auch so in der Vorlage)
+%todo: 1 Anwender des Systems beschreiben (steht auch so in der Vorlage)
 %--------------------------------
 \subsection{Projektumfeldanalyse}
 \subsubsection{Einflussfaktoren}
@@ -101,7 +93,12 @@ Das Projekt wurde durch den Landesschulrat Tirol in Auftrag gegeben. Die Ansprec
 \\
 Des Weiteren beeinflussen die Anwender (IT-Manager) und die Systembetreuer der Plattform das Projektresultat. Da auf die Anwenderfreundlichkeit viel Wert gelegt wird, spielen diese Faktoren eine wirkliche Rolle.
 \\
-Die Projektbetreuer Stefan Stolz und Alexander Scharmer sind für auftretende Fragen, bezüglich Problemstellungen die während des Projekts auftreten können, enorm einflussreich.
+Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, die bezüglich Problemstellungen während des Projekts auftreten können, und damit enorm einflussreich.
+
+%todo: 3 oben: deutsch?
+
+%todo: 2 WHITESPACES FORMATIEREN
+
 \newpage
 \subsection{Stakeholder}
 \subsubsection{Stakeholder Identifizieren}
@@ -110,7 +107,7 @@ Die Projektbetreuer Stefan Stolz und Alexander Scharmer sind für auftretende Fr
 	\begin{tabular}{|lll|}
 		\hline
 		Stakeholder          & Einfluss &  Konfliktpotential      \\ \hline                         
-		Mag. Helmut Hammerle & 3         & 0                  \\ 
+		\getHammerl & 3         & 0                  \\ 
 		Dr. Stefan Walch     & 2         & 0                  \\
 		Stefan Stolz         & 1         & +                  \\ 
 		Alexander Scharmer   & 1         & +                  \\ 
@@ -125,7 +122,7 @@ Die Projektbetreuer Stefan Stolz und Alexander Scharmer sind für auftretende Fr
 
 \subsubsection{Stakeholder Klassifizieren}	
 
-%todo: Formatierung der Tabelle
+%todo: 1 Formatierung der Tabelle
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|lll|}
@@ -143,6 +140,7 @@ Die Projektbetreuer Stefan Stolz und Alexander Scharmer sind für auftretende Fr
 	\label{Tbl_Stakeholder_Klassifikation}
 \end{table}
 
+%todo: 1 Überschriften anpassen um auf Sinnlosigkeit aufmerksam zu machen
 
 \subsection{Funktionalitäten}
 \subsection{Muss Anforderungen}
@@ -155,7 +153,7 @@ SystembetreuerInnen müssen die Tickets der IT-ManagerInnen empfangen, welche si
 \subsection{Soll Anforderungen}
 Es soll eine neue Weboberfläche entwickelt werden, die auf dem HTML \& CSS Framework Bootstrap basiert. Dieses soll sich auf Einfachheit in der Anwendung und Benutzerfreundlichkeit fokussieren. Die Latenzzeit sollte so niedrig wie möglich gehalten werden um ein Reibungsloses Arbeiten zu ermöglichen.
 
-%todo: Testfälle sind furchtbar und müssen generell nocheinmal überarbeitet werden
+%todo: 3 Testfälle sind furchtbar und müssen generell nocheinmal überarbeitet werden - entfernen, falls keine Zeit mehr
 \subsection{Testszenarien und Testfälle}
 Die Testfälle in unserem Projekt beziehen sich auf das Ticketingsystem OSTicket.
 
@@ -200,8 +198,6 @@ Datum:
 %Modus
 %Verteilung(Deployment)
 
-
-%todo: Meilensteine anpassen
 \section{Planung}
 %subsection Projektstrukturplan entfernt
 \subsection{Meilensteine}
@@ -212,13 +208,10 @@ Datum:
 	\item 25.06.2017 Dokumentation fertiggestellt
 \end{itemize}
 
-
-
+%todo: 1 Meilensteine anpassen, Kurzer Text, ob und wie und wann die Meilensteine erreicht wurden (oder nicht)
 
 \subsection{Gant-Chart}
-\subsection{Abnahmekriterien}
-% subsection Pläne zur Evaluierung entfernt
-\subsection{Ergänzungen und zu klärende Punkte}
+%todo: 0 Stolz Vorlage ausfüllen (bullshitten, zu DRITT)
 
 \chapter{Produktvorstellung}
 In diesem Kapitel wird das Softwaresystem \getOst\ dokumentiert bzw. vorgestellt sowie dessen Eignung für die Anforderungen des Projektauftraggebers bearbeitet. Die im Zuge des Projektes geplante Modifikation von \getOst\ wird behandelt und es wird erläutert, warum diese nicht in einem angemessenen Rahmen durchführbar ist. Des Weiteren werden die Ansätze und unternommenen Schritte um das ursprüngliche Projektziel zu erreichen, dargestellt.
@@ -285,6 +278,9 @@ Bootstrap::connect();
 $_SERVER['REMOTE_ADDR'] = osTicket::get_client_ip();
 
 \end{lstlisting}
+
+%todo: 3 Affenzitat
+
 In diesem Codeauszug wird die Lesbarkeit des Codes sehr gut veranschaulicht, der Aufruf von elf statischen Funktionen ohne Dokumentation erschwert die Erweiterbarkeit um ein vielfaches. Der einzige Kommentar des Programmierers \textit{Don't Monkey around with} it ist weder aussagekräftig noch hilfreich.
 \newpage
 \begin{lstlisting}[language=PHP, caption=pwreset.php, firstnumber=51]
@@ -304,6 +300,8 @@ $_SESSION['_client']['reset-token'] = $_GET['token'];
 $acct->forcePasswdReset();
 }
 \end{lstlisting}
+%todo: Wenn Affenzitat muss hier auch zitiert werden. Gilt auch für etwaige Folgende
+
 Auch in der Datei \textit{pwreset.php} ist nur eine sehr dürftige Dokumentation vorzufinden. Es sind lediglich vier Inhaltslose Kommentare wie \textit{makes includes happy} und ein \textit{FIXME} vorzufinden. Diese geben keinerlei Aufschluss über die Funktionalität und Zuständigkeit des Codes.
 \newpage
 \begin{lstlisting}[language=PHP, caption=offline.php, firstnumber=16]
@@ -344,15 +342,20 @@ Katak bietet laut Entwickler folgende Vorteile:
 	\item Der Überblick über Tickets und dessen Status wurde erweitert. Mitarbeiter können nur Tickets bearbeiten, denen sie auch zugeteilt wurden.
 	\item Passwortsicherheit wurde durch die Verwendung von SHA512\footnote{Hashfunktion} verbessert.
 \end{itemize}
-Vor allem die Vereinfachung des Codes und die Trennung zwischen der grafischen Oberfläche und der Logik, erleichtert die Arbeit mit diesem open source System um ein vielfaches.
-\newpage 
+Vor allem die Vereinfachung des Codes und die Trennung zwischen der grafischen Oberfläche und der Logik sollen die Arbeit mit diesem Open Source System um ein Vielfaches erleichtern.
+\newpage
 
 \subsection{Evaluation OSTicky}
-OSTicky präsentierte sich zu Beginn als vielversprechender Ansatz, den Wünschen von \getHammerl\ am besten und effizientesten entgegen zu kommen.
-\newline Diese Lösung unterscheidet sich insofern von einer \getOst\ Installation und einer Katak Installation, dass es sich bei OSTicky nicht um ein eigenständiges Ticketsystem handelt. Es muss viel mehr wie eine Brücke zwischen einer \getOst\ Vanilla Instanz und einem Joomla Interface verstanden werden. Mit OSTicky kann man also ein komplett eigenständiges, unabhängiges Webinterface implementieren, das die Funktionalitäten und Datenbestände von OSTicket utilisiert und somit als Interface für das Ticketsystem fungiert. \newline Ist bereits ein Joomla System in Verwendung, so würde sich OSTicky als geeignete Lösung herausstellen, da dies jedoch nicht der Fall ist, würde sich der Arbeitsaufwand um ein vielfaches erhöhen.
+OSTicky präsentierte sich zu Beginn als vielversprechender Ansatz, den Vorstellungen von \getHammerl\ und dem Landesschulrat am besten und effizientesten zu entsprechen.
+\paragraph{}
+Diese Lösung unterscheidet sich insofern von einer \getOst\ Installation und einer Katak Installation, dass es sich bei OSTicky nicht um ein eigenständiges Ticketsystem handelt. Es muss viel mehr wie eine Brücke zwischen einer \getOst\ Vanilla Instanz und einem Joomla Interface verstanden werden. Mit OSTicky kann man also ein komplett eigenständiges, unabhängiges Webinterface implementieren, das die Funktionalitäten und Datenbestände von OSTicket utilisiert und somit als Interface für das Ticketsystem fungiert.
+\paragraph{}
+Ist bereits ein Joomla System in Verwendung, so würde sich OSTicky als geeignete Lösung herausstellen, da dies jedoch nicht der Fall ist, würde sich der Arbeitsaufwand um ein vielfaches erhöhen.
+
 
 
 %----------------------------------------------
+\newpage
 \section{Systemdokumentation}
 
 \input{inp_systemdoku.tex}
@@ -361,8 +364,6 @@ OSTicky präsentierte sich zu Beginn als vielversprechender Ansatz, den Wünsche
 \input{inp_ost_db_dok}
 
 
-%-------------------------------------
-%todo: Formatierungschaos im Chapter Problemanalyse beheben und Inhalt überarbeiten
 %-------------------------------------
 
 \chapter{Problemanalyse}
@@ -374,6 +375,8 @@ OSTicky präsentierte sich zu Beginn als vielversprechender Ansatz, den Wünsche
 		\item Systembetreuer
 		\item Anwender (IT-Manager und eventuell Lehrer, in Folgendem Anwender genannt)
 \end{itemize}}
+
+%todo: 1 screenshots mit tabellen ersetzen!
 
 \vspace{-.5cm}
 \begin{table}[h]
@@ -448,7 +451,6 @@ OSTicky präsentierte sich zu Beginn als vielversprechender Ansatz, den Wünsche
 	\label{Abb_C08}
 \end{table}
 
-
 \subsection{Ablaufbeschreibung}
 \textbf{C00:}
 \\ 
@@ -490,7 +492,8 @@ Um den Ticketstatus ändern zu können muss der Systembetreuer das Ticket öffne
 Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen um es dann zu schließen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das schließen erfolgreich ist das Ticket geschlossen.
 
 \newpage
-\section{Wireframes}	
+%todo: 2 Wireframes mit Worten zeichnen plus hammerl prios
+\section{User-Interface-Design}	
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.44]{figures/Wireframe_Anwender.png}
@@ -520,89 +523,18 @@ Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen u
 \section{Prototyp}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.8]{figures/Prototyp.png}
+	\includegraphics[scale=.5]{figures/Prototyp.png}
 	\caption{Prototyp Ticketstatus}
 	\label{Abb_Prototyp_Ticketstatus}
 \end{figure}
 
-
-%-------------------------------------------------
-%Chapter Problemanalyse Formatierungschaos bis zu diesem Punkt
-%-------------------------------------------------
-
-
-
-
-\newpage
-\section{Domain-Class-Modelling}
-\begin{itemize}
-	\item "Dinge" (Rollen, Einheiten, Geräte, Events etc.) identifizieren, um die es im Projekt geht
-	\item ER-Modellierung oder Klassendiagramme
-	\item Zustandsdiagramme (zur Darstellung des Lebenszyklus von Domain-Klassen darstellen)
-\end{itemize}
-
-\newpage
-\section{User-Interface-Design}
-\begin{itemize}
-	\item Mockups
-	\item Wireframes
-\end{itemize}
-
-
-
 %  INPUT SYSTEMENTWURF JAVAEE (Jakob)
 \input{inp_javaee_proto}
-
-
-
-
-
-
-\section{Sicherheit des Systems}
-Beschreibung aller sicherheitsrelevanten Designentscheidungen;
-
-\chapter{Implementierung}
-Detaillierte Beschreibung der Implementierung aller Teilkomponenten der Software entlang der zentralsten Use-Cases:
-
-\begin{itemize}
-	\item GUI-Implementierung
-	\item Controllerlogik
-	\item Geschäftslogik
-	\item Datenbankzugriffe
-\end{itemize}
-
-Detaillierte Beschreibung der Teststrategie (Testdriven Development):
-
-\begin{itemize}
-	\item UNIT-Tests (Funktional)
-	\item Integrationstests
-\end{itemize}
 
 Zu Codesequenzen:
 \begin{itemize}
 	\item kurze Codesequenzen direkt im Text (mit Zeilnnummern auf die man in der Beschreibung verweisen kann)
-	\item lange Codesequenzen in den Anhang (mit Zeilennummer) und darauf verweisen (wie z.B. hier \cref{qj})
-\end{itemize}
-
-\chapter{Deployment}
-\begin{itemize}
-	\item Design der Ausführungsumgebung (Produktivenvironment)
-	\item Umsetzung der Ausführungsumgebung
-	\item Deployment
-	\item DevOps-Thema
-\end{itemize}
-
-\chapter{Tests}
-
-%todo: Testfälle doch in diesem Chapter verwenden?!? Vorlage etwas unklar
-\section{Systemtests} 
-Systemtests aller implementierten Funktionalitäten lt. Pflichtenheft
-\begin{itemize}
-	\item Beschreibung der Teststrategie
-	\item Testfall 1
-	\item Testfall 2
-	\item Tesfall 3
-	\item …
+	\item lange Codesequenzen in den Anhang (mit Zeilennummer) und darauf verweisen (wie z.B. hier \cref{xhtml_jee})
 \end{itemize}
 
 \section{Akzeptanztests}
@@ -611,11 +543,11 @@ Systemtests aller implementierten Funktionalitäten lt. Pflichtenheft
 \input{inp_evaluation.tex}
 
 
-\chapter{Benutzerhandbuch} 
-falls im Projekt gefordert
-
 \chapter{Zusammenfassung}
 \begin{itemize}
+	%todo: 0 Muss noch vollständig erstellt werden
 	\item Etwas längere Form des Abstracts
 	\item Detaillierte Beschreibung des Outputs der Arbeit
+	
+	
 \end{itemize}
