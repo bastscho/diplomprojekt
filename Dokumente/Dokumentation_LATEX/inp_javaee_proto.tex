@@ -1,8 +1,6 @@
 \chapter[Systementwurf]{Entwurf/Machbarkeitsfeststellung eines kleinen Java EE Ticketsystems}
 
 \def \currentAuthor{Jakob Tomasi}
-
-
 Aufgrund der bereits geschilderten Nicht Durchführbarkeit einer Adaption von \getOst\ wurde ein Prototyp für ein Ticketsystem entworfen, welcher die vom Landesschulrat und den Tiroler Schulen benötigten Funktionen mitbringt. Die Anforderungen für dieses System sind im Grunde die gleichen, welche zu Beginn an die \getOst-Adaption gestellt wurden. 
 \\
 Ein Auszug dieser Anforderungen sind:
@@ -14,12 +12,11 @@ Ein Auszug dieser Anforderungen sind:
 \end{itemize}
 
 \section{Technologie}
-Für den Prototyp des Ticketsystems wurde Java Enterprise Edition ausgesucht. Diese Entscheidung basiert auf der Absicht, die bei \getOst\ gezogenen Schlüsse zu beachten und die Probleme die bei \getOst\ auftraten, zu vermeiden. JavaEE erscheint hierfür besonders geeignet, da es (in dem Verwendungsmodus, der an der Schule gelehrt wurde) von sich aus das MVC-Entwurfsmuster anwendet (mehr im nächsten Abschnitt). Des Weiteren eignet sich JavaEE für die Beseitigung der Schwächen \getOst s durch die relativ strengen Sprachkonventionen und die (beinahe) unausweichliche Objektorientierung.
+Für den Prototyp des Ticketsystems wurde Java Enterprise Edition ausgesucht. Diese Entscheidung basiert auf der Absicht, die bei \getOst\ gezogenen Schlüsse zu beachten und die Probleme die bei \getOst\ auftraten zu vermeiden. JavaEE erscheint hierfür besonders geeignet, da es (in dem Verwendungsmodus, der an der Schule gelehrt wurde) von sich aus das MVC-Entwurfsmuster anwendet (mehr im nächsten Abschnitt). Des Weiteren eignet sich JavaEE für die Beseitigung der Schwächen \getOst s durch die relativ strengen Sprachkonventionen und die (beinahe) unausweichliche Objektorientierung.
 
 \section{Architektur}
 Als Basis für die Systemarchitektur wird das Model View Controller Muster verwendet. Das bedeutet die Trennung zwischen JavaBeans (Model), die direkt mit der Persistenzebene (Datenbank) arbeitet, der Benutzerschnittstelle (View; Webschicht) und der Logik (Controller; Anwendungsschicht).
 
-%todo: Zitatquelle einfügen: Schießer, Schmollinger; Workshop Java EE 7
 Das Lehrbuch fasst das Entwurfsmuster wie folgt zusammen und bringt dessen Sinn sowie Existenzberechtigung im Evaluationsprogramm \glqq Ticketsystem\grqq\ auf den Punkt:
 
 \blockcquote{javaeeworkshop}{
@@ -27,16 +24,34 @@ Das Lehrbuch fasst das Entwurfsmuster wie folgt zusammen und bringt dessen Sinn 
 	Das Modell kapselt die Daten und enthält je nach MVC-Ausprägung ggf. auch die fachliche Logik. Die View visualisiert das Modell und der Controller realisiert die Anwendungssteuerung Der Controller reagiert auf Benutzerinteraktionen innerhalb der View und aktualisiert ggf. die Daten am Modell. Die View wiederum passt sich je nach Ausprägung des MVC entweder automatisch an das veränderte Modell an oder wird durch den Controller über die Ausprägung informiert.
 }
 
-\begin{itemize}
-	\item MVC
-	\item Schichten
-	\item Pipes
-	\item Request Broker
-	\item Service-Oriented
-\end{itemize}
-
 \section{Benutzerschnittstellen} 
-Kompletter Entwurf aller Benutzerschnittstellen
+Benutzerschnittstellen werden in Java Enterprise Edition - Anwendungen mit der Technologie \glqq Java Server Faces \grqq umgesetzt. Früher wurde \glqq Java Server Pages \grqq verwendet, weiches 1999 erschien und mittlerweile veraltet ist. Java Server Faces ist ein Framework für Oberflächen von Webanwendungen. Folgende Teilkomponenten werden grundsätzlich für JSF benötigt:
+
+\begin{itemize}
+	\item Java Development Kit wurde installiert und eingebunden
+	\item Servlet-Container (bspw. Apache Tomcat) ist einsatzbereit
+\end{itemize}
+\paragraph{}
+Im unteren Listing findet sich beispielhaft ein Auszug aus der XHTML-Datei List.xhtml. Sie oberflächlich gesehen dafür zuständig, eine Tabelle von Tickets und deren detaillierten Eigenschaften anzuzeigen. Des Weiteren finden Sich auch Navigationselemente in der Datei. Solche Tags tragen die Bezeichnung \glqq commandLing \grqq. Definiert in ihrer \glqq action \grqq -Eigenschaft befindet sich ein Expression-Language (EL) Ausdruck welcher auf eine Methode der TicketController Klasse verweist. Ausdrücke der EL sind immer umschlossen von geschweiften Klammern und geführt von einer Raute: \#\{Klassenname.Datenfeld\}, als kleines Beispiel.
+\paragraph{}
+Eine weitere Komponente die hervorzuheben ist, ist der DataTable. Diese Komponente stemmt die Hauptaufgabe der Seite. Sie bezieht eine Liste von Tickets mit dem EL-Ausdruck \glqq \#{tplTicketController.items} \grqq; eine Laufvariable var="item" hält also ein Ticket. Die Laufvariable durchläuft jedes Ticket genau ein mal, vergleichbar mit einer klassischen For-Schleife. So werden die Eigenschaften jedes Tickets in einer Zeile des DataTable dargestellt.
+
+%todo: listing fescher machen
+\begin{lstlisting}[language=html, caption=List.xhtml, firstnumber=0]
+<h:panelGroup rendered="#{tplTicketController.items.rowCount > 0}">
+<h:outputText value="#{tplTicketController.pagination.pageFirstItem + 1}..#{tplTicketController.pagination.pageLastItem + 1}/#{tplTicketController.pagination.itemsCount}"/>&nbsp;
+<h:commandLink action="#{tplTicketController.previous}" value="#{bundle.Previous} #{tplTicketController.pagination.pageSize}" rendered="#{tplTicketController.pagination.hasPreviousPage}"/>&nbsp;
+<h:commandLink action="#{tplTicketController.next}" value="#{bundle.Next} #{tplTicketController.pagination.pageSize}" rendered="#{tplTicketController.pagination.hasNextPage}"/>&nbsp;
+<h:dataTable value="#{tplTicketController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+<h:column>
+<f:facet name="header">
+<h:outputText value="#{bundle.ListTplTicketTitle_ticketId}"/>
+</f:facet>
+<h:outputText value="#{item.ticketId}"/>
+</h:column>
+</h:dataTable>
+</h:panelGroup>
+\end{lstlisting}
 
 %todo: JSPs XHTML erstellen, Screenshotten
 
