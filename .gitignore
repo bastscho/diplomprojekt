@@ -35,9 +35,6 @@ Temporary Items
 *.log
 *.toc
 
-# PDF output - usually a bad idea to keep this in Git
-*.pdf
-
 # Latexmk
 *.fdb_latexmk
 
@@ -60,7 +57,6 @@ Dokumente/Dokumentation_LATEX/figures/klassenentwurf_java_ticketsys_export.png
 *.lol
 *.lof
 *.lot
-*.pdf
 *.gz
 *.toc
 *.bak
