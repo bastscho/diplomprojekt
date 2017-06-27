@@ -162,46 +162,6 @@ SystembetreuerInnen müssen die Tickets der IT-ManagerInnen empfangen, welche si
 \subsection{Ursprüngliche Soll Anforderungen}
 Es soll eine neue Weboberfläche entwickelt werden, die auf dem HTML \& CSS Framework Bootstrap basiert. Dieses soll sich auf Einfachheit in der Anwendung und Benutzerfreundlichkeit fokussieren. Die Latenzzeit sollte so niedrig wie möglich gehalten werden um ein Reibungsloses Arbeiten zu ermöglichen.
 
-%todo: 3 Testfälle sind furchtbar und müssen generell nocheinmal überarbeitet werden - entfernen, falls keine Zeit mehr
-\subsection{Testszenarien und Testfälle}
-Die Testfälle in unserem Projekt beziehen sich auf das Ticketingsystem OSTicket.
-
-\section{Testfälle}
-\subsection{Testfall A}
-\begin{itemize}
-	\item \textbf{Beschreibung:} Ein IT-Manager möchte ein Ticket erstellen.
-	\item \textbf{Vorbedingung:} Der User benötigt ein internetfähiges Gerät und muss im Portal eingeloggt sein.
-	\item \textbf{Aktion:} Der Benutzer wählt den Tab "Neues Ticket" und füllt die notwendigen Felder aus.
-	\item \textbf{Soll-Reaktion:} Das System setzt das Ticket für den zuständigen Systembetreuer sichtbar.
-\end{itemize}
-Tester:
-\\M
-Datum:
-
-\subsection{Testfall B}
-\begin{itemize}
-	\item \textbf{Beschreibung:} Ein Systembetreuer möchte ein Ticket bearbeiten.
-	\item \textbf{Vorbedingung:} Der Systembetreuer benötigt ein internetfähiges Gerät und muss im Portal eingeloggt sein.
-	\item \textbf{Aktion:} Der Systembetreuer wählt den Tab "Meine Tickets" und wählt ein Ticket aus das Bearbeitet werden muss. Durch die Beschreibung des Tickets, weiß der Systembetreuer über die Problemstellung Bescheid und kann dementsprechend handeln.
-	\item \textbf{Soll-Reaktion:} Der Systembetreuer kann sich um die Problemstellung kümmern und das Ticket nach erfolgreicher Bearbeitung wieder schließen.
-\end{itemize}
-Tester:
-\\
-Datum:
-
-\subsection{Testfall C}
-\begin{itemize}
-	\item \textbf{Beschreibung:} Ein Anwender möchte ein bestimmtes Ticket suchen und dieses begutachten. 
-	\item \textbf{Vorbedingung:} Der Anwender benötigt ein internetfähiges Gerät und muss im Portal eingeloggt sein.
-	\item \textbf{Aktion:} Der Anwender gibt im Suchfeld ein Stichwort ein nach dem er suchen möchte. 
-	\item \textbf{Soll-Reaktion:} Das gesuchte Ticket soll angezeigt werden.
-\end{itemize}
-Tester:
-\\
-Datum:
-
-
-
 %subsection Liefervereinbarung entfernt
 %Lieferumfang
 %Modus
@@ -298,8 +258,6 @@ $_SERVER['REMOTE_ADDR'] = osTicket::get_client_ip();
 
 \end{lstlisting}
 
-%todo: 3 Affenzitat
-
 In diesem Codeauszug wird die Lesbarkeit des Codes sehr gut veranschaulicht, der Aufruf von elf statischen Funktionen ohne Dokumentation erschwert die Erweiterbarkeit um ein vielfaches. Der einzige Kommentar des Programmierers \textit{Don't Monkey around with it} ist weder aussagekräftig noch hilfreich.
 \newpage
 \begin{lstlisting}[language=PHP, caption=pwreset.php, firstnumber=51]
@@ -319,8 +277,6 @@ $_SESSION['_client']['reset-token'] = $_GET['token'];
 $acct->forcePasswdReset();
 }
 \end{lstlisting}
-%todo: Wenn Affenzitat muss hier auch zitiert werden. Gilt auch für etwaige Folgende
-
 Auch in der Datei \textit{pwreset.php} ist nur eine sehr dürftige Dokumentation vorzufinden. Es sind lediglich vier Inhaltslose Kommentare wie \textit{makes includes happy} und ein \textit{FIXME} vorzufinden. Diese geben keinerlei Aufschluss über die Funktionalität und Zuständigkeit des Codes.
 \newpage
 \begin{lstlisting}[language=PHP, caption=offline.php, firstnumber=16]
