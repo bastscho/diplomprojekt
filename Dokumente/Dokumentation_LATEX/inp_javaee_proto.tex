@@ -1,9 +1,8 @@
-%todo: 3 Überschrift überlegen, Feinschliff
-\chapter[Systementwurf]{Entwurf/Machbarkeitsfeststellung eines kleinen Java EE Ticketsystems}
-
+\chapter{Java Enterprise Prototyp}
+\label{jee_proto}
 \def \currentAuthor{Jakob Tomasi}
-Aufgrund der bereits geschilderten Nicht Durchführbarkeit einer Adaption von \getOst\ wurde ein Prototyp für ein Ticketsystem entworfen, welcher die vom Landesschulrat und den Tiroler Schulen benötigten Funktionen mitbringt. Die Anforderungen für dieses System sind im Grunde die gleichen, welche zu Beginn an die \getOst-Adaption gestellt wurden. 
-\\
+Aufgrund der bereits geschilderten Nicht-Durchführbarkeit einer Adaption von \getOst\ wurde ein Prototyp für ein Ticketsystem entworfen, welcher die vom Landesschulrat und den Tiroler Schulen benötigten Funktionen mitbringt. Die Anforderungen für dieses System sind im Grunde die gleichen, welche zu Beginn an die \getOst-Adaption gestellt wurden.
+\paragraph{}
 Ein Auszug dieser Anforderungen sind:
 
 \begin{itemize}
@@ -12,8 +11,14 @@ Ein Auszug dieser Anforderungen sind:
 	\item Adaptability: Sollten sich Anforderungen, Best Practices oder Sicherheitsanforderungen ändern, sollen diese mit so geringem Aufwand als möglich implementiert werden können.
 \end{itemize}
 
+Dieser Prototyp wurde mit der Absicht erstellt, die Durchführbarkeit bzw. Machbarkeit eines Ticketsystems entsprechend den Anforderungen des Landesschulrates und insbesondere Herrn \getHammerl\ zu entsprechen. Damit wird also geklärt, dass Java Enterprise Edition als Basistechnologie für ein solches System eingesetzt werden kann. Damit besteht eine Grundlage, an der kommende Projekte anknüpfen können.
+
 \section{Technologie}
-Für den Prototyp des Ticketsystems wurde Java Enterprise Edition ausgesucht. Diese Entscheidung basiert auf der Absicht, die bei \getOst\ gezogenen Schlüsse zu beachten und die Probleme die bei \getOst\ auftraten zu vermeiden. JavaEE erscheint hierfür besonders geeignet, da es (in dem Verwendungsmodus, der an der Schule gelehrt wurde) von sich aus das MVC-Entwurfsmuster anwendet (mehr im nächsten Abschnitt). Des Weiteren eignet sich JavaEE für die Beseitigung der Schwächen \getOst s durch die relativ strengen Sprachkonventionen und die (beinahe) unausweichliche Objektorientierung.
+Für den Prototyp des Ticketsystems wurde Java Enterprise Edition ausgesucht. Diese Entscheidung basiert auf der Absicht, die bei \getOst\ gezogenen Schlüsse zu beachten und die Probleme die bei \getOst\ auftraten zu vermeiden.
+\paragraph{}
+JavaEE erscheint hierfür besonders geeignet, da es (in dem Verwendungsmodus, der an der Schule gelehrt wurde) von sich aus das MVC-Entwurfsmuster anwendet (mehr im nächsten Abschnitt).
+\paragraph{}
+Des Weiteren eignet sich JavaEE für die Beseitigung der Schwächen \getOst s durch die relativ strengen Sprachkonventionen und die (beinahe) unausweichliche Objektorientierung.
 
 \section{Architektur}
 Als Basis für die Systemarchitektur wird das Model View Controller Muster verwendet. Das bedeutet die Trennung zwischen JavaBeans (Model), die direkt mit der Persistenzebene (Datenbank) arbeitet, der Benutzerschnittstelle (View; Webschicht) und der Logik (Controller; Anwendungsschicht).
@@ -43,8 +48,6 @@ Eine weitere Komponente die hervorzuheben ist, ist der DataTable. Diese Komponen
 	\caption{Ausschnitt JSF XHTML Datei}
 	\label{Abb_Jsf_XHTML_Code}
 \end{figure}
-
-%todo: JSF XHTML erstellen, Screenshotten
 
 \newpage
 \section{Klassenentwurf}

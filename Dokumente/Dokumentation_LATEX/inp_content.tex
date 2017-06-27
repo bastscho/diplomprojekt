@@ -8,8 +8,7 @@
 \newpage
 
 \subsection{Risikoanalyse}
-\subsubsection{Risikoidentifikation}
-%todo: 3 Aufblasen
+\paragraph{Risikoidentifikation:}
 
 Folgende Risiken können während der Projektdurchführung erwartet werden:
 \begin{itemize}
@@ -20,27 +19,31 @@ Folgende Risiken können während der Projektdurchführung erwartet werden:
 	\item[\textbf{R5}] Anforderungen werden nicht erreicht.
 \end{itemize}
 
-\subsubsection{Bewertung und Behandlung}
+\paragraph{Bewertung und Behandlung:}
 Die aufgelisteten Risiken werden nach Auswirkung und Eintrittswahrscheinlichkeit bewertet.
 Je höher die Zahl in der Tabelle, desto höher ist die Auswirkung bzw. Einwirkung.
 \begin{table}[h]
 	\begin{tabular}{l|c|c}
 		\textbf{Risiko}                           & \multicolumn{1}{l|}{\textbf{Wahrscheinlichkeit}} & \multicolumn{1}{l}{\textbf{Auswirkung}} \\ \hline
 		\textbf{R1} Ausstieg Projektmitglied                  & 3                                                & 10                                      \\
-		\textbf{R2} Projektpartner stellt Kooperation ein     & 2                                                & 10                                      \\
-		\textbf{R3} Projektpartner ändert seine Anforderungen & 4                                                & 7                                       \\
-		\textbf{R4} Termine können nicht eingehalten werden   & 3                                                & 6                                       \\
+		\textbf{R2} Partner stellt Kooperation ein     & 2                                                & 10                                      \\
+		\textbf{R3} Anforderungsänderung & 4                                                & 7                                       \\
+		\textbf{R4} Termine verpasst   & 3                                                & 6                                       \\
 		\textbf{R5} Anforderungen werden nicht erreicht       & 2                                                & 8                                      
 	\end{tabular}
-	\caption{Analyse Einwirkung \& Auswirkung}
+	\caption{Analyse Risikoeinwirkung \& -auswirkung}
 	\label{Abb_Einwirkung_Auswirkung}
 \end{table}
+
+An dieser Stelle sei angemerkt, dass die Risiken R1 bis R3 sich als ungefährlich erwiesen haben. Dies ist der hohen Flexibilität des Projektpartners \getHammerl\ und des Projektbetreuers \getSteff\ zu verdanken. Ein Eintreten von R5 hatte ein eintreten von R4 zur Folge. Die Umstände und daraus resultierenden Ergebnisse werden in der folgenden Arbeit genau dargestellt.
+
 \newpage
 
 \subsubsection{Risikomatrix}
+Wie in der Matrix in der Abbildung \ref{Abb_Risikomatrix} gut zu sehen ist, sind die Auswirkungen von R4 und R5 relativ hoch. Mit dem Eintreten der beiden Szenarien wandelte sich das Projekt maßgeblich.
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.6]{figures/matrix.png}
+	\includegraphics[scale=.6]{figures/matrix.png}
 	\caption{Risikomatrix}
 	\label{Abb_Risikomatrix}
 \end{figure}
@@ -62,13 +65,17 @@ IT-ManagerInnen können den Bearbeitungsverlauf ihrer Tickets beobachten. System
 \noindent Die Benutzerschnittstelle ist derzeit nur auf die Benutzung mit großen Bildschirmen (ab 1024 Pixel Bildschirmbreite) ausgelegt. Sie kann sich nicht an kleinere Formate (Smartphone, etc.) anpassen.
 
 \section{SOLL Zustand}
+\vspace{-.4cm}
 Bessere Usability soll mit Hilfe von Mobile-First Orientierung auf Basis von Bootstrap erreicht und wenn möglich die Ticketerstellung vereinfacht werden.
+\vspace{-.8cm}
 \paragraph{}
 Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten ermöglichen und eine Erweiterung von Landesebene auf Bundesebene zulassen. Des Weiteren gilt es, den AnwenderInnen den Ticketingprozess intuitiver zu gestalten.
 
-%todo: 2 Erklärung SMART und Sinnhaftigkeit darstellen
-
-\subsection{SMART}
+\vspace{-.5cm}
+\subsection{S.M.A.R.T.}
+\vspace{-.4cm}
+Mit dem Akronym SMART ist ein Rahmen definiert, der die Zieldefinition eines Projektes erleichtern soll. Fünf Aspekte werden hierbei beleuchtet. Jedes ist ein Kriterium das für die erfolgreiche Durchführung eines Projektes erforderlich ist. Sind alle Mindestbestimmungen erfüllt, so ist das Vorhaben \glqq projektwürdig\grqq. Nichtfunktionale Anforderungen wie bspw. Budgetplanung werden von SMART nicht berücksichtigt.
+\vspace{-.25cm}
 \begin{description}
 	\item[S] Spezifisch\newline
 	Systembetreuer und IT-Manager können Support- und Beschaffungsanfragen mit Hilfe des Ticketsystems abwickeln.
@@ -85,8 +92,7 @@ Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten 
 
 \subsection{Produkteinsatz und Umgebung}
 %--------------------------------
-%todo: 1 Anwender des Systems beschreiben (steht auch so in der Vorlage)
-Verwendet soll das Produkt schlussendlich von zweierlei unterschiedlichen Anwendertypen. Diese sind im Folgenden aufgeschlüsselt.
+Das Produkt soll schlussendlich von zweierlei unterschiedlichen Anwendertypen verwendet werden. Diese finden Sie Folgenden aufgeschlüsselt.
 
 \paragraph{IT-Manager\_innen}
 IT-Manager\_innen sind \glqq Ämter\grqq, die von einer oder mehrerer Personen an einer Schule bekleidet werden. Sie sind für die Verfügbarkeit und ordnungsgemäße Funktion der IT-Systeme der Schule (WLAN, Datei- und Druckdienste, etc.) verantwortlich. Sollten Probleme auftreten die deren Expertise oder Möglichkeiten überschreiben, sollen sie unkompliziert mit dem Systembetreuer/der Systembetreuerin ihres Clusters in Kontakt treten können.
@@ -97,13 +103,11 @@ Systembetreuer\_innen empfangen die Anfragen der IT-Manager\_innen und arbeiten 
 %--------------------------------
 \subsection{Projektumfeldanalyse}
 \subsubsection{Einflussfaktoren}
-Das Projekt wurde durch den Landesschulrat Tirol in Auftrag gegeben. Die Ansprechperson, Herr Helmut Hammerl, informiert uns über den IST und SOLL-Zustand der Plattform und unterstützt das Projekt mit Ideen und Hilfestellungen bei Problemstellungen.
+Das Projekt wurde durch den Landesschulrat Tirol in Auftrag gegeben. Die Ansprechperson, Herr \getHammerl, informiert uns über den IST und SOLL-Zustand der Plattform und unterstützt das Projekt mit Ideen und Hilfestellungen bei Problemstellungen.
 \paragraph{}
 Des Weiteren beeinflussen die Anwender (IT-Manager) und die Systembetreuer der Plattform das Projektresultat. Da auf die Anwenderfreundlichkeit viel Wert gelegt wird, spielen diese Faktoren eine wirkliche Rolle.
 \paragraph{}
-Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, die bezüglich Problemstellungen während des Projekts auftreten können, und damit enorm einflussreich.
-
-%todo: 3 oben: deutsch?
+Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, die bezüglich Problemstellungen während des Projekts auftreten können, und damit neben dem Projektpartner, \getHammerl, enorm einflussreich.
 
 %todo: 2 WHITESPACES FORMATIEREN
 
@@ -130,35 +134,32 @@ Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, d
 
 \subsubsection{Stakeholder Klassifizieren}	
 
-%todo: 1 Formatierung der Tabelle
+
 \begin{table}[h]
 	\centering
 	\begin{tabular}{|lll|}
 		\hline
-		Stakeholder          & Risiken durch Stakeholder                        & Strategien                                            \\ \hline
-		Mag. Helmut Hammerl & Ändern der Ansprüche          & Unterschriebenes Pflichtenheft  \\
-		Dr. Stefan Walch      & Nicht bestätigen des Projektantrages             & Durchdachter Projektantrag                            \\
-		Stefan Stolz         & falsche Informationen, kein Interesse & regelmäßiges Treffen             \\
-		Alexander Scharmer   & falsche Informationen, kein Interesse & regelmäßiges Treffen              \\
-		Michael Gamper       & Nicht bestätigen des Projektantrages             & Durchdachter Projektantrag                            \\
-		LSI DI Anton Lendl   & Nicht bestätigen des Projektantrages             & Durchdachter Projektantrag                            \\
-		Team Mitglieder      & Mangelnde Motivation                             & Faire Arbeitsverteilung           \\ \hline			
+		Stakeholder & Risiken durch Stakeholder & Strategien                                            \\ \hline
+		Helmut Hammerl & Ändern der Ansprüche & Pflichtenheft  \\
+		Dr. Stefan Walch      & Ablehnung Projektantrag & Durchdachter Projektantrag \\
+		Stefan Stolz         & Fehlinformation & regelmäßiges Treffen\\
+		Alexander Scharmer   & wenig Interesse & regelmäßiges Treffen\\
+		Michael Gamper       & Ablehnung Projektantrag  & Durchdachter Projektantrag \\
+		LSI DI Anton Lendl   & Ablehnung Projektantrag & Durchdachter Projektantrag \\
+		Team Mitglieder      & Mangelnde Motivation & Faire Arbeitsverteilung \\ \hline			
 	\end{tabular}
 	\caption{Stakeholder Klassifikation}
 	\label{Tbl_Stakeholder_Klassifikation}
 \end{table}
 
-%todo: 1 Überschriften anpassen um auf Sinnlosigkeit aufmerksam zu machen
-
-\subsection{Funktionalitäten}
-\subsection{Muss Anforderungen}
+\subsection{Ursprüngliche Muss Anforderungen}
 IT-ManagerInnen und Systembetreuer müssen sich unter itsys-tirol.at, einem Portal des Landesschulrates, basierend auf OSticket anmelden können. Des Weiteren sollen die Schulen selbst bestimmen, wer einen Zugang zum Portal erhalten soll, um Tickets erstellen zu können.
-\\
+\paragraph{}
 Die angemeldeten IT-ManagerInnen müssen Probleme mit der Infrastruktur melden können und Anfragen zur Beschaffung von Ressourcen bzw. Komponenten einreichen können.
-\\
+\paragraph{}
 SystembetreuerInnen müssen die Tickets der IT-ManagerInnen empfangen, welche sich in ihrem Cluster befinden. Die eingereichten Tickets sollen von den Systembetreuern bearbeitet werden können.
 
-\subsection{Soll Anforderungen}
+\subsection{Ursprüngliche Soll Anforderungen}
 Es soll eine neue Weboberfläche entwickelt werden, die auf dem HTML \& CSS Framework Bootstrap basiert. Dieses soll sich auf Einfachheit in der Anwendung und Benutzerfreundlichkeit fokussieren. Die Latenzzeit sollte so niedrig wie möglich gehalten werden um ein Reibungsloses Arbeiten zu ermöglichen.
 
 %todo: 3 Testfälle sind furchtbar und müssen generell nocheinmal überarbeitet werden - entfernen, falls keine Zeit mehr
@@ -210,16 +211,16 @@ Datum:
 %subsection Projektstrukturplan entfernt
 \subsection{Meilensteine}
 \begin{itemize}
-	\item 15.10.2016 Testumgebung wurde unseren Bedürfnissen angepasst, Planungsphase abgeschlossen.
-	\item 15.02.2017 Die Grundfunktionen können dem Auftraggeber präsentiert werden.
-	\item 18.05.2017 Die einzelnen Alternativen wurden evaluiert und bewertet.
-	\item 25.06.2017 Dokumentation fertiggestellt
+	\item 31.10.2016 Planungsphase abgeschlossen, Zielformulierung und Anforderungsanalyse erstellt.
+	\item 08.01.2017 Die Einarbeitungsphase in \getOst\ wurde abgeschlossen. Frontend Prototyp wurde erstellt.
+	\item 20.04.2017 Die einzelnen Alternativen wurden evaluiert und bewertet. Die Änderungen die sich im Laufe des Projekts ergeben haben, wurden mit dem Projektbetreuer und Projektpartner besprochen.
+	\item 28.06.2017 Dokumentation fertiggestellt.
 \end{itemize}
 
-%todo: 1 Meilensteine anpassen, Kurzer Text, ob und wie und wann die Meilensteine erreicht wurden (oder nicht)
+Da im Projekt einige Änderungen stattgefunden haben, mussten die Meilensteine den Umständen entsprechend angepasst werden. In Abbildung \ref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur konkreten Projektdurchführung gegeben.
+
 \subsection{Gantt-Chart}
-In Abbildung \ref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur Projektdurchführung gegeben.
-%todo: 2 Text etwas ausschmücken. Macht das aktuelle Sinn?
+In Abbildung \ref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur Projektdurchführung gegeben. In dieser Projekttimeline werden die Aktivitäten der einzelnen Teammitglieder dargestellt. Der Vorteil dieser grafischen Aufbereitung, ist die Visualisierung der Aufgaben und deren Arbeitsaufwand in Wochen, die für die Bewältigung notwendig waren.
 
 \newpage
 \begin{landscape}
@@ -397,7 +398,9 @@ Ist bereits ein Joomla System in Verwendung, so würde sich OSTicky als geeignet
 		\item Anwender (IT-Manager und eventuell Lehrer, in Folgendem Anwender genannt)
 \end{itemize}}
 
-%todo: 1 screenshots mit tabellen ersetzen!
+%todo: 1 screenshots mit tabellen ersetzen (elias)!
+
+%\input{tables_useCases.tex}
 
 \vspace{-.5cm}
 \begin{table}[h]
@@ -473,43 +476,28 @@ Ist bereits ein Joomla System in Verwendung, so würde sich OSTicky als geeignet
 \end{table}
 
 \subsection{Ablaufbeschreibung}
-\textbf{C00:}
-\\ 
+\paragraph{C00:}
 Der Benutzer wird aufgefordert seine Benutzerdaten einzugeben.
 Hat er die Daten richtig eingegeben wird er angemeldet. Sind die Daten falsch kommt er zurück zur Dateneingabe.
-\\
-\textbf{C01:}
-\\
+\paragraph{C01:}
 Der Benutzer muss zuerst ein Formular öffnen, um ein Ticket erstellen zu können. Anschließend muss das Formular ausgefüllt werden. 
 \\
 Nach dem Überprüfen des Tickets kann der Benutzer sich entscheiden ob er das Ticket abschickt oder ob er Änderungen vornehmen möchte. 
 \\
 Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war, wird das Ticket in der Datenbank gespeichert.
-\\
-\textbf{C02:}
-\\
+\paragraph{C02:}
 Der Benutzer muss zuerst ein Formular öffnen um einen Incident erstellen zu können. Anschließend muss das Formular ausgefüllt werden. Nach dem Überprüfen des Incident kann der Benutzer sich entscheiden, ob er den Incident abschickt oder ob er Änderungen vornehmen möchte.
 \\
 Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war wird der Incident in der Datenbank gespeichert und der Systembetreuer erhält eine Benachrichtigung.
-\\
-\textbf{C03:}
-\\
+\paragraph{C03:}
 Der Benutzer muss das Formular öffnen um den Status zu sehen. Ist das Öffnen fehlgeschlagen kommt er wieder zum Ausgspunkt und kann es nochmal versuchen.
-\\
-\textbf{C04:}
-\\
+\paragraph{C04:}
 Um die Löschung beantragen zu können muss der Benutzer zuerst das Ticket öffnen. Danach kann er die Löschung beantragen. Schlägt dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War der Antrag auf Löschung erfolgreich erhält der Systembetreuer eine Anfrage zur Löschung.
-\\
-\textbf{C05:}
-\\
+\paragraph{C05:}
 Um ein Ticket zu löschen muss der Systembetreuer das Ticket öffnen und löschen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das Löschen erfolgreich wurde das Ticket aus der Datenbank entfernt.
-\\
-\textbf{C06:}
-\\
+\paragraph{C06:}
 Um den Ticketstatus ändern zu können muss der Systembetreuer das Ticket öffnen und ändern. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das ändern erfolgreich wurde der Ticketstatus geändert.
-\newpage
-\textbf{C07:}
-\\
+\paragraph{C07:}
 Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen um es dann zu schließen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das schließen erfolgreich ist das Ticket geschlossen.
 
 \newpage
@@ -565,10 +553,8 @@ Zu Codesequenzen:
 
 
 \chapter{Zusammenfassung}
-\begin{itemize}
-	%todo: 0 Muss noch vollständig erstellt werden
-	\item Etwas längere Form des Abstracts
-	\item Detaillierte Beschreibung des Outputs der Arbeit
-	
-	
-\end{itemize}
+\subsection{Output der Arbeit}
+Diese Evaluation soll den Landesschulrat von Tirol dabei unterstützen, eine geeignete Alternative zu \getOst\ zu finden. Da der Arbeitsaufwand zu groß ist die Vanilla Version von \getOst\ anzupassen bzw. den Quellcode zu verändern.
+\paragraph{}
+% 1 todo: auf Kapitel verweisen 
+Evaluiert wurden unabhängige \getOst\ Weiterentwicklungen wie Katak und OSTicky. Diese Möglichkeiten könnten durchaus in Betracht gezogen werden und bieten Vorteile die in Kapitel \ref{Realisierbarkeit mit \getOst} genauer thematisiert werden. Die Erkenntnisse bezüglich des Java EE Prototypen haben sich als sehr vielversprechend herausgestellt. Es wurde bereits ein Prototyp mithilfe der CRUD Funktionalität erstellt. Diese Ergebnisse sind im Kapitel \ref{jee_proto} zu finden, dieser Prototyp bildet die Basis für ein zukünftiges eigenständiges Projekt und verschafft Klarheit über die Anforderungen des Landesschulrates.

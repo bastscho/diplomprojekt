@@ -2,12 +2,11 @@
 	OSTicket ist ein weit verbreitetes, quelloffenes Ticketingsystem. Es verfügt über eine zentrale MySQL-Datenbank und ein Multi-User Web Interface. Dieses Webinterface gilt es im Zuge dieses Projektes so aufzubereiten, dass es neben den üblichen Auflösungen von Desktop- und Laptopbildschirmen auch Mobile Displays wie die von Smartphones oder Tablets unterstützt.
 		
 	\begin{wrapfigure}{r}{0.4\textwidth}
-		\vspace{-1cm}
+		\vspace{-2cm}
 		\begin{center}
 		\caption{OSTicket Logo}
-		\vspace{.5cm}
+		%\vspace{.5cm}
 		\includegraphics[scale=.7]{figures/icon_osticket.png}
-		
 		\label{OSTicket Logo}
 		\end{center}
 	\end{wrapfigure}
@@ -23,13 +22,13 @@
 		\label{OSTicket Admin WebGUI}
 	\end{figure}
 
-	\subsubsection{M"oglichkeiten mit OSTicket}
+	\subsubsection{M"oglichkeiten mit \getOst}
 	
 	OSTicket ist sehr anpassbar. Ticketformulare und Formularfelder lassen sich mit geringem Aufwand anpassen, je nach den spezifischen Anforderungen des Helpdesks. Sollte einmal ein wahrer Sturm an Tickets eingehen, ist auch das kein Problem. Tickets lassen sich simpel priorisieren und filtern. Noch mehr Übersicht bringt die M"oglichkeit, Tickets in Hilfsthematiken einzustufen. Sollten mehrere Supportmitarbeiter gleichzeitig Arbeiten, geschieht dies ohne Problem: Ticketkollisionen werden automatisch mit Sperrvariablen vermieden.
 	
 	\subsubsection{Warum OSTicket?}
 	OSTicket findet bereits an einigen Schulen in Tirol Anwendung. Dies soll, laut initialem Wunsch des Projektauftraggebers, im Allgemeinen dem Landesschulrat für Tirol und im Speziellen Projektbetreuer \getHammerl , beibehalten und auf weitere Schulen ausgeweitet werden.
-	\\
+	\paragraph{}
 	Die Vorteile dieser Verbreitung und der damit einher gehenden Standardisierung kann für die Schulen große Vorteile mit sich bringen. Die bis jetzt verwendeten Systeme sind sehr unterschiedlich und in keiner Weise miteinander kompatibel. OSTicket soll als anwenderfreundliches System diese Schwierigkeiten vermeiden und beseitigen. Dadurch soll eine bessere Kommunikation zwischen Systembetreuern und IT Managern an Tirols Schulen ermöglicht werden.
 
 	\subsection{Bootstrap} \label{Bootstrap}
@@ -67,7 +66,8 @@
 	
 	PHP ist der etablierte Standard, wenn es um serverseitige Webprogrammierung geht. Serverseitige Webprogrammierung findet statt, wenn ein Benutzer mit seinem Browser\footnote{Software zum Benutzen des World Wide Web; Bspw. Microsoft Internet Explorer, Mozilla Firefox} eine Webseite ansurft. Es wird eine sogenannte HTTP-Anfrage an den Webserver (welcher unter der Webseitenadresse erreichbar ist) gesendet. Dieser analysiert die Anfrage (welche Seite der Benutzer sehen will) und befüllt das HTML-Grundgerüst mit dynamischen Inhalten. Dann wird die Seite über das Internet zurück zum Browser des Benutzers übertragen und dargestellt.
 	
-	Ein großer Vorteil von PHP ist, dass es für Einsteiger in die Programmierung gut zu erlernen ist, dennoch aber äußerst flexibel, um auch umfangreiche Anwendungen (Wie OSTicket) umsetzen zu können. \\
+	Ein großer Vorteil von PHP ist, dass es für Einsteiger in die Programmierung gut zu erlernen ist, dennoch aber äußerst flexibel, um auch umfangreiche Anwendungen (Wie OSTicket) umsetzen zu können.
+	\paragraph{}
 	Die Flexibilität von PHP zeigt sich auch in der Freiheit, es auf vielen unterschiedlichen Betriebssystem wie Microsoft Windows, Apple OSX und einer Vielzahl an Linuxdistributionen verwenden zu können. Auch allerhand Webserver verstehen PHP wie ihre Muttersprache: Apache, IIS und nginx, um nur einige zu nennen.
 	
 	\subsection{MySQL}
@@ -89,7 +89,7 @@
 	Die im Zuge der Projektdurchführung verwendeten Werkzeuge eignen sich für das Projekt aus verschiedenen Gründen.
 	
 	Ein wichtiger Punkt war die Vertrautheit mit den Werkzeugen: Ein Großteil dieser war uns bereits bekannt beziehungsweise vertraut. Des Weiteren ist die große Community im Internet sehr hilfreich bei auftretenden Problemen und Fragestellungen; meist ist die Lösung innerhalb weniger Minuten gefunden. Da es sich um weit verbreitete Entwicklungsumgebungen handelt konnte auch in der Zukunft (während der Zeit der Projektdurchführung) mit der Weiterentwicklung und Verbesserung dieser Tools gerechnet werden.
-	\newpage
+	
 	\subsection{NetBeans}
 	Die integrierte Entwicklungsumgebung NetBeans ist in Java geschrieben und bietet vielerlei Funktionen wie einen umfangreichen Editor, eine passable Codevervollständigung, Code Analysetools, Debugger und kann mit hilfreichen Plug-Ins wie beispielsweise EasyUML, einem Programm zum Erstellen von UML-Klassendiagrammen aus einem vorhandenen Projekt, erweitert werden. Wie in der Abbildung \ref{Netbeans_GUI} zu sehen ist, kann das Farbthema der Entwicklungsumgebung angepasst werden. Das schont die Augen und erhöht den Workflow.
 	
@@ -112,7 +112,7 @@
 	\end{wrapfigure}
 	
 	NetBeans unterstützt Programmiersprachen wie Java, PHP, C/C++ und andere. Des Weiteren ist NetBeans plattformunabhängig - wir als Projektteam haben somit die freie Wahl unter welchem Betriebssystem gearbeitet werden soll - die Kompatibilität unserer Ergebnisse ist jederzeit gegeben.
-	\\
+	\paragraph{}
 	Jedes neue Release wird auch von der Community getestet und evaluiert. Somit ist auch eine Hilfestellung bei Problemen gegeben.
 	\subsection{XAMPP Apache}
 	XAMPP ist eine Zusammenführung von freier Software. Es ermöglicht einfache Installation und Konfiguration des Webservers Apache und der Datenbank MariaDB. Weitere Anwendungen geliefert unter XAMPP sind die FTP-Server ProFTPd oder FileZilla Server, der Mailserver Mercury, der webbasierte Datenbankclient phpMyAdmin und andere offene Software.
@@ -169,7 +169,6 @@
 	\subsection{Klassendiagramm}
 	Abbildung \ref{Klassendiagramm_System} soll die Klassen welche unter dem Ticketsystem Verwendung finden umreißend beschreiben. Das Diagramm dokumentiert nicht den kompletten systematischen Aufbau des Ticketsystems in seinem "Vanilla-Zustand"\footnote{"Vanilla" beschreibt ein System oder Produkt, welches in keinster Weise verändert (customized) worden ist.}, sondern ist eine Zusammenfassung der wichtigsten Klassen, die Anwendung finden und soll lediglich veranschaulichen, welche die fundamentalsten Klassen sind und in welchem Zusammenhang diese stehen.
 	
-	%todo: 0 aktuellstes diagramm verwenden
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.9]{figures/Klassendiagramm.jpg}
