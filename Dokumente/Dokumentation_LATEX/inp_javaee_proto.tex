@@ -30,7 +30,13 @@ Das Lehrbuch fasst das Entwurfsmuster wie folgt zusammen und bringt dessen Sinn 
 	Das Modell kapselt die Daten und enthält je nach MVC-Ausprägung ggf. auch die fachliche Logik. Die View visualisiert das Modell und der Controller realisiert die Anwendungssteuerung Der Controller reagiert auf Benutzerinteraktionen innerhalb der View und aktualisiert ggf. die Daten am Modell. Die View wiederum passt sich je nach Ausprägung des MVC entweder automatisch an das veränderte Modell an oder wird durch den Controller über die Ausprägung informiert.
 }
 
-\section{Benutzerschnittstellen} 
+\paragraph{CRUD} Funktionalität vereint die folgenden Persistenzfunktionen:\\
+\textbf{C}reate, \textbf{R}ead, \textbf{U}pdate, \textbf{D}elete
+
+Damit ist also die Möglichkeit gemeint, auf die Persistenzschicht der Anwendung modifizierend zuzugreifen. Hierfür wird die Java Persistence API 2.0 (JPA) verwendet. Führt ein User also eine Operation über die Java Server Faces aus (mehr dazu unter \ref{jsf}), wird dies über die Enterprise JavaBeans an die JPA weitergereicht.
+
+\section{Benutzerschnittstellen}
+\label{jsf}
 Benutzerschnittstellen werden in Java Enterprise Edition - Anwendungen mit der Technologie \glqq Java Server Faces \grqq umgesetzt. Früher wurde \glqq Java Server Pages \grqq verwendet, weiches 1999 erschien und mittlerweile veraltet ist. Java Server Faces ist ein Framework für Oberflächen von Webanwendungen. Folgende Teilkomponenten werden grundsätzlich für JSF benötigt:
 
 \begin{itemize}
