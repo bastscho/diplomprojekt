@@ -25,7 +25,7 @@ Diese Tabelle hat keine Referenz zu anderen Tabellen.
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
-		id & INT(11) & Eindeutg ID der Information. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
+		id & INT(11) & Eindeutg ID der Information. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere 
 		Aussagekraft. \\
 		\hline
 		namespace & VARCHAR(64) & \\
@@ -52,7 +52,7 @@ Sämtliche Informationen über den Anhang eines Tickets finden sich in dieser Ta
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:} \\
 		\hline
-		id & INT(10) & Eindeutige ID des Anhanges. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere  \\
+		id & INT(10) & Eindeutige ID des Anhanges. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere  \\
 		\hline
 		object\_id & int(11) & Referenz auf ein Object das dem Anhang übergeben wird \\
 		\hline
@@ -82,7 +82,7 @@ In dieser Tabelle werden vorgefertigte Antworten für Tickets abgelegt. Über di
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
-		canned\_id & INT(10) & Eindeutige ID der Nachricht. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
+		canned\_id & INT(10) & Eindeutige ID der Nachricht. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere 
 		Aussagekraft.\\
 		\hline
 		dept\_id & int(10) & Referenz auf die Abteilungen die diese Nachricht verwenden können\\
@@ -117,7 +117,7 @@ In dieser Tabelle werden Inhalte der Seiten aufgenommen. Es wird angeben, ob der
 		\hline
 		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
 		\hline
-		id & INT(10) & Eindeutige ID des Contents. Dieser Wert ist rein technisch und hat  neben der Eindeutigkeit keine weitere 
+		id & INT(10) & Eindeutige ID des Contents. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere 
 		Aussagekraft.\\
 		\hline
 		isactive & TINYINT(1) & Gib an ob der Inhalt aktiv ist oder nicht\\
@@ -584,21 +584,21 @@ Diese Tabelle speichert die Hilfsthemen. Jedem Thema kann eine bestimmte Priorit
 
 
 \subsection{Beschreibung der Datenbankanbindung von OSTicket}
-Die Datenbankanbindung in diesem System ist in der Klasse mysqli.php verankert. In dieser Klasse sind Funktionen vorhanden, um eine Datenbankverbindung herzustellen, eine Query abzusetzen und die Verbindung wieder zu trennen.
-Um diese Funktionen nutzen zu können, muss die Klasse mysqli.php lediglich in dem zu bearbeiteten Quellcode durch ein Include Statement eingebunden werden.
-Die Klasse besitzt im gesamten eine globale Variable namens \$\_\_db sowie 32 Funktionen. Die Variable wird am Anfang der Klasse deklariert, nach dem Aufrufen der db\_connect- Funktion hält sie ein Mysqli- Objekt.
+Die Datenbankanbindung in diesem System ist in der Klasse \code{mysqli.php} verankert. In dieser Klasse sind Funktionen vorhanden, um eine Datenbankverbindung herzustellen, eine Query abzusetzen und die Verbindung wieder zu trennen.
+Um diese Funktionen nutzen zu können, muss die Klasse \code{mysqli.php} lediglich in dem zu bearbeiteten Quellcode durch ein Include Statement eingebunden werden.
+Die Klasse besitzt im gesamten eine globale Variable namens \code{\$\_\_db} sowie 32 Funktionen. Die Variable wird am Anfang der Klasse deklariert, nach dem Aufrufen der \code{db\_connect}- Funktion hält sie ein Mysqli- Objekt.
 Im folgenden Abschnitt werden die wichtigsten Funktionen im Detail beschrieben.
 
 \subsubsection{function db\_connect}
 Diese Funktion stellt die Verbindung zu einer Datenbank her. Um eine Verbindung herstellen zu können benötigt sie folgende Parameter:
 	\begin{itemize}
-		\item \textbf{\$host} ist die Hostadresse, unter der die Datenbank erreicht werden kann.
-		\item \textbf{\$user} ist ein User, der die benötigen Rechte hat um lesend und schreibend auf die Datenbank zugreifen zu können.
-		\item \textbf{\$passwd} ist das Passwort des Users.
-		\item \textbf{\$options} ist ein Array, das Informationen über den Secure Sockets Layer (SSL) und den Namen der zu selektierenden Datenbank beinhaltet
+		\item \code{\$host:} Ist die Hostadresse, unter der die Datenbank erreicht werden kann.
+		\item \code{\$user:} Ist ein User, der die benötigen Rechte hat um lesend und schreibend auf die Datenbank zugreifen zu können.
+		\item \code{\$passwd:} Ist das Passwort des Users.
+		\item \code{\$options:} Ist ein Array, das Informationen über den Secure Sockets Layer (SSL) und den Namen der zu selektierenden Datenbank beinhaltet
 	\end{itemize}
-Diese Funktion kann als Herzstück dieser Klasse bezeichnet werden, da immer zuerst eine Verbindung zu der Datenbank hergestellt werden muss, um mit ihr arbeiten zu können. Damit eine andere Funktion dieser Klasse genützt werden können, muss zuerst die Funktion db\_connect aufgerufen werden.
-Eine Verbindung besteht solange, bis Die Verbindung mit Hilfe der Funktion db\_close beendet wird.
+Diese Funktion kann als Herzstück dieser Klasse bezeichnet werden, da immer zuerst eine Verbindung zu der Datenbank hergestellt werden muss, um mit ihr arbeiten zu können. Damit eine andere Funktion dieser Klasse genützt werden können, muss zuerst die Funktion \code{db\_connect} aufgerufen werden.
+Eine Verbindung besteht solange, bis Die Verbindung mit Hilfe der Funktion \code{db\_close} beendet wird.
 Sollte in dieser Funktion ein Fehler vorliegen, so gibt sie den Wert \code{null} zurück.
 \newpage
 
@@ -614,8 +614,8 @@ if (!($__db = mysqli_init()))
 return NULL;
 \end{lstlisting}
 
-In diesem Abschnitt des Codes wird zuerst die Variable \textbf{\$\_\_db} als globale Variable deklariert. Anschließen wird durch die String-Funktion strlen geprüft, welche Länge die Parameter \textbf{\$user} und \textbf{\$host} haben. Hat einer der beiden Parameter eine Länge von 0, dann liefert die Funktion den Wert null.\\
-Nach dem Überprüfen der beiden Parameter \textbf{\$user} und \textbf{\$host}, wird bei der nächsten IF-Anweisung geprüft, ob ein Mysqli- Objekt instantiiert werden kann. Ist das nicht der Fall, gibt die Funktion wieder den Wert null zurück,
+In diesem Abschnitt des Codes wird zuerst die Variable \code{\$\_\_db} als globale Variable deklariert. Anschließen wird durch die String-Funktion \code{strlen} geprüft, welche Länge die Parameter \code{\$user} und \code{\$host} haben. Hat einer der beiden Parameter eine Länge von 0, dann liefert die Funktion den Wert \code{null}.\\
+Nach dem Überprüfen der beiden Parameter \code{\$user} und \code{\$host}, wird bei der nächsten IF-Anweisung geprüft, ob ein Mysqli- Objekt instantiiert werden kann. Ist das nicht der Fall, gibt die Funktion wieder den Wert \code{null} zurück,
 
 \newpage
 
@@ -629,7 +629,7 @@ null, null);
 elseif(!$passwd)
 return NULL;
 \end{lstlisting}
-In diesem Codeteil wird zuerst überprüft, ob im Array \$options Werte mit dem Schlüssel ssl abgelegt sind. Wenn dies der Fall ist, werden die Werte key, cert, und ca der Datenbankverbindung übergeben. Nach der Überprüfung des Arrays erfolgt die Kontrolle, ob ein Passwort gesetzt ist. Ist dies nicht der Fall, gibt die Funktion wieder null zurück.
+In diesem Codeteil wird zuerst überprüft, ob im Array \code{\$options} Werte mit dem Schlüssel ssl abgelegt sind. Wenn dies der Fall ist, werden die Werte key, cert, und ca der Datenbankverbindung übergeben. Nach der Überprüfung des Arrays erfolgt die Kontrolle, ob ein Passwort gesetzt ist. Ist dies nicht der Fall, gibt die Funktion wieder \code{null} zurück.
 
 \newpage
 
@@ -658,10 +658,10 @@ if ($persistent)
 $host = 'p:' . $host;
 \end{lstlisting}
 
-In diesem Teilbereich des Codes werden Port, Socket und Hostname der Verbindung festgelegt. Zu Beginn des Abschnittes wird mit Hilfe der Funktion ini\_get der default Wert vom MySql Port und Socket den Variablen \$port und \$socket zugewiesen.\\
-Anschließend wird mit Hilfe der Funktion stripos der Variable \$persistent der Wert true zugewiesen, wenn der Value 'p:' am Anfang des Strings \$host steht oder false wenn 'p:' nicht am Anfang des Strings zu finden ist.\\
-Danach wird durch eine IF-Anweisung geprüft, welchen Wert die Variable \$persistent angenommen hat. Hat sie den Wert true, wird der Variable \$host durch die Funktion substr der vorherige Wert zugewiesen, lediglich die ersten zwei Zeichen des ursprünglichen Strings werden ausgelassen. \\
-In der nächsten IF-Anweisung wird geprüft, ob sich im String der Variable \$host ein ':' befindet. Ist ein Doppelpunkt im String vorhanden, so wird alles, was sich Links vom Doppelpunkt befindet, der Variable \$host zugewiesen und alles, was rechts davon steht, wird der Variable \$portspec zugewiesen. Anschließend wird kontrolliert, ob die Variable \$portspec einen Wert hat und ob dieser Wert nummerisch ist. Trifft beides zu, wird noch festgestellt, ob die Variable \$host den Wert 'localhost' beinhaltet. Hat die Variable \$host den Wert localhost nicht, wird der ihr durch die Funktion gethostbyname die IPv4 Adresse oder der unveränderte Hostname zugewiesen. Außerdem wird der Variable \$port der zu verwendende Port übergeben.
+In diesem Teilbereich des Codes werden Port, Socket und Hostname der Verbindung festgelegt. Zu Beginn des Abschnittes wird mit Hilfe der Funktion \code{ini\_get} der default Wert vom MySql Port und Socket den Variablen \code{\$port} und \code{\$socket} zugewiesen.\\
+Anschließend wird mit Hilfe der Funktion \code{stripos} der Variable \code{\$persistent} der Wert \code{true} zugewiesen, wenn der Value 'p:' am Anfang des Strings \code{\$host} steht oder \code{false} wenn 'p:' nicht am Anfang des Strings zu finden ist.\\
+Danach wird durch eine IF-Anweisung geprüft, welchen Wert die Variable \code{\$persistent} angenommen hat. Hat sie den Wert \code{true}, wird der Variable \code{\$host} durch die Funktion \code{substr} der vorherige Wert zugewiesen, lediglich die ersten zwei Zeichen des ursprünglichen Strings werden ausgelassen. \\
+In der nächsten IF-Anweisung wird geprüft, ob sich im String der Variable \code{\$host} ein ':' befindet. Ist ein Doppelpunkt im String vorhanden, so wird alles, was sich Links vom Doppelpunkt befindet, der Variable \code{\$host} zugewiesen und alles, was rechts davon steht, wird der Variable \code{\$portspec} zugewiesen. Anschließend wird kontrolliert, ob die Variable \code{\$portspec} einen Wert hat und ob dieser Wert nummerisch ist. Trifft beides zu, wird noch festgestellt, ob die Variable \code{\$host} den Wert 'localhost' beinhaltet. Hat die Variable \code\$host den Wert 'localhost' nicht, wird der ihr durch die Funktion \code{gethostbyname} die IPv4 Adresse oder der unveränderte Hostname zugewiesen. Außerdem wird der Variable \code{\$port} der zu verwendende Port übergeben.
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect4, firstnumber=63]
 	    // Connect
@@ -684,11 +684,11 @@ Der Rückgabewerte dieser Funktion ist, wenn keine Fehler vorkommt, eine Mysqli 
 
 \subsubsection{function db\_query}
 
-Mithilfe dieser Funktion lässt sich eine Query an die Datenbank schicken. Ist die Query ein SELECT Statement, bekommt man ein ResultSet zurück. Handelt es sich aber um eine Query mit einem INSERT-, UPDATE- oder DELETE- Statement, liefert die Funktion nach erfolreichem Durchlaufen den Wert true. Ist dies nicht der Fall, liefert sie den Wert false. Um eine Query absetzen zu können, benötigt diese Funktion folgende Parameter:
+Mithilfe dieser Funktion lässt sich eine Query an die Datenbank schicken. Ist die Query ein SELECT Statement, bekommt man ein \code{ResultSet} zurück. Handelt es sich aber um eine Query mit einem INSERT-, UPDATE- oder DELETE- Statement, liefert die Funktion nach erfolreichem Durchlaufen den Wert \code{true}. Ist dies nicht der Fall, liefert sie den Wert \code{false}. Um eine Query absetzen zu können, benötigt diese Funktion folgende Parameter:
 \begin{itemize}
-	\item \textbf{\$query} Mit diesem Parameter wird die abzuschickende Query angeben.
-	\item \textbf{\$logError} Dieser Parameter ist standardmäßig immer true.
-	\item \textbf{\$buffered} Dieser Parameter ist standardmäßig immer true.
+	\item \code{\$query:} Mit diesem Parameter wird die abzuschickende Query angeben.
+	\item \code{\$logError:} Dieser Parameter ist standardmäßig immer \code{true}.
+	\item \code{\$buffered:} Dieser Parameter ist standardmäßig immer \code{true}.
 \end{itemize}
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query1, firstnumber=154]
@@ -701,8 +701,8 @@ $__db->unbuffered_result = false;
 }
 \end{lstlisting}
 
-In diesem Teilabschnitt werden zunächst die Variablen \$ost und \$\_\_db als global- Variablen deklariert.
-Im Anschluss wird geprüft, ob die Variable \$\_\_db ein Unbuffered Result beinhaltet. Ist dies der Fall, wird das Unbuffered Result geleert und der Wert auf false gesetzt.
+In diesem Teilabschnitt werden zunächst die Variablen \code{\$ost} und \code{\$\_\_db} als global- Variablen deklariert.
+Im Anschluss wird geprüft, ob die Variable \code{\$\_\_db} ein \code{Unbuffered Result} beinhaltet. Ist dies der Fall, wird das \code{Unbuffered Result} geleert und der Wert auf \code{false} gesetzt.
 
 \newpage
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_query2, firstnumber=163]
@@ -716,7 +716,7 @@ $buffered ? MYSQLI_STORE_RESULT : MYSQLI_USE_RESULT);
 } while (!$res && --$tries && $__db->errno == 1213);
 \end{lstlisting}
 
-Dieser Teil des Codes schickt mit Hilfe der query Funktion eine Anfrage mit der Query an die Datenbank und speichert das Ergebnis in der Variable \$res. Anschließend wird kontrolliert, ob die Abfrage erfolgreich war und ob \$\_\_db->errno gleich 1213 ist. Zusätzlich wird die Variable \$tries um eins verkleinert. Treffen alle Argumente zu, war das Abschicken der Query erfolglos und wird noch einmal vorgenommen. Nach drei Versuchen bricht die do-while-Schleife ab und es wird nicht mehr versucht eine Anfrage an die Datenbank zu schicken.
+Dieser Teil des Codes schickt mit Hilfe der query Funktion eine Anfrage mit der Query an die Datenbank und speichert das Ergebnis in der Variable \code{\$res}. Anschließend wird kontrolliert, ob die Abfrage erfolgreich war und ob \code{\$\_\_db->errno gleich 1213} ist. Zusätzlich wird die Variable \code{\$tries} um eins verkleinert. Treffen alle Argumente zu, war das Abschicken der Query erfolglos und wird noch einmal vorgenommen. Nach drei Versuchen bricht die do-while-Schleife ab und es wird nicht mehr versucht eine Anfrage an die Datenbank zu schicken.
 War das Abschicken der Query hingegen erfolgreich, wird die do-while-Schleife ebenfalls abgebrochen und die nächste IF-Anweisung wird nicht durchgeführt.  
 \newpage
 
@@ -737,23 +737,46 @@ $__db->unbuffered_result = $res;
 return $res;
 \end{lstlisting}
 
-Wenn, wie im oberen Abschnitt schon erwähnt, die do-while-Schleife den Versuch eine Query an die Datenbank zu schicken abgebrochen hat, wird in einem nächsten Schritt geprüft ob, die Variable \$res etwas beinhaltet und ob die Variablen \$logError und \$ost deklariert wurden. Treffen alle Parameter zu, wird bei der nächsten IF-Anweisung kontrolliert, ob die Variable \$logError einen Wert beinhaltet, der als Funktion aufgerufen werden kann und ob der Aufruf dieser Funktion mit dem Parameter \$\_\_db->errno den Wert false zurück gibt.
-Trifft dies auch zu, wird die Variable \$res mit dem Wert null zurück gegeben. Anschließend wird der Variable \$msg der Fehlertext übergeben und mit der Variable \$ost  wird die Funktion logDBError aufgerufen. Als Parameter werden dieser Funktion der Errorcode und der Errortext mitgegeben.
-In der letzten IF-Anweisung soll noch geprüft werden, ob die Variable \$res ein Objekt ist und ob die Variable \$buffered den Wert false hält. Ist dies der Fall, wird der Wert der Variable \$res dem Datenfeld unbuffered\_result des Objektes \$\_\_db übergeben. 
-Zuletzt wird noch die Variable \$res zurückgegeben.
+Wenn, wie im oberen Abschnitt schon erwähnt, die do-while-Schleife den Versuch eine Query an die Datenbank zu schicken abgebrochen hat, wird in einem nächsten Schritt geprüft ob, die Variable \code{\$res} etwas beinhaltet und ob die Variablen \code{\$logError} und \code{\$ost} deklariert wurden. Treffen alle Parameter zu, wird bei der nächsten IF-Anweisung kontrolliert, ob die Variable \code{\$logError} einen Wert beinhaltet, der als Funktion aufgerufen werden kann und ob der Aufruf dieser Funktion mit dem Parameter \code{\$\_\_db->errno} den Wert \code{false} zurück gibt.
+Trifft dies auch zu, wird die Variable \code{\$res} mit dem Wert \code{null} zurück gegeben. Anschließend wird der Variable \code{\$msg} der Fehlertext übergeben und mit der Variable \code{\$ost}  wird die Funktion \code{logDBError} aufgerufen. Als Parameter werden dieser Funktion der Errorcode und der Errortext mitgegeben.
+In der letzten IF-Anweisung soll noch geprüft werden, ob die Variable \code{\$res} ein Objekt ist und ob die Variable \code{\$buffered} den Wert \code{false} hält. Ist dies der Fall, wird der Wert der Variable \code{\$res} dem Datenfeld \code{unbuffered\_result} des Objektes \code{\$\_\_db} übergeben. 
+Zuletzt wird noch die Variable \code{\$res} zurückgegeben.
 \newpage
 
 \subsection{Tabellenbeschreibung der Datenbank von unserem Java EE Prototyp}
 Dieser Teil der Dokumentation beschreibt die Datenbank von unserem Java EE Prototypen. Dieser erfüllt grundsätzlich alle Anforderungen, die an das Ticketsystem gestellt wurden.\\
 Hinter der Anwendung steht die hier beschriebene Datenbank. Sie wurde konzipiert, möglichst einfach und übersichtlich zu sein. Es wurde auch darauf geachtet, dass keine unnötigen Tabellen verwendet werden müssen, da wir anhand dieser Anwendung zeigen möchten, wie viele überflüssige Funktionen dem OSticketsystem zugrunde liegen.
 Für eine grobe Übersicht, finden Sie hier ein EER-Diagramm der Datenbank.
-%todo: 3 evtll. mit dia nachbilden (AKTUELLSTE VERSION)
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=.8]{figures/EER-Diagramm-Java-EE-Anwendung.PNG}
+	\includegraphics[scale=.7]{figures/JAVAeeDatabaseDiagramm.PNG}
 	\caption{EER-Diagramm-Java-EE-Anwendung}
 	\label{EER-Diagramm-Java-EE-Anwendung}
 \end{figure}
+
+\newpage
+
+\subsubsection{tpl\_cluster}
+
+In dieser Tabelle werden die Cluster festgelegt. Als Cluster wird eine Mengen von Schulen, die zu einer Organisation zusammen geschlossen wurden, bezeichnet. Jeder Cluster hat einen Supervisor, der für die Bearbeitung der anfallenden Tickets in ebendiesem Cluster verantwortlich ist.
+Der Supervisor wird per Referenz zur User-Tabelle festgelegt. Ein Cluster hat immer genau einen Supervisor. Zusätzlich wird noch ein Name für den Cluster festgelegt.
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
+		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
+		\hline
+		cluster\_id & INT & Eindeutige ID des Clusters. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
+		\hline
+		clusterSupervisor & INT & Referenz zu dem User der in diesem Cluster der Supervisor ist\\
+		\hline
+		name & VARCHAR(45) & Name des Clusters\\
+		\hline
+	\end{tabular}
+	\caption{tab:tpl-cluster}
+\end{table}
+\label{tab:tpl_cluster}
 
 \newpage
 
@@ -897,43 +920,20 @@ Eine Schule wird mit ihrer Bezeichnung, Adresse und Namen abgespeichert. Des Wei
 
 \newpage
 
-\subsubsection{tpl\_cluster}
-
-In dieser Tabelle werden die Cluster festgelegt. Als Cluster wird eine Mengen von Schulen, die zu einer Organisation zusammen geschlossen wurden, bezeichnet. Jeder Cluster hat einen Supervisor, der für die Bearbeitung der anfallenden Tickets in ebendiesem Cluster verantwortlich ist.
-Der Supervisor wird per Referenz zur User-Tabelle festgelegt. Ein Cluster hat immer genau einen Supervisor. Zusätzlich wird noch ein Name für den Cluster festgelegt.
-
-
-
-\begin{table}[h]
-	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
-		\hline
-		\textbf{Column Name:} & \textbf{Datatype:} & \textbf{Content:}\\
-		\hline
-		cluster\_id & INT & Eindeutige ID des Clusters. Dieser Wert ist rein technisch und hat neben der Eindeutigkeit keine weitere Aussagekraft.\\
-		\hline
-		clusterSupervisor & INT & Referenz zu dem User der in diesem Cluster der Supervisor ist\\
-		\hline
-		name & VARCHAR(45) & Name des Clusters\\
-		\hline
-	\end{tabular}
-	\caption{tab:tpl-cluster}
-\end{table}
-\label{tab:tpl_cluster}
-
-\newpage
 
 \subsection{Beschreibung der Datenbankanbindung von unserem Java EE Prototyp}
 
-Da unsere Anwendung nur ein Prototyp ist, wurde auch die Datenbankanbindung nur mit den wichtigsten Funktionen konzipiert. Deshalb ist die Klasse Datenbankanbindung.java auch sehr statisch und redundant geschrieben. 
+Da unsere Anwendung nur ein Prototyp ist, wurde auch die Datenbankanbindung nur mit den wichtigsten Funktionen konzipiert. Deshalb ist die Klasse\\
+\code{Datenbankanbindung.java} auch sehr statisch und redundant geschrieben. 
 Die Datenbankanbindung wurde mit Hilfe der Java Api JDBC realisiert.\\
 Mit Hilfe der get-Methoden lassen sich die einzelnen Tabellen aus der Datenbank auslesen und durch die insert-Methoden werden Einträge in die Tabelle eingefügt.
-Mit der Methode dbconnect kann die Verbindung zu der Datenbank hergestellt werden.\\
+Mit der Methode \code{dbconnect} kann die Verbindung zu der Datenbank hergestellt werden.\\
 \\
 Am Anfang der Klasse werden drei String Variablen mit Informationen über den Datenbank-Zugang initialisiert.
 \begin{itemize}
-	\item \textbf{\$url} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner, da es sich noch um einen Prototypen handelt.
-	\item \textbf{\$username} Ist ein User, der die benötigen Rechte hat, um lesend und schreibend auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu, da sie nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
-	\item \textbf{\$password} Ist das Passwort des User. 
+	\item \code{\$url:} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner, da es sich noch um einen Prototypen handelt.
+	\item \code{\$username:} Ist ein User, der die benötigen Rechte hat, um lesend und schreibend auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu, da sie nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
+	\item \code{\$password:} Ist das Passwort des User. 
 \end{itemize}
 
 \begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Datenfelder, firstnumber=30]
@@ -942,11 +942,11 @@ private String username = "root";
 private String password = "";
 \end{lstlisting}
 \newpage
-Im folgenden werden die Methoden Klasse Datenbankanbindung.java im Detail beschrieben.
+Im folgenden werden die Methoden Klasse \code{Datenbankanbindung.java} im Detail beschrieben.
  
 \subsubsection{Methode dbconnect\(\)}
 Diese Methode stellt eine Verbindung zu der Datenbank her und liefert ein Statement Objekt zurück. Das Statement Objekt wird benötigt, um eine Query an die Datenbank zu schicken.
-Um ein Statement Objekt erzeugen zu können, muss zuerst ein Connection Objekt erzeugt werden. Dies erfolgt durch die Methode getConnection mit den Parameter url, username, password. Konnte keine Verbindung zu der Datenbank hergestellt werden, wird durch den Catch-Block die SQLException gefangen und der Wert null zurück gegeben.
+Um ein Statement Objekt erzeugen zu können, muss zuerst ein Connection Objekt erzeugt werden. Dies erfolgt durch die Methode \code{getConnection} mit den Parameter \code{url}, \code{username}, \code{password}. Konnte keine Verbindung zu der Datenbank hergestellt werden, wird durch den Catch-Block die \code{SQLException} gefangen und der Wert \code{null} zurück gegeben.
 
 \begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-dbconnect, firstnumber=44]
 public Statement dbconnect()
@@ -968,7 +968,7 @@ return null;
 
 \subsubsection{Methode insertRole\(\)}
 
-Bei dieser Methode wird ein Insert-Statement erzeugt und anschließend an die Datenbank geschickt, zurück bekommen wir den String 'Das Insert hat funktioniert.' oder null, wenn das Insert nicht funktioniert hat. Als Parameter werden die Values benötigt, welche man in die Datenbank schreiben möchte. Zuerst wird mit der Methode dbconnect\(\) ein Statment Objekt erstellt und darauffolgend wird mit Hilfe der executeUpdate Methode die Query an die Datenbank geschickt. Ist das Abschicken der Query nicht erfolgreich, bekommt man den Wert null zurück.\\
+Bei dieser Methode wird ein Insert-Statement erzeugt und anschließend an die Datenbank geschickt, zurück bekommen wir den String 'Das Insert hat funktioniert.' oder \code{null}, wenn das Insert nicht funktioniert hat. Als Parameter werden die Values benötigt, welche man in die Datenbank schreiben möchte. Zuerst wird mit der Methode \code{dbconnect\(\)} ein Statment Objekt erstellt und darauffolgend wird mit Hilfe der \code{executeUpdate} Methode die Query an die Datenbank geschickt. Ist das Abschicken der Query nicht erfolgreich, bekommt man den Wert \code{null} zurück.\\
 Dieser Methodenaufbau finden wir bei allen insert-Methoden dieser Klasse.
 
 \begin{lstlisting}[language=JAVA, caption=Datenbankanbindung.java/Methode-dbconnect, firstnumber=271]
@@ -989,11 +989,11 @@ return null;
 \newpage
 \subsubsection{Methode getRoles\(\)}
 
-Mit Hilfe der Methode getRoles lassen sich alle Rollen aus der Datenbanktabelle role auslesen.
-Zuerst wird in dieser Methode eine ArrayList roles initialisiert, anschließend werden String Variablen definiert, die benötigt werden, um aus dem ResultSet die Datenfelder der Role zu lesen.
-Im try-Block wird nun ein SELECT-Statement an die Datenbank geschickt und ein ResultSet Objekt rs erzeugt. 
-Um aus dem ResultSet die einzelnen Rollen auszulesen, benötigen wir eine while-Schleife. Diese iterieren solange durch das ResultSet, bis kein Eintrag mehr vorhanden ist(bis rs.next() false zurück gibt).
-In dieser while-Schleife wird zuerst ein role Objekt erzeugt und mit Hilfe der set-Methoden die Datenfelder dieses Rollenobjekts gesetzt. Zum Schluss wird das Rollenobjekt noch der ArrayList roles hinzugefügt. Wurde durch alle Einträge des ResultSet iteriert, wird das Statement geschlossen. Tritt während dem Durchlaufen des Try-Blockes ein Fehler auf, so wird der Wert null durch den Catch-Block zurückgegeben.\\ 
+Mit Hilfe der Methode \code{getRoles} lassen sich alle Rollen aus der Datenbanktabelle \code{role} auslesen.
+Zuerst wird in dieser Methode eine ArrayList \code{roles} initialisiert, anschließend werden String Variablen definiert, die benötigt werden, um aus dem \code{ResultSet} die Datenfelder der Rolle zu lesen.
+Im try-Block wird nun ein SELECT-Statement an die Datenbank geschickt und ein \code{ResultSet} Objekt rs erzeugt. 
+Um aus dem \code{ResultSet} die einzelnen Rollen auszulesen, benötigen wir eine while-Schleife. Diese iterieren solange durch das \code{ResultSet}, bis kein Eintrag mehr vorhanden ist\code{(bis rs.next() false zurück gibt)}.
+In dieser while-Schleife wird zuerst ein \code{role} Objekt erzeugt und mit Hilfe der set-Methoden die Datenfelder dieses Rollenobjekts gesetzt. Zum Schluss wird das Rollenobjekt noch der ArrayList \code{roles} hinzugefügt. Wurde durch alle Einträge des \code{ResultSet} iteriert, wird das Statement geschlossen. Tritt während dem Durchlaufen des Try-Blockes ein Fehler auf, so wird der Wert \code{null} durch den Catch-Block zurückgegeben.\\ 
 Diesen Methodenaufbau finden wir bei allen get-Methoden dieser Klasse.
 
 \newpage
