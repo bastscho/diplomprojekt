@@ -33,29 +33,20 @@ Benutzerschnittstellen werden in Java Enterprise Edition - Anwendungen mit der T
 	\item Servlet-Container (bspw. Apache Tomcat) ist einsatzbereit
 \end{itemize}
 \paragraph{}
-Im unteren Listing findet sich beispielhaft ein Auszug aus der XHTML-Datei List.xhtml. Sie oberflächlich gesehen dafür zuständig, eine Tabelle von Tickets und deren detaillierten Eigenschaften anzuzeigen. Des Weiteren finden Sich auch Navigationselemente in der Datei. Solche Tags tragen die Bezeichnung \glqq commandLing \grqq. Definiert in ihrer \glqq action \grqq -Eigenschaft befindet sich ein Expression-Language (EL) Ausdruck welcher auf eine Methode der TicketController Klasse verweist. Ausdrücke der EL sind immer umschlossen von geschweiften Klammern und geführt von einer Raute: \#\{Klassenname.Datenfeld\}, als kleines Beispiel.
+In der Abbildung \ref{Abb_Jsf_XHTML_Code} befindet sich beispielhaft ein Auszug aus der XHTML-Datei ListTickets.xhtml. Sie oberflächlich gesehen dafür zuständig, eine Tabelle von Tickets und deren detaillierten Eigenschaften anzuzeigen. Des Weiteren finden Sich auch Navigationselemente in der Datei. Solche Tags tragen die Bezeichnung \glqq commandLink\grqq. Definiert in ihrer \glqq action \grqq -Eigenschaft befindet sich ein Expression-Language (EL) Ausdruck welcher auf eine Methode der TicketController Klasse verweist. Ausdrücke der EL sind immer umschlossen von geschweiften Klammern und geführt von einer Raute: \#\{Klassenname.Datenfeld\}, als kleines Beispiel.
 \paragraph{}
-Eine weitere Komponente die hervorzuheben ist, ist der DataTable. Diese Komponente stemmt die Hauptaufgabe der Seite. Sie bezieht eine Liste von Tickets mit dem EL-Ausdruck \glqq \#{tplTicketController.items} \grqq; eine Laufvariable var="item" hält also ein Ticket. Die Laufvariable durchläuft jedes Ticket genau ein mal, vergleichbar mit einer klassischen For-Schleife. So werden die Eigenschaften jedes Tickets in einer Zeile des DataTable dargestellt.
+Eine weitere Komponente die hervorzuheben ist, ist der DataTable. Diese Komponente stemmt die Hauptaufgabe der Seite. Sie bezieht eine Liste von Tickets mit dem EL-Ausdruck \glqq \#{tplTicketController.items}\grqq; eine Laufvariable \glqq item\grqq hält also ein Ticket. Die Laufvariable durchläuft jedes Ticket genau ein mal, vergleichbar mit einer klassischen For-Schleife. So werden die Eigenschaften jedes Tickets in einer Zeile des DataTable dargestellt.
 
-%todo: listing fescher machen
-\begin{lstlisting}[language=html, caption=List.xhtml, firstnumber=0, label=Code_Xhtml_Jee]
-<h:panelGroup rendered="#{tplTicketController.items.rowCount > 0}">
-<h:outputText value="#{tplTicketController.pagination.pageFirstItem + 1}..#{tplTicketController.pagination.pageLastItem + 1}/#{tplTicketController.pagination.itemsCount}"/>&nbsp;
-<h:commandLink action="#{tplTicketController.previous}" value="#{bundle.Previous} #{tplTicketController.pagination.pageSize}" rendered="#{tplTicketController.pagination.hasPreviousPage}"/>&nbsp;
-<h:commandLink action="#{tplTicketController.next}" value="#{bundle.Next} #{tplTicketController.pagination.pageSize}" rendered="#{tplTicketController.pagination.hasNextPage}"/>&nbsp;
-<h:dataTable value="#{tplTicketController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
-<h:column>
-<f:facet name="header">
-<h:outputText value="#{bundle.ListTplTicketTitle_ticketId}"/>
-</f:facet>
-<h:outputText value="#{item.ticketId}"/>
-</h:column>
-</h:dataTable>
-</h:panelGroup>
-\end{lstlisting}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.75]{figures/serverFacesCode.png}
+	\caption{Ausschnitt JSF XHTML Datei}
+	\label{Abb_Jsf_XHTML_Code}
+\end{figure}
 
-%todo: JSPs XHTML erstellen, Screenshotten
+%todo: JSF XHTML erstellen, Screenshotten
 
+\newpage
 \section{Klassenentwurf}
 
 \begin{figure}[h]
