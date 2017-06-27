@@ -49,13 +49,13 @@ Je höher die Zahl in der Tabelle, desto höher ist die Auswirkung bzw. Einwirku
 \newpage
 \section{Pflichtenheft}
 \section{IST Zustand}
-IT-ManagerInnen an Tirols Schulen können Probleme mit der Infrastruktur melden und Anfragen zur Beschaffung von Ressourcen/Komponenten stellen.
+IT-ManagerInnen an Tirols Schulen können Probleme mit der Infrastruktur melden und Anfragen zur Beschaffung von Ressourcen/Komponenten stellen. Das Ticketsystem OSTicket ist in seiner unangetasteten Instanz verfügbar, wird jedoch kaum verwendet. Die meiste Kommunikation findet über Email oder Telefon statt.
 \paragraph{}
-Sie können den Bearbeitungsverlauf ihrer Tickets beobachten. SystembetreuerInnen empfangen die Tickets der IT-ManagerInnen, welche sich in ihrem Cluster befinden. SystembetreuerInnen bearbeiten die Tickets und antworten auf die Anfragen.
+IT-ManagerInnen können den Bearbeitungsverlauf ihrer Tickets beobachten. SystembetreuerInnen empfangen die Tickets der IT-ManagerInnen, welche sich in ihrem Cluster befinden. SystembetreuerInnen bearbeiten die Tickets und antworten auf die Anfragen.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.725]{figures/Ist_Login.png}
+	\includegraphics[scale=0.7]{figures/Ist_Login.png}
 	\caption{IST-Zustand OS-Ticket}
 	\label{Abb_IST-Zustand}
 \end{figure}
@@ -63,7 +63,7 @@ Sie können den Bearbeitungsverlauf ihrer Tickets beobachten. SystembetreuerInne
 
 \section{SOLL Zustand}
 Bessere Usability soll mit Hilfe von Mobile-First Orientierung auf Basis von Bootstrap erreicht und wenn möglich die Ticketerstellung vereinfacht werden.
-\\
+\paragraph{}
 Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten ermöglichen und eine Erweiterung von Landesebene auf Bundesebene zulassen. Des Weiteren gilt es, den AnwenderInnen den Ticketingprozess intuitiver zu gestalten.
 
 %todo: 2 Erklärung SMART und Sinnhaftigkeit darstellen
@@ -86,13 +86,21 @@ Das Backend soll die Aufteilung in mehrere hierarchische Organisationseinheiten 
 \subsection{Produkteinsatz und Umgebung}
 %--------------------------------
 %todo: 1 Anwender des Systems beschreiben (steht auch so in der Vorlage)
+Verwendet soll das Produkt schlussendlich von zweierlei unterschiedlichen Anwendertypen. Diese sind im Folgenden aufgeschlüsselt.
+
+\paragraph{IT-Manager\_innen}
+IT-Manager\_innen sind \glqq Ämter\grqq, die von einer oder mehrerer Personen an einer Schule bekleidet werden. Sie sind für die Verfügbarkeit und ordnungsgemäße Funktion der IT-Systeme der Schule (WLAN, Datei- und Druckdienste, etc.) verantwortlich. Sollten Probleme auftreten die deren Expertise oder Möglichkeiten überschreiben, sollen sie unkompliziert mit dem Systembetreuer/der Systembetreuerin ihres Clusters in Kontakt treten können.
+
+\paragraph{Systembetreuer\_innen}
+Systembetreuer\_innen empfangen die Anfragen der IT-Manager\_innen und arbeiten diese ab. Darunter fallen hauptsächlich Reparaturaufträge und andere Supportdienstleistungen. Systembetreuer\_innen sind einem Schulcluster zugewiesen, haben also ein recht großes Gebiet abzudecken; sowohl geographisch als auch in ihrer Expertise.
+
 %--------------------------------
 \subsection{Projektumfeldanalyse}
 \subsubsection{Einflussfaktoren}
 Das Projekt wurde durch den Landesschulrat Tirol in Auftrag gegeben. Die Ansprechperson, Herr Helmut Hammerl, informiert uns über den IST und SOLL-Zustand der Plattform und unterstützt das Projekt mit Ideen und Hilfestellungen bei Problemstellungen.
-\\
+\paragraph{}
 Des Weiteren beeinflussen die Anwender (IT-Manager) und die Systembetreuer der Plattform das Projektresultat. Da auf die Anwenderfreundlichkeit viel Wert gelegt wird, spielen diese Faktoren eine wirkliche Rolle.
-\\
+\paragraph{}
 Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, die bezüglich Problemstellungen während des Projekts auftreten können, und damit enorm einflussreich.
 
 %todo: 3 oben: deutsch?
@@ -109,8 +117,8 @@ Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, d
 		Stakeholder          & Einfluss &  Konfliktpotential      \\ \hline                         
 		\getHammerl & 3         & 0                  \\ 
 		Dr. Stefan Walch     & 2         & 0                  \\
-		Stefan Stolz         & 1         & +                  \\ 
-		Alexander Scharmer   & 1         & +                  \\ 
+		\getSteff        & 1         & +                  \\ 
+		\getAlex   & 1         & +                  \\ 
 		Michael Gamper       & 0         & 0                  \\ 
 		LSI DI Anton Lendl   & 3         & 0                  \\ 
 		Team Mitglieder      & 2         & 0                   \\ \hline			
@@ -209,9 +217,19 @@ Datum:
 \end{itemize}
 
 %todo: 1 Meilensteine anpassen, Kurzer Text, ob und wie und wann die Meilensteine erreicht wurden (oder nicht)
+\subsection{Gantt-Chart}
+In Abbildung \ref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur Projektdurchführung gegeben.
+%todo: 2 Text etwas ausschmücken. Macht das aktuelle Sinn?
 
-\subsection{Gant-Chart}
-%todo: 0 Stolz Vorlage ausfüllen (bullshitten, zu DRITT)
+\newpage
+\begin{landscape}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=.86]{figures/Timeline.pdf}
+		\caption{Projekttimeline}
+		\label{Abb_Projekt_Timeline_Gantt}
+	\end{figure}
+\end{landscape}
 
 \chapter{Produktvorstellung}
 In diesem Kapitel wird das Softwaresystem \getOst\ dokumentiert bzw. vorgestellt sowie dessen Eignung für die Anforderungen des Projektauftraggebers bearbeitet. Die im Zuge des Projektes geplante Modifikation von \getOst\ wird behandelt und es wird erläutert, warum diese nicht in einem angemessenen Rahmen durchführbar ist. Des Weiteren werden die Ansätze und unternommenen Schritte um das ursprüngliche Projektziel zu erreichen, dargestellt.
@@ -245,7 +263,7 @@ In diesem Kapitel wird das Softwaresystem \getOst\ dokumentiert bzw. vorgestellt
 \end{table}
 
 Ein weiteres Hindernis ergibt sich durch den Mangel an einer auch nur annähernd aktuellen Dokumentation des laufend erweiterten und angepassten \getOst.
-
+\paragraph{}
 Damit ist \getOst\ nicht nur wegen der fehlenden Dokumentation kaum zu bändigen, sondern aufgrund seines ständigen Wachstums zu \glqq crufty\grqq , um mit sinnvollem Aufwand angepasst zu werden:
 
 \blockcquote{cmdlinestephenson}{
@@ -281,7 +299,7 @@ $_SERVER['REMOTE_ADDR'] = osTicket::get_client_ip();
 
 %todo: 3 Affenzitat
 
-In diesem Codeauszug wird die Lesbarkeit des Codes sehr gut veranschaulicht, der Aufruf von elf statischen Funktionen ohne Dokumentation erschwert die Erweiterbarkeit um ein vielfaches. Der einzige Kommentar des Programmierers \textit{Don't Monkey around with} it ist weder aussagekräftig noch hilfreich.
+In diesem Codeauszug wird die Lesbarkeit des Codes sehr gut veranschaulicht, der Aufruf von elf statischen Funktionen ohne Dokumentation erschwert die Erweiterbarkeit um ein vielfaches. Der einzige Kommentar des Programmierers \textit{Don't Monkey around with it} ist weder aussagekräftig noch hilfreich.
 \newpage
 \begin{lstlisting}[language=PHP, caption=pwreset.php, firstnumber=51]
 $inc = 'register.confirmed.inc.php';
@@ -333,7 +351,9 @@ $thisclient = UserAuthenticationBackend::getUser();
 In der Datei client.inc.php wird lediglich dokumentiert, dass diese Datei in jeder client page inkludiert wird. Der Code in dieser Datei besteht hauptsächlich aus statischen Funktionsaufrufen.
 
 \subsection{Evaluation Katak}
-Katak, ein Fork\footnote{unabhängige Weiterentwicklung} von OSTicket, lässt sich laut Angaben der Entwickler leichter installieren, bedienen und anpassen. Das liegt, nach Informationen der Webseite von Katak\footnote{http://www.katak-support.com/en} hauptsächlich an einem vereinfachten Datenbankentwurf und der Absenz einiger weniger PHP-Klassen. Die Möglichkeit einer Anpassung von OSTicket wurde dahingehend ausgeforscht, eine Installation auf einem Testsystem vorzunehmen und gewisse Anpassungen durchzuführen. Die Ergebnisse des Problemlösungsversuch in diese Richtung sind im Abschnitt \ref{Realisierbarkeit mit \getOst} zu finden.
+Katak, ein Fork\footnote{unabhängige Weiterentwicklung} von OSTicket, lässt sich laut Angaben der Entwickler leichter installieren, bedienen und anpassen. Das liegt, nach Informationen der Webseite von Katak\footnote{http://www.katak-support.com/en} hauptsächlich an einem vereinfachten Datenbankentwurf und der Absenz einiger weniger PHP-Klassen.
+\paragraph{}
+Die Möglichkeit einer Anpassung von OSTicket wurde dahingehend ausgeforscht, eine Installation auf einem Testsystem vorzunehmen und gewisse Anpassungen durchzuführen. Die Ergebnisse des Problemlösungsversuch in diese Richtung sind im Abschnitt \ref{Realisierbarkeit mit \getOst} zu finden.
 
 Katak bietet laut Entwickler folgende Vorteile:
 \begin{itemize}
@@ -342,6 +362,7 @@ Katak bietet laut Entwickler folgende Vorteile:
 	\item Der Überblick über Tickets und dessen Status wurde erweitert. Mitarbeiter können nur Tickets bearbeiten, denen sie auch zugeteilt wurden.
 	\item Passwortsicherheit wurde durch die Verwendung von SHA512\footnote{Hashfunktion} verbessert.
 \end{itemize}
+\paragraph{}
 Vor allem die Vereinfachung des Codes und die Trennung zwischen der grafischen Oberfläche und der Logik sollen die Arbeit mit diesem Open Source System um ein Vielfaches erleichtern.
 \newpage
 
@@ -473,7 +494,7 @@ Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abs
 \\
 \textbf{C03:}
 \\
-Der Benutzer muss das Formular öffnen um den Status zu sehen. Ist das Öffnen fehlgeschlagen kommt er wieder zum Ausgangspunkt und kann es nochmal versuchen.
+Der Benutzer muss das Formular öffnen um den Status zu sehen. Ist das Öffnen fehlgeschlagen kommt er wieder zum Ausgspunkt und kann es nochmal versuchen.
 \\
 \textbf{C04:}
 \\
