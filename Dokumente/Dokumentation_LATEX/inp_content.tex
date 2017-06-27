@@ -457,14 +457,29 @@ Um den Ticketstatus ändern zu können muss der Systembetreuer das Ticket öffne
 Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen um es dann zu schließen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das schließen erfolgreich ist das Ticket geschlossen.
 
 \newpage
-%todo: 2 Wireframes mit Worten zeichnen plus hammerl prios
-\section{User-Interface-Design}	
+
+\section{User-Interface-Design}
+Der Ansprechpartner priorisiert eine einfach zu bedienende grafische Oberfläche. Diese sollte nur die fundamentalsten Funktionalitäten enthalten. Diese wären:
+
+\begin{itemize}
+	\item Ein Ticket eröffnen.
+	\item Erstellte Tickets ansehen.
+	\item Erstellte Tickets bearbeiten.
+	\item Status eines Tickets ändern.
+\end{itemize}
+\paragraph{}
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.44]{figures/Wireframe_Anwender.png}
 	\caption{Mockup Anwendersicht}
 	\label{Abb_Mockup_Anwendersicht}
 \end{figure}
+
+In Abbildung \ref{Abb_Mockup_Anwendersicht} ist ein Mockup zu sehen, wie die Oberfläche aus Sicht eines Anwenders des System, aussehen sollte.
+\newpage
+Diese Vorgaben bezüglich der grafischen Oberfläche, gelten ebenfalls für den Systembetreuer. Dieser muss alle Tickets ansehen können, die im jeweiligen Cluster erstellt wurden.
+\paragraph{}
 
 \vspace{-.5cm}
 \begin{figure}[h]
@@ -474,8 +489,11 @@ Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen u
 	\label{Abb_Mockup_Systembetreuer}
 \end{figure}
 
+Eine Möglichkeit dies zu Realisieren wäre wie in Abbildung \ref{Abb_Mockup_Systembetreuer} zu sehen ist ein Menü in dem all diese genannten Punkte erreichbar sind.
+\newpage
 
-
+Der Anwender des Systems sollte weitere Informationen bzw. eine Rückmeldung zu seinem erstellten Ticket bekommen.
+\paragraph{}
 \vspace{.5cm}
 \begin{figure}[h]
 	\centering
@@ -483,15 +501,20 @@ Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen u
 	\caption{Mockup Ticketstatus}
 	\label{Abb_Mockup_Ticketstatus}
 \end{figure}	
-
+Wie in Abbildung \ref{Abb_Mockup_Ticketstatus} zu sehen ist, sollten die verschiedenen Schritte \textbf{Erstellt}, \textbf{Erhalt bestätigt}, \textbf{In Bearbeitung} und \textbf{Erledigt} vorhanden sein.
 \newpage
+
 \section{Prototyp}
+Ein Prototyp wurde bereits erstellt und mit dem Ansprechpartner abgeklärt. Dieser Prototyp in Abbildung  \ref{Abb_Prototyp_Ticketstatus} zu sehen wurde mit Bootstrap erstellt und bietet eine Vorlage für zukünftige Projekte.
+\paragraph{}
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=.5]{figures/Prototyp.png}
 	\caption{Prototyp Ticketstatus}
 	\label{Abb_Prototyp_Ticketstatus}
 \end{figure}
+
+
 
 %  INPUT SYSTEMENTWURF JAVAEE (Jakob)
 \input{inp_javaee_proto}
