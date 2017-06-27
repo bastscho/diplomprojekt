@@ -1,4 +1,6 @@
 \newpage
+\renewcommand{\arraystretch}{1.5}
+\newcommand{\code}{\texttt}
 \section{Datenbankentwurf}
 \def \currentAuthor{Elias Gabl}
 
@@ -10,7 +12,6 @@ In gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben, da es kei
 \newline
 An dieser Stelle sollte ein Datenmodell stehen, aber da jenes von OSTicket recht groß und komplex ist, hat es hier nicht Platz. Sie finden es auf dem mitgelieferten Datenträger.(Der Dateiname ist: OSTicketDB.mwb).
 
-%todo: EER Diagramm einfuegen oder nicht?
 
 \newpage
 
@@ -176,6 +177,14 @@ Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat e
 		\hline
 		ticket\_auto\_ response & TINYINT(1) & Das vordefinierte Standartticket der Abteilung \\
 		\hline
+	\end{tabular}
+	\caption{tab:ost-department}
+\end{table}
+\label{tab:ost_department}
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
 		message\_auto\_ response & TINYINT(1) & Die vordefinierte Standartantwort der Abteilung auf Tickets \\
 		\hline
 		path & VARCHAR & Pfad der Abteilung\\
@@ -185,12 +194,9 @@ Diese Tabelle speichert Informationen über eine Abteilung. Jede Abteilung hat e
 		created & INT(10) & Erstelldatum der Abteilung\\
 		\hline
 	\end{tabular}
-	\caption{tab:ost-department}
+	\caption{tab:ost-department2}
 \end{table}
-\label{tab:ost_department}
-
-\newpage
-
+\label{tab:ost_department2}
 
 \subsubsection{ost\_faq}
 
@@ -265,6 +271,14 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des/de
 		\hline
 		signature & TEXT & Die Signatur des Mitgliedes \\
 		\hline
+			\end{tabular}
+			\caption{tab:ost-staff}
+		\end{table}
+		\label{tab:ost_staff}
+		\newpage
+		\begin{table}[h]
+			\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+				\hline
 		lang & VARCHAR(16) & Die Sprache des Mitgliedes \\
 		\hline
 		timezone & VARCHAR(64) & Die Zeitzone in der sich das Mitglied befindet \\
@@ -276,14 +290,6 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des/de
 		isactive & TINYINT(1) & Gib an ob das Mitglied aktiv ist\\
 		\hline
 		isadmin & TINYINT(1) & Gib an ob das Mitglied ein Administrator ist\\
-		\hline
-			\end{tabular}
-			\caption{tab:ost-staff}
-		\end{table}
-		\label{tab:ost_staff}
-		\newpage
-		\begin{table}[h]
-			\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
 		isvisible & TINYINT(1) & Gib an ob das Mitglied für andere sichtbar ist \\
 		\hline
@@ -299,8 +305,19 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des/de
 		\hline
 		auto\_refresh\_rate & INT(10) & Gib die Taktrate an wie oft die Übersichtsseite des Mitgliedes automatisch aktualisiert werden soll \\
 		\hline
+	\end{tabular}
+	\caption{tab:ost-staff2}
+\end{table}
+\label{tab:ost_staff2}
+
+\newpage
+
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
 		default\_signature\_ type & ENUM('none', 'mine', 'dept') & Gib die default Signatur bei der Beantwortung eines Tickets an \\
 		\hline
+			
 		default\_paper\_size & ENUM('Letter', 'Legal', 'Ledger', 'A4', 'A3') & Gib das default Format der Antwort auf ein Ticket an \\
 		\hline
 		extra & TEXT & Hier können zusätzliche Informationen über das Mitglied gespeichert werden \\
@@ -316,9 +333,9 @@ Die Tabelle enthält auch Informationen über die Abteilung und die Rolle des/de
 		updated & DATETIME & Änderungsdatum des Mitgliedes \\
 		\hline
 	\end{tabular}
-	\caption{tab:ost-staff2}
+	\caption{tab:ost-staff3}
 \end{table}
-\label{tab:ost_staff2}
+\label{tab:ost_staff3}
 
 \newpage
 
@@ -359,16 +376,17 @@ Diese Tabelle enthält sämtliche Informationen über ein Ticket. Dazu gehören 
 		\hline
 		flags & INT(10) &  \\
 		\hline
+	\end{tabular}
+	\caption{tab:ost-ticket}
+\end{table}
+\label{tab:ost_ticket}
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
+		\hline
 		ip\_address & VARCHAR(64) & Die IP-Adresse von der das Ticket abgesetzt worden ist \\
 		\hline
-			\end{tabular}
-			\caption{tab:ost-ticket}
-		\end{table}
-		\label{tab:ost_ticket}
-		\newpage
-		\begin{table}[h]
-			\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
-		\hline
+			
 		source & ENUM(Web, Email, Phone, API, Other) &\\
 		\hline
 		source\_extra & VARCHAR(40)&\\
@@ -581,7 +599,7 @@ Diese Funktion stellt die Verbindung zu einer Datenbank her. Um eine Verbindung 
 	\end{itemize}
 Diese Funktion kann als Herzstück dieser Klasse bezeichnet werden, da immer zuerst eine Verbindung zu der Datenbank hergestellt werden muss, um mit ihr arbeiten zu können. Damit eine andere Funktion dieser Klasse genützt werden können, muss zuerst die Funktion db\_connect aufgerufen werden.
 Eine Verbindung besteht solange, bis Die Verbindung mit Hilfe der Funktion db\_close beendet wird.
-Sollte in dieser Funktion ein Fehler vorliegen, so gibt sie den Wert null zurück.
+Sollte in dieser Funktion ein Fehler vorliegen, so gibt sie den Wert \code{null} zurück.
 \newpage
 
 \begin{lstlisting}[language=PHP, caption=mysqli.php/function-db\_connect1, firstnumber=21]
@@ -884,6 +902,8 @@ Eine Schule wird mit ihrer Bezeichnung, Adresse und Namen abgespeichert. Des Wei
 In dieser Tabelle werden die Cluster festgelegt. Als Cluster wird eine Mengen von Schulen, die zu einer Organisation zusammen geschlossen wurden, bezeichnet. Jeder Cluster hat einen Supervisor, der für die Bearbeitung der anfallenden Tickets in ebendiesem Cluster verantwortlich ist.
 Der Supervisor wird per Referenz zur User-Tabelle festgelegt. Ein Cluster hat immer genau einen Supervisor. Zusätzlich wird noch ein Name für den Cluster festgelegt.
 
+
+
 \begin{table}[h]
 	\begin{tabular}{|p{3.5cm}|p{4cm}|p{6.2cm}|}
 		\hline
@@ -911,8 +931,8 @@ Mit der Methode dbconnect kann die Verbindung zu der Datenbank hergestellt werde
 \\
 Am Anfang der Klasse werden drei String Variablen mit Informationen über den Datenbank-Zugang initialisiert.
 \begin{itemize}
-	\item \textbf{url} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner, da es sich noch um einen Prototypen handelt.
-	\item \textbf{username} Ist ein User, der die benötigen Rechte hat, um lesend und schreibend auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu, da sie nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
+	\item \textbf{\$url} Die URl unter der die Datenbank zu erreichen ist. In diesem Fall liegt die Datenbank Local auf einem Rechner, da es sich noch um einen Prototypen handelt.
+	\item \textbf{\$username} Ist ein User, der die benötigen Rechte hat, um lesend und schreibend auf die Datenbank zugreifen zu können. In unserem Fall greifen wir mit dem root User auf die Datenbank zu, da sie nur Local gespeichert ist und wir uns noch keine Gedanken über Sicherheit machen müssen.
 	\item \textbf{\$password} Ist das Passwort des User. 
 \end{itemize}
 
@@ -1009,13 +1029,11 @@ return null;
 }
 \end{lstlisting}
 
+\renewcommand{\arraystretch}{1}
+
 \newpage
 
-
-%todo: Datenbank Doku Gendern
-%todo: Formatieren der Tabellen
-%todo: Verschieben nach Kap. 2 (Vorstellung des Produktes; hier die JavaeEE Doku)
-%todo: Dokumentation kontrollieren
 %todo: ost ticket: User gendern? Betreuungslehrer fragen
-%todo: null groß?
-%todo: doppelpunkte bei aufzählung
+%todo: null \code{null} wird so Formatiert + alle Klassen namen + Methodennamen
+%todo: doppelpunkte bei aufzählung + \textbf durch \code ersetzen.
+%todo: finales durchlesen der Doku
