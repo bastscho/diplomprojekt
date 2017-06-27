@@ -163,11 +163,13 @@
 		
 	MySQL Workbench kann neben der Ausführung von Konfigurations- und Datenmanipulationsbefehlen auch Modellierung: Mit dem Integrierten UML Editor kann eine Datenbank (und die zugehörigen SQL Befehle) generiert werden. Auch die entgegengesetzte Richtung ist möglich: Mit wenigen Klicks kann ein UML Diagramm aus einer bestehenden Datenbank erstellt werden. Abbldung \ref{Workbench_DiaGUI} zeigt ein solches Klassendiagramm im Detail.
 	
+	%todo: 1 Formatierung ist hier chaotisch
 		
 	\newpage
 	\section{Modelle}
 	\subsection{Klassendiagramm}
 	Abbildung \ref{Klassendiagramm_System} soll die Klassen welche unter dem Ticketsystem Verwendung finden umreißend beschreiben. Das Diagramm dokumentiert nicht den kompletten systematischen Aufbau des Ticketsystems in seinem "Vanilla-Zustand"\footnote{"Vanilla" beschreibt ein System oder Produkt, welches in keinster Weise verändert (customized) worden ist.}, sondern ist eine Zusammenfassung der wichtigsten Klassen, die Anwendung finden und soll lediglich veranschaulichen, welche die fundamentalsten Klassen sind und in welchem Zusammenhang diese stehen.
+	
 	
 	\begin{figure}[h]
 		\centering
@@ -175,23 +177,28 @@
 		\caption{Komprimiertes Klassendiagramm}
 		\label{Klassendiagramm_System}
 	\end{figure}
+	 \newpage
 	
-
-	\newpage
+	
 	\section{Implementierung}
-	%todo: 2 text bull (oben und unten bei beiden screenshots)
 	Es wurden zwei GUI Prototypen mit Bootstrap\footnote{Ein Framework,  Kapitel \ref{Bootstrap}}  erstellt. Die grafische Oberfläche wurde stark vereinfacht und mit \getHammerl\ besprochen.
+	\paragraph{}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=0.6]{figures/newTicket.png}
 		\caption{Ticket erstellen}
 		\label{Ein Ticket erstellen}
 	\end{figure}
+
+
+Das wichtigste Anliegen des Projektpartners bestimmt die Vereinfachung der Benutzeroberfläche.
+
 	\newpage
-	%todo: 2 neuer screencapture, kleineres browserfenster
+	Um die Prototypen zu erstellen wurden zuerst Mockups erstellt wie in Kapitel \ref{UserInterfaceDesign} zu beachten ist. Dieser Schritt war notwendig um eine Vorlage für die Bootstrap Prototypen zu haben.
+	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.68]{figures/index.png}
+		\includegraphics[scale=0.52]{figures/index.png}
 		\caption{Ticketverwaltung}
 		\label{Tickets verwalten}
 	\end{figure}
