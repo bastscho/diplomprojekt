@@ -11,7 +11,7 @@
 		\end{center}
 	\end{wrapfigure}
 
-	Es wird eine Minimum-Impact Strategie verfolgt, das heißt dass im Zuge der Projektdurchführung die Änderungen auf das Vanilla\footnote{Von \glqq Vanilla\grqq\ spricht man, wenn ein System unangegriffen und sich in dessen Auslieferungszustand befindet.}-System so gering als möglich ausfallen. Damit wird einerseits das Ziel verfolgt, eine gewisse Übersichtlichkeit zu bewahren, was in einer kompakten Dokumentation resultieren soll.
+	Es wird eine Minimum-Impact Strategie verfolgt, das heißt dass im Zuge der Projektdurchführung die Änderungen auf das Vanilla\footnote{Von \glqq Vanilla\grqq\ wird im Computer Jargon gesprochen, wenn ein System unangetastet ist und sich in dessen Auslieferungszustand befindet.}-System so gering als möglich ausfallen. Damit wird einerseits das Ziel verfolgt, eine gewisse Übersichtlichkeit zu bewahren, was in einer kompakten Dokumentation resultieren soll.
 	
 	Des weiteren sollen nicht benötigte Funktionalitäten bewahrt bleiben, um systeminterne Reibungen zu vermeiden und Funktionen im Nachhinein mit geringem Aufwand verwenden zu können.
 	
@@ -21,9 +21,9 @@
 		\caption{Die standard-Weboberfläche für Administratoren}
 		\label{OSTicket Admin WebGUI}
 	\end{figure}
-
+\vspace{-.5cm}
 	\subsubsection{M"oglichkeiten mit \getOst}
-	
+\vspace{-.5cm}
 	OSTicket ist sehr anpassbar. Ticketformulare und Formularfelder lassen sich mit geringem Aufwand anpassen, je nach den spezifischen Anforderungen des Helpdesks. Sollte einmal ein wahrer Sturm an Tickets eingehen, ist auch das kein Problem. Tickets lassen sich simpel priorisieren und filtern. Noch mehr Übersicht bringt die M"oglichkeit, Tickets in Hilfsthematiken einzustufen. Sollten mehrere Supportmitarbeiter gleichzeitig Arbeiten, geschieht dies ohne Problem: Ticketkollisionen werden automatisch mit Sperrvariablen vermieden.
 	
 	\subsubsection{Warum OSTicket?}
@@ -66,7 +66,7 @@
 	
 	PHP ist der etablierte Standard, wenn es um serverseitige Webprogrammierung geht. Serverseitige Webprogrammierung findet statt, wenn ein Benutzer mit seinem Browser\footnote{Software zum Benutzen des World Wide Web; Bspw. Microsoft Internet Explorer, Mozilla Firefox} eine Webseite ansurft. Es wird eine sogenannte HTTP-Anfrage an den Webserver (welcher unter der Webseitenadresse erreichbar ist) gesendet. Dieser analysiert die Anfrage (welche Seite der Benutzer sehen will) und befüllt das HTML-Grundgerüst mit dynamischen Inhalten. Dann wird die Seite über das Internet zurück zum Browser des Benutzers übertragen und dargestellt.
 	
-	Ein großer Vorteil von PHP ist, dass es für Einsteiger in die Programmierung gut zu erlernen ist, dennoch aber äußerst flexibel, um auch umfangreiche Anwendungen (Wie OSTicket) umsetzen zu können.
+	Ein großer Vorteil von PHP ist, dass es für Einsteiger in die Programmierung gut zu erlernen ist, dennoch aber äußerst flexibel, um auch umfangreiche Anwendungen (Wie \getOst) umsetzen zu können.
 	\paragraph{}
 	Die Flexibilität von PHP zeigt sich auch in der Freiheit, es auf vielen unterschiedlichen Betriebssystem wie Microsoft Windows, Apple OSX und einer Vielzahl an Linuxdistributionen verwenden zu können. Auch allerhand Webserver verstehen PHP wie ihre Muttersprache: Apache, IIS und nginx, um nur einige zu nennen.
 	
@@ -75,7 +75,7 @@
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=.35]{figures/mysql_logo.png}
+		\includegraphics[scale=.28]{figures/mysql_logo.png}
 		\caption{MySQL Logo}
 		\label{MySQL_Logo}
 	\end{figure}
@@ -83,9 +83,9 @@
 	MySQL wird für die Datenspeicherung von Webservices verwendet. Es wird meistens zusammen mit dem Apache Webserver und der Skiptsprache PHP verwendet. Dies war auch der Grund weshalb wir MySQL verwenden da OSTicket in der Skriptsprache PHP geschrieben ist.
 	MySQL und die Bibliotheken sind hauptsächlich in C und C++ geschrieben. Dies ist zurückzuführen auf die Erzielung einer gute Performance.
 	MySQL sieht grundsätzlich eine MySQL-Server vor auf dem mehrere Datenbanken erstellt werden können. In einer Datenbank könne auch mehrere Tabellen erstellt werden.
-	
-
+\vspace{-.5cm}
 	\section{Werkzeuge}
+\vspace{-.5cm}
 	Die im Zuge der Projektdurchführung verwendeten Werkzeuge eignen sich für das Projekt aus verschiedenen Gründen.
 	
 	Ein wichtiger Punkt war die Vertrautheit mit den Werkzeugen: Ein Großteil dieser war uns bereits bekannt beziehungsweise vertraut. Des Weiteren ist die große Community im Internet sehr hilfreich bei auftretenden Problemen und Fragestellungen; meist ist die Lösung innerhalb weniger Minuten gefunden. Da es sich um weit verbreitete Entwicklungsumgebungen handelt konnte auch in der Zukunft (während der Zeit der Projektdurchführung) mit der Weiterentwicklung und Verbesserung dieser Tools gerechnet werden.
@@ -112,7 +112,7 @@
 	\end{wrapfigure}
 	
 	NetBeans unterstützt Programmiersprachen wie Java, PHP, C/C++ und andere. Des Weiteren ist NetBeans plattformunabhängig - wir als Projektteam haben somit die freie Wahl unter welchem Betriebssystem gearbeitet werden soll - die Kompatibilität unserer Ergebnisse ist jederzeit gegeben.
-	\paragraph{}
+	\\
 	Jedes neue Release wird auch von der Community getestet und evaluiert. Somit ist auch eine Hilfestellung bei Problemen gegeben.
 	\subsection{XAMPP Apache}
 	XAMPP ist eine Zusammenführung von freier Software. Es ermöglicht einfache Installation und Konfiguration des Webservers Apache und der Datenbank MariaDB. Weitere Anwendungen geliefert unter XAMPP sind die FTP-Server ProFTPd oder FileZilla Server, der Mailserver Mercury, der webbasierte Datenbankclient phpMyAdmin und andere offene Software.
@@ -136,39 +136,29 @@
 		\end{center}
 	\end{wrapfigure}
 
-	\newpage
 	XAMPP ermöglicht eine einfache und schnelle Installation einer Testumgebung. Da XAMPP ausschließlich für Testumgebungen gedacht ist sind standardmäßige Sicherheitseinstellungen nicht ausreichend und ist somit nicht für Produktivumgebungen geeignet.
 	
-	
 	\subsection{MySQL Workbench}
-	Die Verwaltung der Verwendeten MySQL Datenbank erfolgt mit dem Tool MySQL Workbench. Die vielen Überwachungs- und Konfigurationsmöglichkeiten, die die GUI\footnote{Graphical User Interface} bietet, macht es möglich, auf aufwändige SQL-Skripte zu verzichten. Damit ist eine einfache Verwaltung und ein erleichterter Umgang mit dieser umfangreichen Datenbank gegeben.
+	Die Verwaltung der Verwendeten MySQL Datenbank erfolgt mit dem Tool MySQL Workbench. Die vielen Überwachungs- und Konfigurationsmöglichkeiten, die die Oberfläche bietet, macht es möglich, auf aufwändige SQL-Skripte zu verzichten. Damit ist eine einfache Verwaltung und ein erleichterter Umgang mit dieser umfangreichen Datenbank gegeben.
 	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=.5]{figures/workbench_startgui.png}
-		\caption{MySQL Workbench Start Screen}
-		\label{Worbench_Startgui}
-	\end{figure}
-
-	Auch die Unterstützung von Projektbetreuern und weiteren Lehrpersonen kann in Betracht gezogen werden, da die MySQL Workbench im Unterricht oft Verwendung findet.
-	
-	
-
 	\begin{figure}[h]
 		\centering
 		\includegraphics[scale=.5]{figures/workbench_reverse.png}
 		\caption{MySQL Workbench - Datenbankdiagramm (Ausschnitt)}
 		\label{Workbench_DiaGUI}
 	\end{figure}
+
+	Auch die Unterstützung von Projektbetreuern und weiteren Lehrpersonen kann in Betracht gezogen werden, da die MySQL Workbench im Unterricht oft Verwendung findet.
+	\paragraph{}
 		
-	MySQL Workbench kann neben der Ausführung von Konfigurations- und Datenmanipulationsbefehlen auch Modellierung: Mit dem Integrierten UML Editor kann eine Datenbank (und die zugehörigen SQL Befehle) generiert werden. Auch die entgegengesetzte Richtung ist möglich: Mit wenigen Klicks kann ein UML Diagramm aus einer bestehenden Datenbank erstellt werden. Abbldung \ref{Workbench_DiaGUI} zeigt ein solches Klassendiagramm im Detail.
+	MySQL Workbench kann neben der Ausführung von Konfigurations- und Datenmanipulationsbefehlen auch Modellierung: Mit dem Integrierten UML Editor kann eine Datenbank (und die zugehörigen SQL Befehle) generiert werden. Auch die entgegengesetzte Richtung ist möglich: Mit wenigen Klicks kann ein UML Diagramm aus einer bestehenden Datenbank erstellt werden (Siehe Abb. \ref{Workbench_DiaGUI}).
 	
 	%todo: 1 Formatierung ist hier chaotisch
 		
 	\newpage
 	\section{Modelle}
 	\subsection{Klassendiagramm}
-	Abbildung \ref{Klassendiagramm_System} soll die Klassen welche unter dem Ticketsystem Verwendung finden umreißend beschreiben. Das Diagramm dokumentiert nicht den kompletten systematischen Aufbau des Ticketsystems in seinem "Vanilla-Zustand"\footnote{"Vanilla" beschreibt ein System oder Produkt, welches in keinster Weise verändert (customized) worden ist.}, sondern ist eine Zusammenfassung der wichtigsten Klassen, die Anwendung finden und soll lediglich veranschaulichen, welche die fundamentalsten Klassen sind und in welchem Zusammenhang diese stehen.
+	Abbildung \ref{Klassendiagramm_System} soll die Klassen welche unter dem Ticketsystem Verwendung finden umreißend beschreiben. Das Diagramm dokumentiert nicht den kompletten systematischen Aufbau des Ticketsystems in seinem \glqq Vanilla-Zustand\grqq \footnote{\glqq Vanilla\grqq\ beschreibt ein System oder Produkt, welches in keinster Weise verändert (customized) worden ist.}, sondern ist eine Zusammenfassung der wichtigsten Klassen, die Anwendung finden und soll lediglich veranschaulichen, welche die fundamentalsten Klassen sind und in welchem Zusammenhang diese stehen.
 	
 	
 	\begin{figure}[h]

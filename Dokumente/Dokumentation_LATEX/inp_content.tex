@@ -1,7 +1,7 @@
 \def \currentAuthor {Das Projektteam} %so kann jederzeit der Autor geändert werden -> wird in der Fusszeile angezeigt.
 
 \chapter{Projektmanagement}
-\subsection{Team}
+\subsection{Projektteam}
 
 \begin{itemize}
 	\item Jakob Tomasi
@@ -125,9 +125,6 @@ Des Weiteren beeinflussen die Anwender (IT-Manager) und die Systembetreuer der P
 \paragraph{}
 Die Projektbetreuer \getSteff\ und \getAlex\ sind Ansprechpartner für Fragen, die bezüglich Problemstellungen während des Projekts auftreten können, und damit neben dem Projektpartner, \getHammerl, enorm einflussreich.
 
-%todo: 2 WHITESPACES FORMATIEREN
-
-\newpage
 \subsection{Stakeholder}
 \subsubsection{Stakeholder Identifizieren}
 \begin{table}[h]
@@ -183,6 +180,7 @@ Es soll eine neue Weboberfläche entwickelt werden, die auf dem HTML \& CSS Fram
 %Modus
 %Verteilung(Deployment)
 
+\newpage
 \section{Planung}
 %subsection Projektstrukturplan entfernt
 \subsection{Meilensteine}
@@ -196,7 +194,7 @@ Es soll eine neue Weboberfläche entwickelt werden, die auf dem HTML \& CSS Fram
 Da im Projekt einige Änderungen stattgefunden haben, mussten die Meilensteine den Umständen entsprechend angepasst werden. In Abbildung \ref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur konkreten Projektdurchführung gegeben.
 
 \subsection{Gantt-Chart}
-In Abbildung \ref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur Projektdurchführung gegeben. In dieser Projekttimeline werden die Aktivitäten der einzelnen Teammitglieder dargestellt. Der Vorteil dieser grafischen Aufbereitung, ist die Visualisierung der Aufgaben und deren Arbeitsaufwand in Wochen, die für die Bewältigung notwendig waren.
+In Abbildung \ref{Abb_Projekt_Timeline_Gantt} auf Seite \pageref{Abb_Projekt_Timeline_Gantt} ist ein Überblick zur Projektdurchführung gegeben. In dieser Projekttimeline werden die Aktivitäten der einzelnen Teammitglieder dargestellt. Der Vorteil dieser grafischen Aufbereitung, ist die Visualisierung der Aufgaben und deren Arbeitsaufwand in Wochen, die für die Bewältigung notwendig waren.
 
 \newpage
 \begin{landscape}
@@ -214,7 +212,7 @@ In diesem Kapitel wird das Softwaresystem \getOst\ dokumentiert bzw. vorgestellt
 \section{Realisierbarkeit mit \getOst} \label{Realisierbarkeit mit \getOst}
 \getOst\ hat sich als umfangreicher herausgestellt wie zu Beginn des Projekts angenommen wurde. Nach Ausarbeitung des konzeptuellen Zieles des Projektes erfolgte eine lange Phase der Evaluation, Einarbeitung und Dokumentation von \getOst. Nach ca. 30 Stunden dieser (viel zu langen) Phase, in der die Komplexität und Schwerfälligkeit des Systems \getOst\ sich nicht bezwingen lassen wollte. Die Anzahl der Dateien setzt sich folgendermaßen zusammen:
 
-\begin{table}
+\begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline 
@@ -244,7 +242,7 @@ Ein weiteres Hindernis ergibt sich durch den Mangel an einer auch nur annähernd
 Damit ist \getOst\ nicht nur wegen der fehlenden Dokumentation kaum zu bändigen, sondern aufgrund seines ständigen Wachstums zu \glqq crufty\grqq , um mit sinnvollem Aufwand angepasst zu werden:
 
 \blockcquote{cmdlinestephenson}{
-	 In the jargon of hackers\footnote{Es darf angenommen werden, dass Neal Stephenson in seinem Essay mit Hacker vor allem Softwareentwickler aus der Open-Source Welt meint.}, it is called
+	 In the jargon of hackers\footnote{Es darf angenommen werden, dass der Autor in seinem Essay mit \glqq Hacker\grqq\ vor allem Softwareentwickler aus der Open-Source Welt meint.}, it is called
 	\glqq cruft.\grqq\ An operating system\footnote{Neal Stephenson's Essay bezieht sich vor allem auf Betriebssysteme, der Jargonausdruck findet in der Softwareentwicklung jedoch generelle Anwendung.} that has many, many layers of it is described as \glqq crufty.\grqq \\
 	Hackers hate to do things twice, but when they see something crufty, their first impulse
 	is to rip it out, throw it away, and start anew.
@@ -252,10 +250,10 @@ Damit ist \getOst\ nicht nur wegen der fehlenden Dokumentation kaum zu bändigen
 	Like an upgrade to an old building, cruft always seems like a good idea when the first layers of it go on – just routine maintenance, sound prudent management. This is especially true if (as it were) you never look into the cellar, or behind the drywall. But if you are a hacker who spends all his time looking at it from that point of view, cruft is fundamentally disgusting, and you can’t avoid wanting to go after it with a crowbar. Or, better yet, simply walk out of the building – let the Leaning Tower of Pisa fall over – and go make a new one THAT DOESN’T LEAN.
 }
 
-Um die Realisierbarkeit zu veranschaulichen nun einige Codeauszüge aus OSTicket.
+Um die Realisierbarkeit zu veranschaulichen folgen ab Seite \pageref{firstCode} einige Codeauszüge aus OSTicket.
 \newpage
 \subsection{Codeausschnitte osTicket}
-\begin{lstlisting}[language=PHP, caption=main.inc.php, firstnumber=18]
+\begin{lstlisting}[language=PHP, caption=main.inc.php, firstnumber=18, label=firstCode]
 #Disable direct access.
 if(isset($_SERVER['SCRIPT_NAME'])
 && !strcasecmp(basename($_SERVER['SCRIPT_NAME'])
@@ -359,121 +357,25 @@ Ist bereits ein Joomla System in Verwendung, so würde sich OSTicky als geeignet
 
 
 %-------------------------------------
-
+\vspace{-2cm}
 \chapter{Problemanalyse}
-
-\section{USE-Case-Analyse}
-{\linespread{.5}
+\vspace{-.8cm}
+\section{USE-Case-Analyse \& Ablaufbeschreibung}
+{\linespread{.3}
+	\vspace{-.5cm}
 	\textbf{Akteure:}
 	\begin{itemize}
 		\item Systembetreuer
-		\item Anwender (IT-Manager und eventuell Lehrer, in Folgendem Anwender genannt)
+		\item Anwender (IT-Manager und eventuell Lehrer, im Folgenden Anwender genannt)
 \end{itemize}}
 
-%todo: 1 screenshots mit tabellen ersetzen (elias)!
+Es folgen die ermittelten Use Cases in tabellarischer Form.
 
-%\input{tables_useCases.tex}
+\input{tables_useCases.tex}
 
-\vspace{-.5cm}
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.51]{figures/C00.png}
-	\caption{Use-Case C00}
-	\label{Abb_C00}
-\end{table}
-\newpage
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.55]{figures/C01.png}
-	\caption{Use-Case C01}
-	\label{Abb_C01}
-\end{table}
-\newpage
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.6]{figures/C02.png}
-	\caption{Use-Case C02}
-	\label{Abb_C02}
-\end{table}
-
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.62]{figures/C03.png}
-	\caption{Use-Case C03}
-	\label{Abb_C03}
-\end{table}
-\newpage
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.62]{figures/C04.png}
-	\caption{Use-Case C04}
-	\label{Abb_C04}
-\end{table}
-
-
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.62]{figures/C05.png}
-	\caption{Use-Case C05}
-	\label{Abb_C05}
-\end{table}
-\newpage
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.62]{figures/C06.png}
-	\caption{Use-Case C06}
-	\label{Abb_C06}
-\end{table}
-\newpage
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.62]{figures/C07.png}
-	\caption{Use-Case C07}
-	\label{Abb_C07}
-\end{table}
-
-\vspace{-.5cm}	
-\begin{table}[h]
-	\centering
-	\includegraphics[scale=0.62]{figures/C08.png}
-	\caption{Use-Case C08}
-	\label{Abb_C08}
-\end{table}
-
-\subsection{Ablaufbeschreibung}
-\paragraph{C00:}
-Der Benutzer wird aufgefordert seine Benutzerdaten einzugeben.
-Hat er die Daten richtig eingegeben wird er angemeldet. Sind die Daten falsch kommt er zurück zur Dateneingabe.
-\paragraph{C01:}
-Der Benutzer muss zuerst ein Formular öffnen, um ein Ticket erstellen zu können. Anschließend muss das Formular ausgefüllt werden. 
-\\
-Nach dem Überprüfen des Tickets kann der Benutzer sich entscheiden ob er das Ticket abschickt oder ob er Änderungen vornehmen möchte. 
-\\
-Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war, wird das Ticket in der Datenbank gespeichert.
-\paragraph{C02:}
-Der Benutzer muss zuerst ein Formular öffnen um einen Incident erstellen zu können. Anschließend muss das Formular ausgefüllt werden. Nach dem Überprüfen des Incident kann der Benutzer sich entscheiden, ob er den Incident abschickt oder ob er Änderungen vornehmen möchte.
-\\
-Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war wird der Incident in der Datenbank gespeichert und der Systembetreuer erhält eine Benachrichtigung.
-\paragraph{C03:}
-Der Benutzer muss das Formular öffnen um den Status zu sehen. Ist das Öffnen fehlgeschlagen kommt er wieder zum Ausgspunkt und kann es nochmal versuchen.
-\paragraph{C04:}
-Um die Löschung beantragen zu können muss der Benutzer zuerst das Ticket öffnen. Danach kann er die Löschung beantragen. Schlägt dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War der Antrag auf Löschung erfolgreich erhält der Systembetreuer eine Anfrage zur Löschung.
-\paragraph{C05:}
-Um ein Ticket zu löschen muss der Systembetreuer das Ticket öffnen und löschen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das Löschen erfolgreich wurde das Ticket aus der Datenbank entfernt.
-\paragraph{C06:}
-Um den Ticketstatus ändern zu können muss der Systembetreuer das Ticket öffnen und ändern. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das ändern erfolgreich wurde der Ticketstatus geändert.
-\paragraph{C07:}
-Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen um es dann zu schließen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das schließen erfolgreich ist das Ticket geschlossen.
 
 \newpage
-
+\def \currentAuthor{Peter Pollheimer}
 \section{User-Interface-Design}
 \label{UserInterfaceDesign}
 Der Ansprechpartner priorisiert eine einfach zu bedienende grafische Oberfläche. Diese sollte nur die fundamentalsten Funktionalitäten enthalten. Diese wären:
@@ -533,8 +435,6 @@ Ein Prototyp wurde bereits erstellt und mit dem Ansprechpartner abgeklärt. Dies
 
 %  INPUT SYSTEMENTWURF JAVAEE (Jakob)
 \input{inp_javaee_proto}
-
-%todo: 0 Systementwurf PHP erweitern und überarbeiten, Feinschliff fehlt. Ist doch ein wichtiges Kapitel. Generell sehr kurzes Chapter. Bei einigen Passagen vil. auf weitere Chapter verweisen.
 
 %  INPUT SYSTEMENTWURF PHP (Peter)
 \input{inp_php}

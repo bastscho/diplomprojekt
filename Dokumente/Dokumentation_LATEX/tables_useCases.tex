@@ -1,0 +1,298 @@
+\def \currentAuthor{Das Projektteam}
+\renewcommand{\arraystretch}{1.3}
+
+%todo: Gender prüfung 
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Anmelden am Portal\\
+		\hline
+		ID &  C00\\
+		\hline
+		Beschreibung & Ein/Eine Anwender\_in oder Systembetreuer\_innen nutzt seine/ihre Login-Daten um sich in das System einzuwählen.\\
+		\hline
+		Akteure & Anwender\_innen, Systembetreuer\_innen\\
+		\hline
+		Häufigkeit & 5/5\\
+		\hline
+		Auslöser & Der/Die Anwender\_innen möchte das Portal benutzen.\\
+		\hline
+		Bedingungen & Anmeldedaten vorhanden und Rechte vergeben. \\
+		\hline
+		Endzustand & Eine Session wurde geöffnet und der/die Anwender\_innen kann das System nutzen.\\
+		\hline
+		Hauptablauf & 1. Benutzerdaten eingeben \newline2. Login Vorgang  initiieren \\
+		\hline
+		Ausnahmen & Error -> Anmeldedaten prüfen. Error -> Anmeldedaten neu beziehen.\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C00}
+\end{table}
+\label{tab:tab:Use-Case C00}
+\vspace{-.5cm}
+\paragraph{C00:}
+Der Benutzer wird aufgefordert seine Benutzerdaten einzugeben.
+Hat er die Daten richtig eingegeben wird er angemeldet. Sind die Daten falsch kommt er zurück zur Dateneingabe.
+
+
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Erstellung eines Standarttickets\\
+		\hline
+		ID & C01\\
+		\hline
+		Beschreibung & Ein/Eine Anwender\_in meldet sich am Portal an und möchte ein neues Netzwerkgerät bestellen. Dieser/Diese eröffnet ein neues Standartticket und beschreibt den Grund für die Anschaffung. Der/Die Anwender\_in reicht das Ticket ein.\\
+		\hline
+		Akteure & Anwender\_in\\
+		\hline
+		Häufigkeit & 2/5\\
+		\hline
+		Auslöser & Es wird eine Komponente/Ressource für die Schule benötigt.\\
+		\hline
+		Bedingungen & C00\\
+		\hline
+		Endzustand & Ticket wurde in der Datenbank gespeichert.\\
+		\hline
+		Hauptablauf & 1. Formular öffnen \newline2. Formular ausfüllen \newline3. Ticket überprüfen \newline4. Ticket einreichen\\
+		\hline
+		Ausnahmen & Error -> Ticket kann nicht abgegeben werden -> C01 erneut ausführen\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C01}
+\end{table}
+\label{tab:tab:Use-Case C01}
+
+\paragraph{C01:}
+Der Benutzer muss zuerst ein Formular öffnen, um ein Ticket erstellen zu können. Anschließend muss das Formular ausgefüllt werden. 
+\\
+Nach dem Überprüfen des Tickets kann der Benutzer sich entscheiden ob er das Ticket abschickt oder ob er Änderungen vornehmen möchte. 
+\\
+Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war, wird das Ticket in der Datenbank gespeichert.
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Erstellung eines Incident\\
+		\hline
+		ID &  C02\\
+		\hline
+		Beschreibung & Ein/Eine Anwender\_in meldet sich am Portal an und öffnet ein Ticket, er/sie meldet ein Problem, das er/sie selbst nicht lösen kann. Der/Die Anwender\_in markiert das Ticket als Incident und speichert es.\\
+		\hline
+		Akteure & Anwender\_in\\
+		\hline
+		Häufigkeit & 4/5\\
+		\hline
+		Auslöser & Ein für den/die Anwender\_in nicht lösbares technisches Problem.\\
+		\hline
+		Bedingungen & C00, Auslösen\\
+		\hline
+		Endzustand & Incident wurde in der Datenbank gespeichert und der/die Systembetreuer\_in hat eine Benachrichtigung erhalten.\\
+		\hline
+		Hauptablauf & 1. Formular öffnen \newline2. Formular ausfüllen \newline3. Incident überprüfen \newline4. Incident einreichen\\
+		\hline
+		Ausnahmen & Error -> Ticket kann nicht abgegeben werden -> C02 erneut ausführen.\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C02}
+\end{table}
+\label{tab:tab:Use-Case C02}
+
+\paragraph{C02:}
+Der Benutzer muss zuerst ein Formular öffnen um einen Incident erstellen zu können. Anschließend muss das Formular ausgefüllt werden. Nach dem Überprüfen des Incident kann der Benutzer sich entscheiden, ob er den Incident abschickt oder ob er Änderungen vornehmen möchte.
+\\
+Wenn das Abschicken fehlgeschlagen ist kommt er zum Anfang zurück. Wenn das abschicken erfolgreich war wird der Incident in der Datenbank gespeichert und der Systembetreuer erhält eine Benachrichtigung.
+
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Ticketstatus prüfen\\
+		\hline
+		ID & C03\\
+		\hline
+		Beschreibung & Ein/Eine Anwender\_in meldet sich am Portal an und sieht sich seine/ihre eigenen Tickets an. Er/Sie kann einsehen ob der/die Systembetreuer\_in das Ticket erhalten hat und wie weit die Bestellung fortgeschritten ist.\\
+		Akteure & Anwender\_in\\
+		\hline
+		Häufigkeit & 3/5\\
+		\hline
+		Auslöser & Anwender\_in hat eine Anfrage erhalten.\\
+		\hline
+		Bedingungen & C00, zu überprüfendes Ticket muss vorhanden sein.\\
+		\hline
+		Endzustand & Keine Veränderung am System\\
+		\hline
+		Hauptablauf & 1. Ticket öffnen \newline2. Status ansehen\\
+		\hline
+		Ausnahmen & Error -> Ticket kann nicht überprüft werden -> C03 erneut ausführen\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C03}
+\end{table}
+\label{tab:tab:Use-Case C03}
+
+\paragraph{C03:}
+Der Benutzer muss das Formular öffnen um den Status zu sehen. Ist das Öffnen fehlgeschlagen kommt er wieder zum Ausgspunkt und kann es nochmal versuchen.
+
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Ticketlöschung beantragen\\
+		\hline
+		ID & C04\\
+		\hline
+		Beschreibung & Ein/Eine Anwender\_in meldet sich am Portal an und beantragt die Löschung seines Tickets.\\
+		\hline
+		Akteure & Anwender\_in\\
+		\hline
+		Häufigkeit & 1/5\\
+		\hline
+		Auslöser & Ticket hat sich erübrigt, Ticket ist falsch\\
+		\hline
+		Bedingungen & C00, zu löschendes Ticket muss vorhanden sein\\
+		\hline
+		Endzustand & Systembetreuer\_in hat die Anfrage auf Löschung erhalten\\
+		\hline
+		Hauptablauf & 1. Ticket öffnen \newline2. Löschung beantragen\\
+		\hline
+		Ausnahmen & Error -> Löschvorgang nicht erfolgreich -> C04 erneut ausführen\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C04}
+\end{table}
+\label{tab:tab:Use-Case C04}
+
+\paragraph{C04:}
+Um die Löschung beantragen zu können muss der Benutzer zuerst das Ticket öffnen. Danach kann er die Löschung beantragen. Schlägt dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War der Antrag auf Löschung erfolgreich erhält der Systembetreuer eine Anfrage zur Löschung.
+
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Ticket löschen\\
+		\hline
+		ID & C05\\
+		\hline
+		Beschreibung & Der/Die Systembetreuer\_in meldet sich am Portal an und kümmert sich um Löschanfragen.\\
+		\hline
+		Akteure & Systembetreuer\_in\\
+		\hline
+		Häufigkeit & 1/5\\
+		\hline
+		Auslöser & C04\\
+		\hline
+		Bedingungen & C00, zu löschendes Ticket muss vorhanden sein.\\
+		\hline
+		Endzustand & Das Ticket wurde entfernt.\\
+		\hline
+		Hauptablauf & 1. Ticket öffnen \newline2. Ticket löschen\\
+		\hline
+		Ausnahmen & Error -> Löschvorgang nicht erfolgreich -> C05 erneut ausführen.\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C05}
+\end{table}
+\label{tab:tab:Use-Case C05}
+
+\paragraph{C05:}
+Um ein Ticket zu löschen muss der Systembetreuer das Ticket öffnen und löschen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das Löschen erfolgreich wurde das Ticket aus der Datenbank entfernt.
+
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Ticketstatus ändern\\
+		\hline
+		ID &  C06\\
+		\hline
+		Beschreibung & Der/Die Systembetreuer meldet sich am Portal an und sieht die Tickets der Anwender\_innen in seinem/ihrem Cluster\\
+		\hline
+		Akteure & Systembetreuer\_in\\
+		\hline
+		Häufigkeit & 4/5\\
+		\hline
+		Auslöser & C01\\
+		\hline
+		Bedingungen & C00, das Ticket muss vorhanden sein.\\
+		\hline
+		Endzustand & Der Ticketstatus wurde geändert.\\
+		\hline
+		Hauptablauf & 1. Ticket öffnen \newline2. Ticketstatus ändern\\
+		\hline
+		Ausnahmen & Error -> Statusänderung nicht erfolgreich -> C06 erneut ausführen.\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C06}
+\end{table}
+\label{tab:tab:Use-Case C06}
+
+\paragraph{C06:}
+Um den Ticketstatus ändern zu können muss der Systembetreuer das Ticket öffnen und ändern. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das ändern erfolgreich wurde der Ticketstatus geändert.
+
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Incident bearbeiten\\
+		\hline
+		ID &  C07\\
+		\hline
+		Beschreibung & Der/Die Systembetreuer\_in erhält eine E-Mail-Benachrichtigung über einen Incident. Er/Sie klickt aud den mitgelieferten Link und meldet sich am Portal an. Er/Sie bearbeitet den Incident mit erhöhter Priorität.\\
+		\hline
+		Akteure & Systembetreuer\_in\\
+		\hline
+		Häufigkeit & 3/5\\
+		\hline
+		Auslöser & C02\\
+		\hline
+		Bedingungen & C00, der Incident muss vorhanden sein.\\
+		\hline
+		Endzustand & Der Incident ist abgearbeitet.\\
+		\hline
+		Hauptablauf & 1. Benachrichtigung erhalten \newline2. Incident öffnen \newline3. Incident bearbeiten \newline4. C08\\
+		\hline
+		Ausnahmen & Error -> Incident öffnen nicht erfolgreich -> C07 erneut ausführen.\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C07}
+\end{table}
+\label{tab:tab:Use-Case C07}
+
+\paragraph{C07:}
+Um ein Ticket schließen zu können muss der Systembetreuer das Ticket öffnen um es dann zu schließen. Schlug dies fehl kommt er wieder zurück an den Anfang und kann es nochmal versuchen. War das schließen erfolgreich ist das Ticket geschlossen.
+
+\newpage
+\begin{table}[h]
+	\begin{tabular}{|p{3cm}|p{10.7cm}|}
+		\hline
+		Name & Ticket schließen\\
+		\hline
+		ID &  C08\\
+		\hline
+		Beschreibung & Der/Die Systembetreuer\_in meldet sich am Portal an und schließt ein Ticket bzw. einen Incident nach dessen Erledigung.\\
+		\hline
+		Akteure & Systembetreuer\_in\\
+		\hline
+		Häufigkeit & 5/5\\
+		\hline
+		Auslöser & C01, C02\\
+		\hline
+		Bedingungen & C00, das Ticket muss vorhanden und abgearbeitet sein.\\
+		\hline
+		Endzustand & Ticket ist geschlossen\\
+		\hline
+		Hauptablauf & 1. Ticket öffnen \newline2. Ticket schließen\\
+		\hline
+		Ausnahmen & Error -> Ticket konnte nicht geschlossen werden -> C08 erneut ausführen.\\
+		\hline
+	\end{tabular}
+	\caption{tab:Use-Case C08}
+\end{table}
+\label{tab:tab:Use-Case C08}
+
+\paragraph{C08:}
+Hat der User das Ticket erfolgreich geöffnet und bearbeitet, so muss das Ticket wieder geschlossen werden. Nach erfolgreichem Schließen des Tickets, kommt der Anwender/die Anwenderin wieder zurück zum Ausgangspunkt.
+
+
+\renewcommand{\arraystretch}{1}

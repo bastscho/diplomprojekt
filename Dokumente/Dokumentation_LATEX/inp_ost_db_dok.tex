@@ -6,11 +6,11 @@
 
 \subsection{Tabellenbeschreibung der Datenbank von OSTicket}
 
-In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems OS Ticket. OS Ticket ist ein Ticketsingsystem, das für einfache Support Anwendung entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen, von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht, sind aber dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
+In dieser Dokumentation finden Sie eine grobe Beschreibung der Datenbank des Systems \getOst. \getOst ist ein Ticketsingsystem, das für einfache Support Anwendung entwickelt worden ist. Die Datenbank besteht aus 59 Tabellen, von diesen sind manche nicht mehr aktuell bzw. werden nicht mehr gebraucht, sind aber dennoch vorhanden. Daher werden in dieser Dokumentation nur die wichtigsten Tabellen der Datenbank beschrieben.\\
 In gewissen Spalten ist es leider nicht möglich den Inhalt anzugeben, da es keine gute Dokumentation der Datenbank gibt und man den Inhalt der Spalten aus dem Kontext erschließen muss.
 \newline
 \newline
-An dieser Stelle sollte ein Datenmodell stehen, aber da jenes von OSTicket recht groß und komplex ist, hat es hier nicht Platz. Sie finden es auf dem mitgelieferten Datenträger.(Der Dateiname ist: OSTicketDB.mwb).
+An dieser Stelle sollte ein Datenmodell stehen, aber da jenes von \getOst recht groß und komplex ist, hat es hier nicht Platz. Sie finden es auf dem mitgelieferten Datenträger. (Der Dateiname ist: OSTicketDB.mwb).
 
 
 \newpage
@@ -736,13 +736,12 @@ $__db->unbuffered_result = $res;
 
 return $res;
 \end{lstlisting}
-
+\vspace{-.5cm}
 Wenn, wie im oberen Abschnitt schon erwähnt, die do-while-Schleife den Versuch eine Query an die Datenbank zu schicken abgebrochen hat, wird in einem nächsten Schritt geprüft ob, die Variable \code{\$res} etwas beinhaltet und ob die Variablen \code{\$logError} und \code{\$ost} deklariert wurden. Treffen alle Parameter zu, wird bei der nächsten IF-Anweisung kontrolliert, ob die Variable \code{\$logError} einen Wert beinhaltet, der als Funktion aufgerufen werden kann und ob der Aufruf dieser Funktion mit dem Parameter \code{\$\_\_db->errno} den Wert \code{false} zurück gibt.
 Trifft dies auch zu, wird die Variable \code{\$res} mit dem Wert \code{null} zurück gegeben. Anschließend wird der Variable \code{\$msg} der Fehlertext übergeben und mit der Variable \code{\$ost}  wird die Funktion \code{logDBError} aufgerufen. Als Parameter werden dieser Funktion der Errorcode und der Errortext mitgegeben.
 In der letzten IF-Anweisung soll noch geprüft werden, ob die Variable \code{\$res} ein Objekt ist und ob die Variable \code{\$buffered} den Wert \code{false} hält. Ist dies der Fall, wird der Wert der Variable \code{\$res} dem Datenfeld \code{unbuffered\_result} des Objektes \code{\$\_\_db} übergeben. 
 Zuletzt wird noch die Variable \code{\$res} zurückgegeben.
 \newpage
-
 \subsection{Tabellenbeschreibung der Datenbank von unserem Java EE Prototyp}
 Dieser Teil der Dokumentation beschreibt die Datenbank von unserem Java EE Prototypen. Dieser erfüllt grundsätzlich alle Anforderungen, die an das Ticketsystem gestellt wurden.\\
 Hinter der Anwendung steht die hier beschriebene Datenbank. Sie wurde konzipiert, möglichst einfach und übersichtlich zu sein. Es wurde auch darauf geachtet, dass keine unnötigen Tabellen verwendet werden müssen, da wir anhand dieser Anwendung zeigen möchten, wie viele überflüssige Funktionen dem OSticketsystem zugrunde liegen.

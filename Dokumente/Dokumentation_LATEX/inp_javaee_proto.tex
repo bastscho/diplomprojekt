@@ -46,7 +46,7 @@ Benutzerschnittstellen werden in Java Enterprise Edition - Anwendungen mit der T
 \paragraph{}
 In der Abbildung \ref{Abb_Jsf_XHTML_Code} befindet sich beispielhaft ein Auszug aus der XHTML-Datei ListTickets.xhtml. Sie oberflächlich gesehen dafür zuständig, eine Tabelle von Tickets und deren detaillierten Eigenschaften anzuzeigen. Des Weiteren finden Sich auch Navigationselemente in der Datei. Solche Tags tragen die Bezeichnung \glqq commandLink\grqq. Definiert in ihrer \glqq action \grqq -Eigenschaft befindet sich ein Expression-Language (EL) Ausdruck welcher auf eine Methode der TicketController Klasse verweist. Ausdrücke der EL sind immer umschlossen von geschweiften Klammern und geführt von einer Raute: \#\{Klassenname.Datenfeld\}, als kleines Beispiel.
 \paragraph{}
-Eine weitere Komponente die hervorzuheben ist, ist der DataTable. Diese Komponente stemmt die Hauptaufgabe der Seite. Sie bezieht eine Liste von Tickets mit dem EL-Ausdruck \glqq \#{tplTicketController.items}\grqq; eine Laufvariable \glqq item\grqq hält also ein Ticket. Die Laufvariable durchläuft jedes Ticket genau ein mal, vergleichbar mit einer klassischen For-Schleife. So werden die Eigenschaften jedes Tickets in einer Zeile des DataTable dargestellt.
+Eine weitere Komponente die hervorzuheben ist, ist der DataTable. Diese Komponente stemmt die Hauptaufgabe der Seite. Sie bezieht eine Liste von Tickets mit dem EL-Ausdruck \glqq \#\{tplTicketController.items\}\grqq; eine Laufvariable \glqq item\grqq hält also ein Ticket. Die Laufvariable durchläuft jedes Ticket genau ein mal, vergleichbar mit einer klassischen For-Schleife. So werden die Eigenschaften jedes Tickets in einer Zeile des DataTable dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -70,7 +70,7 @@ In Abbildung \ref{Abb_Klassendesign_TicketSys} ist ein simpler Entwurf der Model
 \begin{description}
 	\item[IT Manager bzw. Managerinnen (Managers):] Eine Person an Tirols Schulen, verantwortlich für die lokale Infrastrukturbetreuung und Fehlerreporting
 	\item[Systembetreuer bzw. Systembetreuerinnen (Supervisors):] Bearbeitet Meldungen (Tickets) für einen Schulcluster
-	\item[Administratoren bzw. Administratorinnen (Admins):] Eine Person des Landesschulrates, verantwortlich für das Gesamtsystem (\getHammerl).
+	\item[Administratoren/Administratorinnen:] Eine Person des Landesschulrates, verantwortlich für das Gesamtsystem (\getHammerl).
 \end{description}
 
 Damit steht die Klasse User im Zentrum des Systems. Die Ticket-Klasse (oder eine Entität des Typs Ticket) hat eine Überschrift, eine Priorität, welche vom User (meist IT Manager(in)) definiert wird, eine Liste an Notes (Fehlerbeschreibungen, Nachrichten in Blogpost-Form) und eine Menge an Dateianhängen.
